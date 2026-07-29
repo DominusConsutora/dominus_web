@@ -1,0 +1,442 @@
+{
+    "metadata": {
+        "title": "DOMINUS · Consultoría en desarrollo portuario",
+        "description": "Consultora especializada en desarrollo portuario para autoridades portuarias y operadores portuarios a nivel mundial."
+    },
+    "common": {
+        "logoAlt": "DOMINUS",
+        "readMore": "Saber más"
+    },
+    "nav": {
+        "ariaLabelLanguage": "Idioma",
+        "home": "Inicio",
+        "about": "Nosotros",
+        "team": "Equipo",
+        "services": "Servicios",
+        "contact": "Contacto",
+        "servicesList": {
+            "master-plans-portuarios": "Master plans portuarios",
+            "concesiones-ppp-licitaciones": "Concesiones, PPP y licitaciones",
+            "gobernanza-y-tarifas": "Gobernanza y tarifas",
+            "optimizacion-operativa-terminales": "Optimización operativa de terminales",
+            "transformacion-digital-pcs": "Transformación digital y PCS",
+            "sostenibilidad-y-green-ports": "Sostenibilidad y green ports",
+            "regulacion-y-politicas-publicas": "Regulación y políticas públicas",
+            "capacitacion-y-talento": "Capacitación y talento portuario"
+        }
+    },
+    "hero": {
+        "titleStatic": "Consultoría integral para el",
+        "titleWord": "desarrollo",
+        "rotatingWords": [
+            "portuario.",
+            "estratégico.",
+            "sostenible.",
+            "implementable."
+        ],
+        "descriptionLine1": "Acompañamos a autoridades y operadores portuarios",
+        "descriptionLine2": "a planificar, transformar y hacer crecer sus puertos.",
+        "ctaAbout": "Sobre nosotros",
+        "ctaServices": "Nuestros servicios"
+    },
+    "about": {
+        "imgAlt1": "Puerto — vista aérea",
+        "imgAlt2": "Equipo técnico portuario",
+        "badgeTitle": "Oficio portuario",
+        "badgeLine1": "Experiencia real en gestión pública portuaria,",
+        "badgeLine2": "operación de terminales y regulación.",
+        "subtitleNumber": "01",
+        "subtitleText": "Consultoría portuaria estratégica",
+        "title": "Un equipo con oficio portuario, pensando el largo plazo",
+        "description": "En DOMINUS acompañamos a autoridades portuarias y operadores portuarios en las decisiones que definen el futuro de sus puertos: planes maestros, concesiones, gobernanza, transformación digital y estrategia de sostenibilidad.",
+        "feature1Title": "Del diagnóstico a la implementación",
+        "feature1Text": "No entregamos informes que quedan en un cajón. Cada proyecto incluye hoja de ruta con etapas, responsables y presupuesto.",
+        "feature2Title": "Visión global, ejecución local",
+        "feature2Text": "Trabajamos con alcance mundial, integrando buenas prácticas internacionales con la realidad institucional y operativa de cada plaza.",
+        "cta": "Conocé más sobre nosotros"
+    },
+    "differentiators": {
+        "subtitle": "Consultoría con impacto real",
+        "titleLine1": "Cuatro razones por las que autoridades",
+        "titleLine2": "y operadores portuarios eligen DOMINUS",
+        "cta": "Conocé al equipo",
+        "items": {
+            "oficio": {
+                "title": "Oficio portuario",
+                "description": "Nuestro equipo se formó dentro del sector: gestión pública portuaria, operación de terminales y regulación. No aprendemos con el proyecto de cada cliente."
+            },
+            "implementable": {
+                "title": "Enfoque implementable",
+                "description": "Diseñamos soluciones pensadas para ejecutarse. Cada recomendación viene con etapas, responsables, presupuesto y matriz de riesgos."
+            },
+            "global": {
+                "title": "Visión global",
+                "description": "Trabajamos con benchmarking activo a nivel mundial, integrando buenas prácticas comparadas con la realidad institucional de cada país."
+            },
+            "independencia": {
+                "title": "Independencia técnica",
+                "description": "No tenemos participación en negocios operativos del sector. Nuestro único producto es criterio técnico independiente para nuestros clientes."
+            }
+        }
+    },
+    "services": {
+        "subtitleNumber": "02",
+        "subtitleText": "Nuestras líneas de trabajo",
+        "titleLine1": "Consultoría integral para todo el ciclo",
+        "titleLine2": "de vida de un puerto o terminal",
+        "descriptionLine1": "Ocho líneas de servicio para acompañar a autoridades portuarias",
+        "descriptionLine2": "y operadores en las decisiones de largo plazo.",
+        "detailCta": "Saber más",
+        "allCta": "Ver todos los servicios",
+        "list": {
+            "master-plans-portuarios": {
+                "title": "Master plans portuarios",
+                "description": "Master plans y planes directores que ordenan el crecimiento de puertos y terminales con horizonte de 10 a 30 años.",
+                "longDescription": "Un puerto competitivo se planifica con décadas de anticipación. En DOMINUS acompañamos a autoridades portuarias y operadores en la formulación de master plans, planes directores y estudios de expansión, integrando análisis de demanda, dimensionamiento de infraestructura, layout operativo, evaluación ambiental y financiera. Nuestro objetivo es entregar un plan implementable: con etapas priorizadas, presupuesto de inversión y esquema de financiamiento realistas.",
+                "deliverables": [
+                    "Estudio de demanda por segmento de carga y proyecciones de tráfico.",
+                    "Layout general y planes de zonificación.",
+                    "Plan de inversiones por etapas (CAPEX / OPEX).",
+                    "Análisis costo-beneficio y evaluación económico-financiera.",
+                    "Hoja de ruta de implementación y matriz de riesgos."
+                ]
+            },
+            "concesiones-ppp-licitaciones": {
+                "title": "Concesiones, PPP y licitaciones",
+                "description": "Estructuración de procesos de concesión, esquemas público-privados y licitaciones con reglas claras y contratos robustos.",
+                "longDescription": "La atracción de inversión privada al sector portuario requiere estructuras contractuales que equilibren el interés público, la sostenibilidad económica del operador y la seguridad jurídica de largo plazo. En DOMINUS diseñamos y acompañamos procesos de concesión, PPP y licitaciones de terminales, servicios y obras portuarias, desde el análisis de factibilidad hasta la firma del contrato y la puesta en marcha del monitoreo regulatorio.",
+                "deliverables": [
+                    "Estudios de factibilidad técnica, económica y legal.",
+                    "Diseño del modelo de negocio y matriz de riesgos.",
+                    "Pliegos de bases y condiciones, contratos y anexos técnicos.",
+                    "Data room y soporte durante la ronda de consultas.",
+                    "Evaluación de ofertas y acompañamiento en la adjudicación."
+                ]
+            },
+            "gobernanza-y-tarifas": {
+                "title": "Gobernanza y tarifas",
+                "description": "Rediseño de modelos de gobernanza portuaria y esquemas tarifarios para alinear incentivos, eficiencia y competitividad.",
+                "longDescription": "La gobernanza y la política tarifaria son dos de las palancas más potentes —y más subestimadas— del desempeño portuario. Ayudamos a autoridades y directorios a diagnosticar su modelo institucional (landlord, tool port, service port, modelos híbridos), a rediseñar la estructura organizacional y a construir un cuadro tarifario que financie la operación, remunere la inversión y no erosione la competitividad frente a puertos vecinos.",
+                "deliverables": [
+                    "Diagnóstico institucional y benchmarking internacional.",
+                    "Propuesta de modelo de gobernanza y estructura organizacional.",
+                    "Cuadro tarifario con metodología y justificación técnica.",
+                    "Reglamento interno y manuales de procedimientos.",
+                    "Plan de transición e implementación."
+                ]
+            },
+            "optimizacion-operativa-terminales": {
+                "title": "Optimización operativa de terminales",
+                "description": "Diagnósticos operativos y planes de mejora para elevar productividad, reducir estadías y aprovechar la infraestructura existente.",
+                "longDescription": "Antes de invertir en más infraestructura, muchas terminales pueden ganar capacidad optimizando lo que ya tienen. En DOMINUS realizamos diagnósticos operativos de terminales de contenedores, graneles y multipropósito, medimos KPIs de productividad (BMPH, dwell time, yard utilization, gate turnaround), identificamos cuellos de botella y diseñamos planes de mejora concretos, con impacto medible en tiempos, costos y nivel de servicio a las líneas.",
+                "deliverables": [
+                    "Diagnóstico operativo con medición de KPIs.",
+                    "Mapa de cuellos de botella y análisis de causa raíz.",
+                    "Plan de mejora operativa priorizado por impacto y esfuerzo.",
+                    "Rediseño de procesos, layouts de patio y ciclos de equipos.",
+                    "Tablero de indicadores para seguimiento continuo."
+                ]
+            },
+            "transformacion-digital-pcs": {
+                "title": "Transformación digital y PCS",
+                "description": "Estrategia y hoja de ruta de digitalización portuaria, incluyendo Port Community Systems, TOS y ventanilla única.",
+                "longDescription": "La digitalización dejó de ser opcional para el sector portuario. Acompañamos a puertos y terminales en la definición de su estrategia digital, la selección e implementación de Port Community Systems (PCS), sistemas de gestión de terminales (TOS), ventanillas únicas portuarias y plataformas de intercambio electrónico de datos con la comunidad logística. Trabajamos con enfoque de arquitectura de negocio: primero los procesos, después la tecnología.",
+                "deliverables": [
+                    "Diagnóstico de madurez digital y benchmark.",
+                    "Estrategia y hoja de ruta de transformación digital.",
+                    "Casos de negocio y especificaciones funcionales para PCS/TOS.",
+                    "Acompañamiento en procesos de selección de proveedores.",
+                    "Gestión del cambio y adopción con actores de la comunidad portuaria."
+                ]
+            },
+            "sostenibilidad-y-green-ports": {
+                "title": "Sostenibilidad y green ports",
+                "description": "Estrategias de sostenibilidad ambiental y planes de descarbonización alineados con estándares internacionales de green ports.",
+                "longDescription": "Los puertos son nodos críticos para la transición energética y para el cumplimiento de los compromisos climáticos regionales. Ayudamos a autoridades portuarias y terminales a construir su estrategia de sostenibilidad ambiental, medir su huella de carbono, diseñar planes de descarbonización (electrificación de muelle, cold ironing, combustibles alternativos) y alinear su gestión con marcos internacionales como ESI, EcoPorts y las directrices de la IMO.",
+                "deliverables": [
+                    "Inventario de emisiones GEI (Scope 1, 2 y 3 portuario).",
+                    "Plan de descarbonización con metas y hoja de ruta.",
+                    "Estrategia de calidad de aire, agua y gestión de residuos.",
+                    "Alineación con estándares internacionales (ESI, EcoPorts, IMO).",
+                    "Reporte de sostenibilidad y comunicación a stakeholders."
+                ]
+            },
+            "regulacion-y-politicas-publicas": {
+                "title": "Regulación y políticas públicas",
+                "description": "Diseño y evaluación de políticas públicas portuarias, marcos regulatorios y reformas del sistema portuario nacional.",
+                "longDescription": "El desempeño de un sistema portuario depende, en gran medida, de la calidad de su marco regulatorio. Asesoramos a ministerios, autoridades portuarias y organismos de regulación en el diseño de políticas públicas, reformas normativas, leyes de puertos y regulaciones sectoriales. Combinamos análisis técnico, legal e institucional para producir instrumentos claros, viables y con legitimidad entre los actores del sector.",
+                "deliverables": [
+                    "Diagnóstico del marco normativo vigente y benchmarking internacional.",
+                    "Anteproyectos de ley, decretos y reglamentaciones.",
+                    "Análisis de impacto regulatorio (RIA).",
+                    "Diseño de esquemas de fiscalización y supervisión.",
+                    "Estrategia de consulta pública y construcción de consensos."
+                ]
+            },
+            "capacitacion-y-talento": {
+                "title": "Capacitación y talento portuario",
+                "description": "Programas de formación ejecutiva y técnica para autoridades portuarias, directorios y equipos de operadores portuarios.",
+                "longDescription": "Las mejores políticas y los mejores contratos requieren equipos preparados para llevarlos adelante. En DOMINUS diseñamos programas de capacitación a medida para directorios de autoridades portuarias, cuadros gerenciales de terminales y áreas técnicas del sector público. Nuestros programas combinan marcos conceptuales sólidos, casos comparados a nivel internacional y ejercicios aplicados a los desafíos reales de cada institución.",
+                "deliverables": [
+                    "Diagnóstico de necesidades de formación.",
+                    "Diseño curricular y materiales didácticos originales.",
+                    "Talleres presenciales y virtuales (in-company).",
+                    "Programas ejecutivos para directorios y alta gerencia.",
+                    "Certificaciones y evaluación de impacto formativo."
+                ]
+            }
+        }
+    },
+    "cta": {
+        "titleLine1": "Conversemos sobre tu",
+        "titleLine2": "próximo proyecto portuario",
+        "subtitle": "Contanos qué está enfrentando tu institución — planificación, concesión, digitalización, sostenibilidad — y armamos una propuesta a medida.",
+        "primary": "Solicitar una reunión",
+        "emailLink": "O escribinos por email",
+        "imgAlt": "Llamado a la acción"
+    },
+    "aboutPage": {
+        "hero": {
+            "eyebrow": "Institucional",
+            "breadcrumbHome": "Inicio",
+            "breadcrumbCurrent": "Nosotros",
+            "title": "Conocé DOMINUS",
+            "subtitle": "Una consultora especializada en desarrollo portuario, con equipo formado dentro del sector.",
+            "imgAlt": "Puerto — vista institucional"
+        },
+        "intro": {
+            "eyebrow": "Quiénes somos",
+            "title": "Un equipo con oficio portuario al servicio de autoridades y terminales a nivel mundial",
+            "paragraph1": "DOMINUS es una firma de consultoría especializada en el desarrollo del sistema portuario a nivel mundial. Nacimos para dar respuesta a un vacío concreto: la necesidad de contar con asesoramiento técnico e institucional independiente, con oficio portuario real y con vocación de implementación, tanto para autoridades portuarias públicas como para terminales privadas.",
+            "paragraph2": "Nuestro equipo se formó dentro del sector: gestión pública portuaria, operación de terminales, regulación y planificación de infraestructura. Esa trayectoria nos permite entender los problemas desde adentro, hablar el idioma de nuestros clientes y producir soluciones que efectivamente se puedan poner en marcha, no solo diagnósticos elegantes.",
+            "cta": "Ver nuestros servicios",
+            "imgAlt1": "Equipo técnico DOMINUS",
+            "imgAlt2": "Reunión de directorio portuario"
+        },
+        "reach": {
+            "eyebrow": "Presencia global",
+            "title": "Proyectos en los principales sistemas portuarios del mundo",
+            "description": "Nuestra experiencia acumulada abarca autoridades portuarias, terminales de contenedores, graneles y multipropósito, y organismos de regulación en múltiples países alrededor del mundo. Ese recorrido nos da un banco vivo de casos comparados que enriquece cada nuevo proyecto.",
+            "moreLabel": "Consultá por otros mercados",
+            "countries": {
+                "ar": "Argentina",
+                "uy": "Uruguay",
+                "cl": "Chile",
+                "pe": "Perú",
+                "co": "Colombia",
+                "pa": "Panamá",
+                "do": "República Dominicana",
+                "mx": "México",
+                "us": "Estados Unidos"
+            }
+        },
+        "method": {
+            "eyebrow": "Nuestra cultura",
+            "title": "Cómo trabajamos con cada cliente",
+            "subtitle": "Un método que privilegia el diálogo, el rigor técnico y la implementación.",
+            "principles": {
+                "listen": "Escuchamos primero el problema institucional, no vendemos soluciones prehechas.",
+                "mixed-teams": "Trabajamos con equipos mixtos: nuestros expertos y los del cliente.",
+                "direct-dialog": "Priorizamos el diálogo directo con directorios y áreas técnicas.",
+                "benchmarking": "Combinamos benchmarking internacional con realidad local.",
+                "independent": "Aplicamos criterio técnico independiente, incluso cuando incomoda.",
+                "implementable": "Entregamos productos implementables, con etapas y responsables.",
+                "confidential": "Respetamos la confidencialidad de cada institución cliente."
+            }
+        },
+        "values": {
+            "eyebrow": "Valores",
+            "title": "Los principios que guían nuestro trabajo",
+            "subtitle": "Seis compromisos que asumimos con cada cliente y cada proyecto.",
+            "items": {
+                "independence": {
+                    "title": "Independencia técnica",
+                    "description": "Nuestro único producto es criterio profesional independiente. No tenemos intereses cruzados con operadores ni proveedores del sector."
+                },
+                "public": {
+                    "title": "Compromiso con lo público",
+                    "description": "Cuando trabajamos con autoridades portuarias, entendemos que estamos aportando a la política pública portuaria del país."
+                },
+                "rigor": {
+                    "title": "Rigor técnico",
+                    "description": "Cada recomendación se sostiene con datos, metodología documentada y benchmarking regional."
+                },
+                "confidentiality": {
+                    "title": "Confidencialidad",
+                    "description": "Manejamos información sensible de instituciones y operadores. Nuestros equipos operan bajo estrictos protocolos de confidencialidad."
+                },
+                "implementation": {
+                    "title": "Vocación de implementación",
+                    "description": "No entregamos informes decorativos. Cada proyecto llega hasta el plan de acción y, cuando el cliente lo pide, hasta la puesta en marcha."
+                },
+                "longterm": {
+                    "title": "Relaciones de largo plazo",
+                    "description": "Con nuestros clientes construimos vínculos duraderos, más allá de cada proyecto puntual."
+                }
+            }
+        },
+        "advantages": {
+            "eyebrow": "Nuestras ventajas",
+            "title": "Qué nos hace distintos",
+            "subtitle": "Lo que nos permite ofrecer consultoría portuaria consistente en toda la región.",
+            "items": {
+                "expert-team": "Equipo con oficio portuario real (no consultores genéricos)",
+                "comparative": "Experiencia comparada en distintos países",
+                "integral": "Mirada integral: técnica, legal, económica e institucional",
+                "methodology": "Metodología propia, adaptada a cada institución",
+                "independence": "Independencia técnica y ausencia de conflictos de interés",
+                "implementable": "Foco en implementabilidad, no solo en el diagnóstico",
+                "confidentiality": "Confidencialidad estricta en el manejo de información sensible",
+                "transfer": "Programas de transferencia de conocimiento al cliente"
+            }
+        },
+        "finalCta": {
+            "titleLine1": "Hablemos de tu",
+            "titleLine2": "próximo proyecto portuario",
+            "subtitle": "Contanos el desafío que enfrenta tu institución y armamos una propuesta a medida. Sin compromiso.",
+            "primary": "Contactanos",
+            "emailLink": "O ver nuestros servicios",
+            "imgAlt": "Llamado a la acción — Nosotros"
+        }
+    },
+    "servicesPage": {
+        "hero": {
+            "eyebrow": "Servicios",
+            "breadcrumbHome": "Inicio",
+            "breadcrumbCurrent": "Servicios",
+            "title": "Consultoría portuaria de punta a punta",
+            "subtitle": "Ocho líneas de servicio para acompañar a autoridades portuarias y operadores en todo el ciclo de vida de un puerto o terminal.",
+            "imgAlt": "Puerto — servicios DOMINUS"
+        },
+        "intro": {
+            "eyebrow": "Nuestras líneas de trabajo",
+            "title": "Un portafolio integral para el desarrollo portuario",
+            "description": "Trabajamos con autoridades portuarias, terminales y organismos de regulación. Cada servicio se organiza para producir resultados implementables, con etapas claras y responsables definidos."
+        },
+        "detail": {
+            "breadcrumbHome": "Inicio",
+            "parentLabel": "Servicios",
+            "overviewLabel": "Descripción del servicio",
+            "deliverablesTitle": "Entregables típicos",
+            "contactCtaLabel": "Hablemos de tu proyecto",
+            "backToServices": "← Volver a servicios"
+        },
+        "finalCta": {
+            "titleLine1": "¿Tenés un proyecto",
+            "titleLine2": "portuario en mente?",
+            "subtitle": "Cada servicio se adapta a la etapa y a las prioridades de tu institución. Contanos el desafío y armamos una propuesta a medida.",
+            "primary": "Solicitar una reunión",
+            "emailLink": "O conocenos más",
+            "imgAlt": "Llamado a la acción — Servicios"
+        }
+    },
+    "contact": {
+        "subtitleNumber": "03",
+        "subtitleText": "Contacto",
+        "title": "Escribinos",
+        "descriptionLine1": "Contanos el desafío de tu institución y nuestro equipo",
+        "descriptionLine2": "te va a contactar a la brevedad.",
+        "imgAlt": "Reunión de contacto",
+        "form": {
+            "name": "Nombre y apellido",
+            "institution": "Institución / Empresa",
+            "email": "Email institucional",
+            "subject": "Asunto",
+            "message": "Contanos brevemente qué desafío te gustaría abordar",
+            "submit": "Enviar mensaje",
+            "submitting": "Enviando...",
+            "success": "Tu mensaje fue enviado. Te contactaremos a la brevedad.",
+            "error": "No pudimos enviar tu mensaje. Probá nuevamente en unos minutos."
+        }
+    },
+    "contactPage": {
+        "hero": {
+            "eyebrow": "Contacto",
+            "breadcrumbHome": "Inicio",
+            "breadcrumbCurrent": "Contacto",
+            "title": "Hablemos de tu próximo proyecto portuario",
+            "subtitle": "Estamos a un mensaje de conocer tu desafío institucional. Escribinos y nuestro equipo te responde a la brevedad.",
+            "imgAlt": "Puerto — contacto DOMINUS"
+        },
+        "channels": {
+            "eyebrow": "Canales de contacto",
+            "title": "Cómo llegar a DOMINUS",
+            "description": "Elegí el canal que te resulte más cómodo. Los datos que se muestran a continuación son de referencia y se actualizarán con los oficiales.",
+            "items": {
+                "email": {
+                    "icon": "feather-mail",
+                    "label": "Email institucional",
+                    "value": "contacto@dominus.example",
+                    "hint": "Respondemos en un día hábil.",
+                    "action": "Escribinos por email",
+                    "href": "mailto:contacto@dominus.example"
+                },
+                "phone": {
+                    "icon": "feather-phone",
+                    "label": "Teléfono directo",
+                    "value": "+54 11 5555-1234",
+                    "hint": "Lunes a viernes · 9 a 18 h (GMT-3).",
+                    "action": "Llamar ahora",
+                    "href": "tel:+541155551234"
+                },
+                "whatsapp": {
+                    "icon": "feather-message-circle",
+                    "label": "WhatsApp",
+                    "value": "+54 9 11 5555-1234",
+                    "hint": "Para consultas rápidas y coordinación de reuniones.",
+                    "action": "Abrir WhatsApp",
+                    "href": "https://wa.me/541155551234"
+                },
+                "linkedin": {
+                    "icon": "feather-linkedin",
+                    "label": "LinkedIn",
+                    "value": "linkedin.com/company/dominus-portuaria",
+                    "hint": "Novedades, publicaciones y equipo.",
+                    "action": "Ver perfil",
+                    "href": "https://www.linkedin.com/company/dominus-portuaria"
+                },
+                "address": {
+                    "icon": "feather-map-pin",
+                    "label": "Oficina",
+                    "value": "Av. Corrientes 1234, Piso 8 — CABA, Argentina",
+                    "hint": "Reuniones con cita previa.",
+                    "action": "Ver en el mapa",
+                    "href": "https://maps.google.com/?q=Av.+Corrientes+1234+CABA"
+                },
+                "schedule": {
+                    "icon": "feather-clock",
+                    "label": "Horario de atención",
+                    "value": "Lun a Vie · 9:00 a 18:00 (GMT-3)",
+                    "hint": "Fuera de horario, escribinos por email o WhatsApp.",
+                    "action": "",
+                    "href": ""
+                }
+            }
+        },
+        "form": {
+            "eyebrow": "Escribinos",
+            "title": "Contanos brevemente tu proyecto",
+            "description": "Cuanto más contexto compartas — institución, etapa del proyecto, plazos — más precisa será nuestra respuesta."
+        }
+    },
+    "footer": {
+        "tagline": "Consultora especializada en desarrollo portuario para autoridades portuarias y operadores portuarios a nivel mundial.",
+        "sectionInstitutional": "Institucional",
+        "sectionServices": "Servicios",
+        "sectionContact": "Contacto",
+        "contactPrompt": "¿Querés hablar sobre tu próximo proyecto portuario?",
+        "linksServicesShort": {
+            "master-plans-portuarios": "Master plans portuarios",
+            "concesiones-ppp-licitaciones": "Concesiones y PPP",
+            "gobernanza-y-tarifas": "Gobernanza y tarifas",
+            "transformacion-digital-pcs": "Transformación digital",
+            "sostenibilidad-y-green-ports": "Sostenibilidad"
+        },
+        "legal": {
+            "privacy": "Política de privacidad",
+            "terms": "Términos y condiciones",
+            "contact": "Contacto"
+        },
+        "copyright": "© {year} DOMINUS · Consultoría en desarrollo portuario."
+    }
+}

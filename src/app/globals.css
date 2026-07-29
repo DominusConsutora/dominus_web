@@ -1,0 +1,1101 @@
+/* Lenis drives smooth scrolling while GSAP ScrollTrigger handles animation timing. */
+
+/* DOMINUS · paleta base */
+:root {
+  --dominus-navy: #00194b;
+  --dominus-body: #2f3a52;
+  --dominus-body-soft: #4b5568;
+}
+
+/* DOMINUS · fondo gris claro (prueba) */
+html,
+body {
+  background-color: #f2f4f7;
+  color: var(--dominus-body);
+}
+
+/* DOMINUS · menú principal en color navy institucional */
+.mainmenu-nav .mainmenu > li > a {
+  color: var(--dominus-navy) !important;
+}
+
+/* Submenu (Servicios) — fondo oscuro heredado del template, letras blancas
+ * y hover en negrita (sin cambio de color ni underline). */
+.mainmenu-nav .mainmenu li.has-droupdown .submenu li a {
+  color: #ffffff !important;
+  font-weight: var(--f-regular, 400);
+  transition: font-weight 150ms ease, color 150ms ease;
+}
+.mainmenu-nav .mainmenu li.has-droupdown .submenu li a:hover,
+.mainmenu-nav .mainmenu li.has-droupdown .submenu li a:focus-visible,
+.mainmenu-nav .mainmenu li.has-droupdown .submenu li.active > a {
+  color: #ffffff !important;
+  font-weight: var(--f-bold, 700) !important;
+}
+
+/* DOMINUS · header — dos estados: top (sobre hero) y scrolled (sobre body claro).
+ * `.is-top`  → posición absolute (superpuesto al hero), fondo transparente,
+ *              logo blanco, links blancos.
+ * `.is-scrolled` → position fixed, fondo blanco 82% + blur, logo navy, links navy. */
+.dominus-header {
+  transition: background-color 300ms ease, box-shadow 300ms ease,
+    backdrop-filter 300ms ease, -webkit-backdrop-filter 300ms ease;
+}
+.dominus-header.is-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  /* Ligero velo navy para separar el header del slider sin taparlo. */
+  background-color: rgba(0, 18, 51, 0.28) !important;
+  backdrop-filter: saturate(140%) blur(4px);
+  -webkit-backdrop-filter: saturate(140%) blur(4px);
+  box-shadow: none !important;
+}
+.dominus-header.is-scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  box-shadow: 0 4px 18px rgba(0, 25, 75, 0.06) !important;
+  /* Anula la animación `headerSticky` del template que dejaba el header
+     traducido en Y y con fondo oscuro. */
+  animation: none !important;
+  transform: translateY(0) !important;
+  border-bottom: 0 !important;
+}
+
+/* Alternancia de logos según estado del header + reducción del tamaño al
+ * scrollear para dar sensación de compacto. */
+.dominus-header .dominus-logo {
+  transition: opacity 250ms ease, height 250ms ease;
+  height: 55px;
+  width: auto;
+}
+.dominus-header.is-scrolled .dominus-logo {
+  height: 42px;
+}
+.dominus-header.is-top .dominus-logo--top,
+.dominus-header.is-scrolled .dominus-logo--scrolled {
+  display: inline-block !important;
+  opacity: 1;
+}
+.dominus-header.is-top .dominus-logo--scrolled,
+.dominus-header.is-scrolled .dominus-logo--top {
+  display: none !important;
+  opacity: 0;
+}
+
+/* Links del menú blancos cuando el header está sobre el hero */
+.dominus-header.is-top .mainmenu-nav .mainmenu > li > a {
+  color: #ffffff !important;
+}
+.dominus-header.is-top .mainmenu-nav .mainmenu > li > a:hover {
+  color: #dbe3ff !important;
+}
+
+/* Language switcher · banderitas 🇪🇸/🇬🇧 */
+.dominus-lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: background-color 250ms ease, border-color 250ms ease;
+}
+.dominus-header.is-scrolled .dominus-lang-switcher {
+  background: rgba(0, 25, 75, 0.05);
+  border-color: rgba(0, 25, 75, 0.12);
+}
+.dominus-lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.55;
+  filter: grayscale(35%);
+  transition: opacity 200ms ease, filter 200ms ease, background-color 200ms ease;
+}
+.dominus-lang-btn:hover {
+  opacity: 0.9;
+  filter: none;
+  background: rgba(255, 255, 255, 0.14);
+}
+.dominus-header.is-scrolled .dominus-lang-btn:hover {
+  background: rgba(0, 25, 75, 0.08);
+}
+.dominus-lang-btn.is-active {
+  opacity: 1;
+  filter: none;
+  background: rgba(255, 255, 255, 0.22);
+}
+.dominus-header.is-scrolled .dominus-lang-btn.is-active {
+  background: rgba(0, 25, 75, 0.12);
+}
+
+/* DOMINUS · botones en color navy institucional */
+.tmp-btn,
+a.tmp-btn,
+button.tmp-btn {
+  background-color: var(--dominus-navy) !important;
+  border-color: var(--dominus-navy) !important;
+  color: #ffffff !important;
+}
+.tmp-btn:hover,
+a.tmp-btn:hover,
+button.tmp-btn:hover {
+  background-color: #001233 !important;
+  border-color: #001233 !important;
+  color: #ffffff !important;
+}
+
+/* DOMINUS · badge flotante en About (Oficio portuario) con el mismo navy
+ * institucional `--dominus-navy` (#00194b) que los botones y las tarjetas
+ * de servicios. */
+.about-2-thumbnail-left-wrapper .absolute-rating-area {
+  background: var(--dominus-navy) !important;
+  border-color: var(--dominus-navy) !important;
+  color: #ffffff !important;
+}
+.about-2-thumbnail-left-wrapper .absolute-rating-area .stars-area,
+.about-2-thumbnail-left-wrapper .absolute-rating-area .stars-area span,
+.about-2-thumbnail-left-wrapper .absolute-rating-area .stars-area i,
+.about-2-thumbnail-left-wrapper .absolute-rating-area p {
+  color: #ffffff !important;
+}
+
+/* DOMINUS · Tarjetas de servicios (Home §Servicios) con el mismo navy
+ * institucional (`--dominus-navy` · #00194b) que los botones y el badge
+ * "Oficio portuario". Iconos y tipografía en blanco; botón "Saber más"
+ * invertido (blanco con texto navy) para mantener contraste. */
+.service.service__style--1.bg-color-card {
+  background: var(--dominus-navy) !important;
+  color: #ffffff !important;
+}
+/* El template añade `.tmponhover::after` como una capa `inset: 2px` con el
+ * color oscuro del tema (`--color-card`). Sin este override, esa capa tapa
+ * el azul y las tarjetas se ven casi negras. */
+.service.service__style--1.bg-color-card.tmponhover::after {
+  background: var(--dominus-navy) !important;
+}
+.service.service__style--1.bg-color-card .icon,
+.service.service__style--1.bg-color-card .icon i {
+  color: #ffffff !important;
+}
+.service.service__style--1.bg-color-card .content .title,
+.service.service__style--1.bg-color-card .content .title a,
+.service.service__style--1.bg-color-card .content .title a:hover,
+.service.service__style--1.bg-color-card .content .description,
+.service.service__style--1.bg-color-card .content p {
+  color: #ffffff !important;
+}
+.service.service__style--1.bg-color-card a.tmp-btn.btn-border {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  color: var(--dominus-navy) !important;
+}
+.service.service__style--1.bg-color-card a.tmp-btn.btn-border:hover {
+  background-color: transparent !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* DOMINUS · CTA "Conversemos sobre tu próximo proyecto":
+ * la imagen de fondo (0808.webp) ocupa todo el bloque negro. Se aplica un
+ * overlay oscuro para mantener el contraste de la tipografía blanca. */
+.clltoaction-style-default.style-5 .content-wrapper {
+  overflow: hidden;
+}
+.clltoaction-style-default.style-5 .content-wrapper .person-stand {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  z-index: 0 !important;
+}
+.clltoaction-style-default.style-5 .content-wrapper .person-stand img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.clltoaction-style-default.style-5 .content-wrapper .person-stand::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+  pointer-events: none;
+}
+.clltoaction-style-default.style-5 .content-wrapper .inner {
+  position: relative;
+  z-index: 2;
+}
+@media only screen and (max-width: 767px) {
+  .clltoaction-style-default.style-5 .content-wrapper .person-stand {
+    display: block !important;
+  }
+}
+
+/* DOMINUS · Página Nosotros — estilos específicos de los bloques
+ * (CONTENT.md §Nosotros). Prefijados con `.dominus-` para no interferir con
+ * clases del template. */
+
+/* Bloque 3 · Alcance — tarjetas de país con bandera. */
+.dominus-country-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px 12px;
+  border-radius: 10px;
+  background: #f7f8fb;
+  border: 1px solid rgba(0, 25, 75, 0.08);
+  text-align: center;
+  height: 100%;
+  transition: transform 0.35s ease, box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+.dominus-country-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--dominus-navy);
+  box-shadow: 0 12px 24px rgba(0, 25, 75, 0.08);
+}
+.dominus-country-card .dominus-country-flag {
+  font-size: 34px;
+  line-height: 1;
+}
+.dominus-country-card .dominus-country-name {
+  color: var(--dominus-navy);
+  font-weight: 600;
+  font-size: 15px;
+}
+.dominus-country-card--more {
+  background: var(--dominus-navy);
+  border-color: var(--dominus-navy);
+}
+.dominus-country-card--more .dominus-country-flag,
+.dominus-country-card--more .dominus-country-name {
+  color: #ffffff;
+}
+.dominus-country-card--more .dominus-country-flag i {
+  font-size: 30px;
+}
+
+/* Bloque 4 · Cómo trabajamos — filas de principios (icono + texto). */
+.dominus-principle-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 20px 22px;
+  border-radius: 10px;
+  background: #f7f8fb;
+  border: 1px solid rgba(0, 25, 75, 0.06);
+  height: 100%;
+}
+.dominus-principle-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--dominus-navy);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+.dominus-principle-icon i {
+  line-height: 1;
+}
+.dominus-principle-text {
+  color: var(--dominus-body);
+  font-size: 16px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Bloque 6 · Ventajas competitivas — banda navy con dos columnas de 4. */
+.dominus-advantages-band {
+  background: var(--dominus-navy);
+  border-radius: 14px;
+  padding: 70px 60px;
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (max-width: 767px) {
+  .dominus-advantages-band {
+    padding: 40px 24px;
+  }
+}
+/* Tipografía blanca dentro de la banda navy: aplica a TODOS los textos
+ * (eyebrow, título con spans de `useTitleSplitAnimation` — clases .char /
+ * .word de SplitType —, subtítulo, description, ventajas). Se fuerza
+ * también `-webkit-text-fill-color` por si alguna regla previa aplica un
+ * gradiente sobre el título/descripción y `background: none` para anular
+ * fondos con `background-clip: text` heredados. */
+.dominus-advantages-band,
+.dominus-advantages-band *,
+.dominus-advantages-band .title,
+.dominus-advantages-band .title .char,
+.dominus-advantages-band .title .word,
+.dominus-advantages-band .description,
+.dominus-advantages-band .description .char,
+.dominus-advantages-band .description .word,
+.dominus-advantages-band .subtitle,
+.dominus-advantages-band .subtitle .subtitle-text,
+.dominus-advantages-band .dominus-advantage-text {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+.dominus-advantages-band .title,
+.dominus-advantages-band .title .char,
+.dominus-advantages-band .title .word,
+.dominus-advantages-band .description,
+.dominus-advantages-band .description .char,
+.dominus-advantages-band .description .word {
+  background: none !important;
+  background-image: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+}
+.dominus-advantages-band .pres-line-separator-wrapper .line-separator {
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+/* El icono de cada ventaja va sobre círculo blanco → mantener color navy. */
+.dominus-advantages-band .dominus-advantage-icon,
+.dominus-advantages-band .dominus-advantage-icon i {
+  color: var(--dominus-navy) !important;
+  -webkit-text-fill-color: var(--dominus-navy) !important;
+}
+.dominus-advantage-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  height: 100%;
+}
+.dominus-advantage-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--dominus-navy);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.dominus-advantage-icon i {
+  line-height: 1;
+}
+.dominus-advantage-text {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* DOMINUS · tarjetas de canal de contacto (página /contacto).
+ * Card blanca sobre fondo claro, icono navy dentro de círculo suave, con
+ * label + valor + hint + acción opcional. Placeholder de datos en JSON. */
+.dominus-contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 28px 26px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 25, 75, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 25, 75, 0.04);
+  height: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.dominus-contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 25, 75, 0.08);
+}
+.dominus-contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 25, 75, 0.08);
+  color: var(--dominus-navy);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+.dominus-contact-icon i {
+  line-height: 1;
+}
+.dominus-contact-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--dominus-navy);
+}
+.dominus-contact-value {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--dominus-navy);
+  margin: 0;
+  word-break: break-word;
+}
+.dominus-contact-hint {
+  font-size: 14px;
+  color: var(--dominus-body);
+  margin: 0;
+}
+.dominus-contact-action {
+  margin-top: 6px;
+  align-self: flex-start;
+}
+
+/* DOMINUS · hero con imagen de fondo y overlay para legibilidad */
+.dominus-hero-bg {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dominus-hero-bg > .dominus-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 25, 75, 0.72) 0%,
+    rgba(0, 25, 75, 0.55) 45%,
+    rgba(0, 18, 51, 0.78) 100%
+  );
+}
+.dominus-hero-bg > .container,
+.dominus-hero-bg > .banner-svg,
+.dominus-hero-bg > .shape-left-top,
+.dominus-hero-bg > .shape-right-bottom {
+  position: relative;
+  z-index: 1;
+}
+.dominus-hero-bg > .container {
+  width: 100%;
+}
+.dominus-hero-bg .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* "desarrollo" + palabra rotativa siempre en la misma línea */
+.dominus-hero-bg .dominus-hero-line {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.35em;
+  white-space: nowrap;
+  line-height: 1.1;
+}
+.dominus-hero-bg .dominus-hero-line > span:first-child,
+.dominus-hero-bg .dominus-hero-line .header-caption,
+.dominus-hero-bg .dominus-hero-line .cd-headline,
+.dominus-hero-bg .dominus-hero-line .cd-words-wrapper,
+.dominus-hero-bg .dominus-hero-line b {
+  line-height: 1.1;
+}
+.dominus-hero-bg .dominus-hero-line .header-caption {
+  display: inline-flex;
+  align-items: flex-end;
+}
+/* El wrapper tiene overflow:hidden y por CSS su baseline se convierte en el
+   borde inferior, dejando el texto interno visualmente más alto que la
+   palabra "desarrollo". Compensamos bajando la caja del caption. */
+.dominus-hero-bg .dominus-hero-line .header-caption {
+  transform: translateY(0.22em);
+}
+
+/* --------------------------------------------------------------------------
+ * DOMINUS · tipografía sobre fondo claro (#f2f4f7)
+ * El template base fue diseñado para fondo oscuro, con --color-heading en
+ * blanco y --color-body en un lila muy claro. Al usar fondo gris claro esas
+ * tipografías quedan ilegibles. Aquí forzamos:
+ *   · Títulos y subtítulos → navy institucional (#00194b)
+ *   · Párrafos, descripciones y listas → gris oscuro (#2f3a52)
+ * Se preservan blancos dentro de secciones que ya tienen fondo oscuro propio
+ * (hero, footer, CTA con fondo, tarjetas de servicio y form de contacto).
+ * ------------------------------------------------------------------------ */
+main.page-wrapper {
+  color: var(--dominus-body);
+}
+
+main.page-wrapper h1,
+main.page-wrapper h2,
+main.page-wrapper h3,
+main.page-wrapper h4,
+main.page-wrapper h5,
+main.page-wrapper h6,
+main.page-wrapper .title,
+main.page-wrapper .heading-title,
+main.page-wrapper .tmp-section-title-border .subtitle,
+main.page-wrapper .tmp-section-title-border .subtitle .subtitle-text {
+  color: var(--dominus-navy) !important;
+}
+
+main.page-wrapper p,
+main.page-wrapper .description,
+main.page-wrapper .b1,
+main.page-wrapper .b2,
+main.page-wrapper li {
+  color: var(--dominus-body) !important;
+}
+
+main.page-wrapper .tmp-section-title-border .subtitle .number {
+  color: var(--dominus-body-soft) !important;
+}
+
+/* Excepciones: secciones que YA tienen fondo oscuro propio conservan blancos.
+ * ------------------------------------------------------------------------ */
+main.page-wrapper .slider-area,
+main.page-wrapper .slider-area h1,
+main.page-wrapper .slider-area h2,
+main.page-wrapper .slider-area h3,
+main.page-wrapper .slider-area h4,
+main.page-wrapper .slider-area h5,
+main.page-wrapper .slider-area h6,
+main.page-wrapper .slider-area .title,
+main.page-wrapper .slider-area .title span,
+main.page-wrapper .slider-area .title b,
+main.page-wrapper .slider-area p,
+main.page-wrapper .slider-area .description,
+main.page-wrapper .slider-area .subtitle,
+
+/* Hero de páginas internas (Nosotros, etc.): overlay navy sobre imagen,
+ * tipografía siempre en blanco. Incluye spans .char/.word que genera
+ * SplitType para animar el título, y el breadcrumb inferior. */
+main.page-wrapper .dominus-hero-bg,
+main.page-wrapper .dominus-hero-bg h1,
+main.page-wrapper .dominus-hero-bg h2,
+main.page-wrapper .dominus-hero-bg h3,
+main.page-wrapper .dominus-hero-bg h4,
+main.page-wrapper .dominus-hero-bg h5,
+main.page-wrapper .dominus-hero-bg h6,
+main.page-wrapper .dominus-hero-bg .title,
+main.page-wrapper .dominus-hero-bg .title span,
+main.page-wrapper .dominus-hero-bg .title .char,
+main.page-wrapper .dominus-hero-bg .title .word,
+main.page-wrapper .dominus-hero-bg .description,
+main.page-wrapper .dominus-hero-bg .description .char,
+main.page-wrapper .dominus-hero-bg .description .word,
+main.page-wrapper .dominus-hero-bg .subtitle,
+main.page-wrapper .dominus-hero-bg .subtitle .subtitle-text,
+main.page-wrapper .dominus-hero-bg p,
+main.page-wrapper .dominus-hero-bg li,
+main.page-wrapper .dominus-hero-bg a,
+main.page-wrapper .dominus-hero-bg .page-list,
+main.page-wrapper .dominus-hero-bg .page-list li,
+main.page-wrapper .dominus-hero-bg .page-list a,
+main.page-wrapper .dominus-hero-bg .tmp-breadcrumb-item,
+
+main.page-wrapper .tmp-footer,
+main.page-wrapper .tmp-footer h1,
+main.page-wrapper .tmp-footer h2,
+main.page-wrapper .tmp-footer h3,
+main.page-wrapper .tmp-footer h4,
+main.page-wrapper .tmp-footer h5,
+main.page-wrapper .tmp-footer h6,
+main.page-wrapper .tmp-footer .title,
+main.page-wrapper .tmp-footer p,
+main.page-wrapper .tmp-footer li,
+main.page-wrapper .tmp-footer a,
+main.page-wrapper .tmp-footer .description,
+main.page-wrapper .tmp-footer .subtitle,
+
+main.page-wrapper .tmp-callto-action .title,
+main.page-wrapper .tmp-callto-action .subtitle,
+main.page-wrapper .tmp-callto-action .description,
+main.page-wrapper .tmp-callto-action p,
+main.page-wrapper .tmp-callto-action h1,
+main.page-wrapper .tmp-callto-action h2,
+main.page-wrapper .tmp-callto-action h3,
+main.page-wrapper .tmp-callto-action h4,
+main.page-wrapper .tmp-callto-action h5,
+main.page-wrapper .tmp-callto-action h6,
+
+main.page-wrapper .bg-color-card,
+main.page-wrapper .bg-color-card .title,
+main.page-wrapper .bg-color-card .title a,
+main.page-wrapper .bg-color-card .description,
+main.page-wrapper .bg-color-card p,
+main.page-wrapper .bg-color-card h1,
+main.page-wrapper .bg-color-card h2,
+main.page-wrapper .bg-color-card h3,
+main.page-wrapper .bg-color-card h4,
+main.page-wrapper .bg-color-card h5,
+main.page-wrapper .bg-color-card h6,
+
+main.page-wrapper .appoinment-form-wrapper input,
+main.page-wrapper .appoinment-form-wrapper textarea {
+  color: #ffffff !important;
+}
+
+/* Placeholders del formulario de contacto sobre su fondo oscuro. */
+main.page-wrapper .appoinment-form-wrapper input::placeholder,
+main.page-wrapper .appoinment-form-wrapper textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html.scroll-locked,
+html.scroll-locked body {
+  overflow: hidden;
+}
+
+@supports (overflow: clip) {
+  html,
+  body,
+  body.overflow-x-visible {
+    overflow-x: clip;
+  }
+}
+
+.images-left-right-float {
+  will-change: transform;
+}
+
+.image-auto {
+  width: auto;
+  height: auto;
+}
+
+.section-title .subtitle::before {
+    content: "";
+    pointer-events: none;
+    user-select: none !important;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(55deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 15%, rgba(255, 255, 255, 0.05) 45%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.05) 55%, rgba(255, 255, 255, 0.05) 70%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.05) 100%);
+    background-size: 400% 400%;
+    -webkit-mask: linear-gradient(black, black) content-box content-box, linear-gradient(black, black);
+    -webkit-mask-composite: xor !important;
+    animation: overlayAnimate 6s ease 10s infinite reverse;
+}
+
+.creative-portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.creative-portfolio-grid .portfolio-3 {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+}
+
+.creative-portfolio-grid .resizer {
+  display: none;
+}
+
+.scrollbar-v {
+  height: 100px !important;
+  background: transparent !important;
+  overflow: hidden;
+  pointer-events: auto;
+  transition: opacity 0.2s linear !important;
+}
+
+.scrollbar-v::after {
+  pointer-events: none;
+}
+
+.scrollbar-v-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100px;
+  background: var(--color-primary);
+  transform: scaleY(0);
+  transform-origin: top;
+  will-change: transform;
+  pointer-events: none;
+}
+
+#buy-now.show-on-scroll,
+.float-text.show-on-scroll {
+  pointer-events: none;
+}
+
+#buy-now.show-on-scroll.show,
+.float-text.show-on-scroll.show {
+  pointer-events: auto;
+}
+
+.react-video-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.82);
+}
+
+.react-video-popup__panel {
+  position: relative;
+  width: min(100%, 960px);
+}
+
+.react-video-popup__frame {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 8px;
+}
+
+.react-video-popup__frame iframe,
+.react-video-popup__frame video {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.react-video-popup__close {
+  position: absolute;
+  right: 0;
+  top: -48px;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  background: transparent;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.react-video-popup-open {
+  overflow: hidden;
+}
+
+.next-light-gallery {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 88px;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.next-light-gallery__stage {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.next-light-gallery__stage img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.next-light-gallery__close,
+.next-light-gallery__nav,
+.next-light-gallery__toolbar button,
+.next-light-gallery__thumbs button {
+  border: 0;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.next-light-gallery__close,
+.next-light-gallery__nav {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+  transition: background 180ms linear, transform 180ms linear;
+}
+
+.next-light-gallery__close:hover,
+.next-light-gallery__nav:hover,
+.next-light-gallery__toolbar button:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.next-light-gallery__close {
+  top: 24px;
+  right: 24px;
+}
+
+.next-light-gallery__nav--prev {
+  left: 24px;
+}
+
+.next-light-gallery__nav--next {
+  right: 24px;
+}
+
+.next-light-gallery__toolbar {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.next-light-gallery__toolbar button {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 50%;
+  transition: background 180ms linear;
+}
+
+.next-light-gallery__thumbs {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  z-index: 2;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  overflow-x: auto;
+  padding: 8px 0;
+}
+
+.next-light-gallery__thumbs button {
+  flex: 0 0 auto;
+  width: 76px;
+  height: 56px;
+  overflow: hidden;
+  padding: 2px;
+  border-radius: 4px;
+  opacity: 0.65;
+  transition: opacity 180ms linear, outline-color 180ms linear;
+}
+
+.next-light-gallery__thumbs button.is-active {
+  outline: 2px solid #fff;
+  opacity: 1;
+}
+
+.next-light-gallery__thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.next-light-gallery-open {
+  overflow: hidden;
+}
+
+.tmp-header-panel-open {
+  overflow: hidden;
+}
+
+.tmponhover {
+  --x: 50%;
+  --y: 50%;
+}
+
+.header-right.with-search .header-btn .search-area-btn,
+.dot-btn .offcanvas-trigger,
+.mobile-menu-bar .hamberger-button {
+  border: 0;
+}
+
+.header-right.with-search .header-btn button.search-area-btn,
+.dot-btn button.offcanvas-trigger,
+.mobile-menu-bar button.hamberger-button {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.toast {
+  min-width: 220px;
+  background: #1fa65a;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateX(120%);
+  transition: all 0.4s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.tmp-our-cart-area-start table tbody tr td.cart-empty-cell {
+  position: static;
+  z-index: auto;
+  right: auto;
+  top: auto;
+  padding: 24px;
+}
+
+.tmp-our-cart-area-start table tbody tr td.cart-empty-cell .product-info {
+  padding-left: 0;
+}
+
+.checkout-area-main-wrapper-left .order-area-single-card .order-wrapper .transfer-area .payment-accordion-item {
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 0 12px;
+  margin-bottom: 12px;
+}
+
+.checkout-area-main-wrapper-left .order-area-single-card .order-wrapper .transfer-area .payment-accordion-item .option {
+  margin-bottom: 0;
+}
+
+.checkout-area-main-wrapper-left .order-area-single-card .order-wrapper .transfer-area .payment-accordion-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease;
+}
+
+.checkout-area-main-wrapper-left .order-area-single-card .order-wrapper .transfer-area .payment-accordion-body .desc {
+  overflow: hidden;
+  margin: 0;
+  padding-left: 28px;
+}
+
+.checkout-area-main-wrapper-left .order-area-single-card .order-wrapper .transfer-area .payment-accordion-item.active .payment-accordion-body {
+  grid-template-rows: 1fr;
+}
+
+.checkout-area-main-wrapper-left .order-area-single-card .order-wrapper .transfer-area .payment-accordion-item.active .payment-accordion-body .desc {
+  margin-top: 10px;
+}
+
+@media (min-width: 992px) {
+  .mainmenu-nav .mainmenu li.with-megamenu .tmp-megamenu .wrapper {
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .mainmenu .with-megamenu .tmp-megamenu .demos-area-drop-down ul.mega-menu-item {
+    max-height: calc(100vh - 250px);
+    overscroll-behavior: contain;
+  }
+}
+
+@media (max-width: 767px) {
+  .react-video-popup {
+    padding: 16px;
+  }
+
+  .react-video-popup__close {
+    right: -4px;
+    top: -44px;
+  }
+
+  .next-light-gallery {
+    padding: 72px 18px 92px;
+  }
+
+  .next-light-gallery__close {
+    top: 18px;
+    right: 18px;
+  }
+
+  .next-light-gallery__nav {
+    top: auto;
+    bottom: 24px;
+  }
+
+  .next-light-gallery__nav--prev {
+    left: 18px;
+  }
+
+  .next-light-gallery__nav--next {
+    right: 18px;
+  }
+
+  .next-light-gallery__toolbar {
+    top: 18px;
+    left: 18px;
+  }
+
+  .next-light-gallery__thumbs {
+    right: 72px;
+    bottom: 18px;
+    left: 72px;
+    justify-content: flex-start;
+  }
+
+  .next-light-gallery__thumbs button {
+    width: 58px;
+    height: 44px;
+  }
+}
