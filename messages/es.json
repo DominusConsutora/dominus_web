@@ -417,6 +417,14 @@
             "eyebrow": "Escribinos",
             "title": "Contanos brevemente tu proyecto",
             "description": "Cuanto más contexto compartas — institución, etapa del proyecto, plazos — más precisa será nuestra respuesta."
+        },
+        "underConstruction": {
+            "eyebrow": "Sitio en desarrollo",
+            "title": "Estamos trabajando en esta sección",
+            "description": "En breve vas a poder contactarnos desde acá con canales oficiales y un formulario directo. Mientras tanto, agradecemos tu paciencia.",
+            "note": "Si necesitás comunicarte con nosotros con urgencia, escribinos a nuestro email corporativo.",
+            "ctaLabel": "Volver al inicio",
+            "ctaHref": "/"
         }
     },
     "footer": {

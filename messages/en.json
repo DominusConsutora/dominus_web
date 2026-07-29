@@ -417,6 +417,14 @@
             "eyebrow": "Write to us",
             "title": "Briefly tell us about your project",
             "description": "The more context you share — institution, project stage, timeline — the more precise our answer will be."
+        },
+        "underConstruction": {
+            "eyebrow": "Site under construction",
+            "title": "We're working on this section",
+            "description": "Soon you'll be able to reach us from here with official channels and a direct contact form. Thanks for your patience in the meantime.",
+            "note": "If you need to get in touch urgently, please write to our corporate email.",
+            "ctaLabel": "Back to home",
+            "ctaHref": "/"
         }
     },
     "footer": {
