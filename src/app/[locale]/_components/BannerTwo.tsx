@@ -48,7 +48,7 @@ export default function BannerTwo() {
 
   return (
     <div
-      className="slider-area banner-two-shape-control tmp-slider-style-1 with-bg-tin bg-transparent height-850 position-relative dominus-hero-bg"
+      className="slider-area banner-two-shape-control tmp-slider-style-1 with-bg-tin bg-transparent height-850 position-relative dominus-hero-bg dominus-home-hero"
       style={{
         zIndex: 1,
         backgroundImage: "url('/assets/images/shape/headers_01.png')",
@@ -61,7 +61,8 @@ export default function BannerTwo() {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="inner text-center">
+            <div className="inner dominus-hero-content">
+              <p className="dominus-hero-eyebrow">{t("eyebrow")}</p>
               <h1 className="title display-two w-700 mt--20 mb--20">
                 <span>{t("titleStatic")}</span>
                 <br />
@@ -106,7 +107,7 @@ export default function BannerTwo() {
                 </span>
               </h1>
 
-              <p className="description b1 tmp-title-split-p">
+              <p className="description b1 tmp-title-split-p dominus-hero-description">
                 {t("descriptionLine1")}
                 <br />
                 {t("descriptionLine2")}
@@ -114,7 +115,7 @@ export default function BannerTwo() {
 
               <div className="button-group">
                 <Link
-                  className="tmp-btn round hover-icon-reverse"
+                  className="tmp-btn round hover-icon-reverse dominus-hero-primary"
                   href="/nosotros"
                 >
                   <span className="icon-reverse-wrapper">
@@ -129,7 +130,7 @@ export default function BannerTwo() {
                 </Link>
 
                 <Link
-                  className="tmp-btn btn-border round hover-icon-reverse"
+                  className="tmp-btn round hover-icon-reverse dominus-hero-primary"
                   href="/servicios"
                 >
                   <span className="icon-reverse-wrapper">

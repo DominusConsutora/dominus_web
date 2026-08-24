@@ -26,6 +26,7 @@
         }
     },
     "hero": {
+        "eyebrow": "Consultoría portuaria estratégica",
         "titleStatic": "Consultoría integral para el",
         "titleWord": "desarrollo",
         "rotatingWords": [
@@ -49,10 +50,10 @@
         "subtitleText": "Consultoría portuaria estratégica",
         "title": "Un equipo con oficio portuario, pensando el largo plazo",
         "description": "En DOMINUS acompañamos a autoridades portuarias y operadores portuarios en las decisiones que definen el futuro de sus puertos: planes maestros, concesiones, gobernanza, transformación digital y estrategia de sostenibilidad.",
-        "feature1Title": "Del diagnóstico a la implementación",
-        "feature1Text": "No entregamos informes que quedan en un cajón. Cada proyecto incluye hoja de ruta con etapas, responsables y presupuesto.",
-        "feature2Title": "Visión global, ejecución local",
-        "feature2Text": "Trabajamos con alcance mundial, integrando buenas prácticas internacionales con la realidad institucional y operativa de cada plaza.",
+        "feature1Title": "Del diagnóstico a la ejecución",
+        "feature1Text": "Convertimos el análisis en decisiones concretas, con una hoja de ruta que define etapas, responsables, inversión y próximos pasos para cada proyecto.",
+        "feature2Title": "Visión global, criterio local",
+        "feature2Text": "Integramos experiencia internacional con el contexto institucional y operativo de cada puerto para diseñar soluciones aplicables y sostenibles.",
         "cta": "Conocé más sobre nosotros"
     },
     "differentiators": {

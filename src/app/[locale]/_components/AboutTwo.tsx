@@ -1,8 +1,5 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslations } from "next-intl";
 
 /**
@@ -13,75 +10,25 @@ import { useTranslations } from "next-intl";
  */
 export default function AboutTwo() {
     const t = useTranslations("about");
-    const floatRef = useRef<HTMLDivElement | null>(null);
-
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        let floatTween: gsap.core.Tween | undefined;
-
-        if (floatRef.current) {
-            gsap.killTweensOf(floatRef.current);
-            floatTween = gsap.fromTo(
-                floatRef.current,
-                { x: 0 },
-                {
-                    x: -150,
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: floatRef.current,
-                        start: "top bottom",
-                        end: "bottom top",
-                        scrub: 2,
-                    },
-                }
-            );
-        }
-
-        return () => {
-            floatTween?.scrollTrigger?.kill();
-            floatTween?.kill();
-        };
-    }, []);
 
     return (
         <>
             {/* Start About Area  */}
-            <div className="about-area about-style-4 tmp-section-gap">
+            <div className="about-area about-style-4 tmp-section-gap dominus-home-about">
                 <div className="container">
-                    <div className="row row--5 align-items-center">
-                        <div className="col-lg-7 pr--40 pr_sm--0">
+                    <div className="row row--5 align-items-start dominus-about-columns">
+                        <div className="col-lg-4 pr--40 pr_sm--0">
                             <div className="about-2-thumbnail-left-wrapper">
-                                <div className="single-thumbnail invers-anime">
+                                <div className="single-thumbnail">
                                     <img
                                         loading="lazy"
                                         src="/assets/images/about/01.webp"
                                         alt={t("imgAlt1")}
                                     />
                                 </div>
-                                <div className="single-thumbnail invers-anime mt--80">
-                                    <img
-                                        loading="lazy"
-                                        src="/assets/images/about/02.webp"
-                                        alt={t("imgAlt2")}
-                                    />
-                                </div>
-                                <div
-                                    ref={floatRef}
-                                    className="absolute-rating-area images-left-right-float image"
-                                >
-                                    <div className="stars-area">
-                                        <i className="feather-anchor" style={{ fontSize: "28px", color: "#ffffff" }} />
-                                        <span>&nbsp;{t("badgeTitle")}</span>
-                                    </div>
-                                    <p>
-                                        {t("badgeLine1")}{" "}
-                                        <br />
-                                        {t("badgeLine2")}
-                                    </p>
-                                </div>
                             </div>
                         </div>
-                        <div className="col-lg-5 mt_md--40 mt_sm--40">
+                        <div className="col-lg-8 mt_md--50 mt_sm--50">
                             <div className="content">
                                 <div className="inner">
                                     <div className="tmp-section-title-border text-start hero__sub-title">
@@ -95,16 +42,18 @@ export default function AboutTwo() {
                                             <div className="line-separator" />
                                         </div>
                                     </div>
-                                    <h2 className="title w-700 tmp-title-split">
-                                        {t("title")}
-                                    </h2>
-                                    <p className="description b1 tmp-title-split-p">
-                                        {t("description")}
-                                    </p>
-                                    <ul className="feature-list">
+                                    <div className="dominus-about-intro-row">
+                                        <h2 className="title w-700">
+                                            {t("title")}
+                                        </h2>
+                                        <p className="description b1">
+                                            {t("description")}
+                                        </p>
+                                    </div>
+                            <ul className="feature-list">
                                         <li>
                                             <div className="icon">
-                                                <i className="feather-check" />
+                                                <i className="feather-anchor" aria-hidden="true" />
                                             </div>
                                             <div className="title-wrapper">
                                                 <h4 className="title">
@@ -117,7 +66,7 @@ export default function AboutTwo() {
                                         </li>
                                         <li>
                                             <div className="icon">
-                                                <i className="feather-check" />
+                                                <i className="feather-anchor" aria-hidden="true" />
                                             </div>
                                             <div className="title-wrapper">
                                                 <h4 className="title">
@@ -128,7 +77,7 @@ export default function AboutTwo() {
                                                 </p>
                                             </div>
                                         </li>
-                                    </ul>
+                            </ul>
                                     <div className="about-btn mt--30">
                                         <Link
                                             className="tmp-btn round text-center"

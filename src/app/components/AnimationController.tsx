@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, type RefObject } from "react";
+import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import AOS from "aos";
 import Lenis from "lenis";
@@ -25,12 +25,6 @@ const SCROLL_LOCK_SELECTORS = {
   "react-video-popup-open": [".react-video-popup"],
   "next-light-gallery-open": [".next-light-gallery"],
 } satisfies Record<(typeof SCROLL_LOCK_BODY_CLASSES)[number], string[]>;
-
-function isHoverTarget(target: EventTarget | null) {
-  return target instanceof Element
-    ? target.closest("a, button, .cursor-pointer")
-    : null;
-}
 
 function hasActiveScrollLockTarget(className: (typeof SCROLL_LOCK_BODY_CLASSES)[number]) {
   return SCROLL_LOCK_SELECTORS[className].some((selector) => document.querySelector(selector));
@@ -259,70 +253,13 @@ function useFloatingImagesController(pathname: string) {
   }, [pathname]);
 }
 
-function useCursorController(
-  innerRef: RefObject<HTMLDivElement | null>,
-  outerRef: RefObject<HTMLDivElement | null>,
-) {
-  useEffect(() => {
-    const inner = innerRef.current;
-    const outer = outerRef.current;
-
-    if (!inner || !outer) return;
-
-    const moveCursor = (event: MouseEvent) => {
-      const transform = `translate(${event.clientX}px, ${event.clientY}px)`;
-
-      inner.style.transform = transform;
-      outer.style.transform = transform;
-    };
-
-    const addHover = (event: MouseEvent) => {
-      if (!isHoverTarget(event.target)) return;
-
-      inner.classList.add("cursor-hover");
-      outer.classList.add("cursor-hover");
-    };
-
-    const removeHover = (event: MouseEvent) => {
-      const leavingTarget = isHoverTarget(event.target);
-      const enteringTarget = isHoverTarget(event.relatedTarget);
-
-      if (!leavingTarget || enteringTarget) return;
-
-      inner.classList.remove("cursor-hover");
-      outer.classList.remove("cursor-hover");
-    };
-
-    inner.style.visibility = "visible";
-    outer.style.visibility = "visible";
-
-    window.addEventListener("mousemove", moveCursor);
-    document.body.addEventListener("mouseover", addHover);
-    document.body.addEventListener("mouseout", removeHover);
-
-    return () => {
-      window.removeEventListener("mousemove", moveCursor);
-      document.body.removeEventListener("mouseover", addHover);
-      document.body.removeEventListener("mouseout", removeHover);
-    };
-  }, [innerRef, outerRef]);
-}
-
 export default function AnimationController() {
   const pathname = usePathname();
-  const innerRef = useRef<HTMLDivElement | null>(null);
-  const outerRef = useRef<HTMLDivElement | null>(null);
 
   useAosController(pathname);
   useLenisController(pathname);
   useTmpHoverController();
   useFloatingImagesController(pathname);
-  useCursorController(innerRef, outerRef);
 
-  return (
-    <>
-      <div ref={innerRef} className="mouse-cursor cursor-inner" />
-      <div ref={outerRef} className="mouse-cursor cursor-outer" />
-    </>
-  );
+  return null;
 }

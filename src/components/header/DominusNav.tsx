@@ -23,7 +23,7 @@ interface DominusNavProps {
 export default function DominusNav({ active = 'home' }: DominusNavProps) {
   const t = useTranslations('nav')
   return (
-    <nav className="mainmenu-nav d-none d-lg-block ms-auto" data-lenis-prevent-wheel="">
+    <nav className="mainmenu-nav dominus-main-nav d-none d-lg-block ms-auto" data-lenis-prevent-wheel="">
       <ul className="mainmenu">
         <li className={active === 'home' ? 'active' : ''}>
           <Link href="/">{t('home')}</Link>

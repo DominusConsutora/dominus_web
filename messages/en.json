@@ -26,6 +26,7 @@
         }
     },
     "hero": {
+        "eyebrow": "Strategic port consulting",
         "titleStatic": "Comprehensive consulting for",
         "titleWord": "port development ",
         "rotatingWords": [
@@ -49,10 +50,10 @@
         "subtitleText": "Strategic port consulting",
         "title": "A team with port craft, thinking long-term",
         "description": "At DOMINUS we support port authorities and port operators in the decisions that shape the future of their ports: master plans, concessions, governance, digital transformation and sustainability strategy.",
-        "feature1Title": "From diagnosis to implementation",
-        "feature1Text": "We don't deliver reports that end up in a drawer. Every project includes a roadmap with stages, owners and budget.",
-        "feature2Title": "Global vision, local execution",
-        "feature2Text": "We work with worldwide scope, blending international best practices with the institutional and operational reality of each market.",
+        "feature1Title": "From diagnosis to execution",
+        "feature1Text": "We turn analysis into clear decisions, with a roadmap defining stages, owners, investment and the next steps for each project.",
+        "feature2Title": "Global vision, local judgment",
+        "feature2Text": "We combine international experience with each port's institutional and operational context to design practical, sustainable solutions.",
         "cta": "Learn more about us"
     },
     "differentiators": {
