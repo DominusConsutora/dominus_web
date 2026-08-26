@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { useTitleSplitAnimation } from "../../components/useTitleSplitAnimation";
 
 /**
  * Servicios DOMINUS — grid con los 8 servicios de consultoría portuaria.
@@ -28,12 +27,11 @@ const servicios: Servicio[] = [
 
 function ServiceTwo() {
     const t = useTranslations("services");
-    useTitleSplitAnimation();
 
     return (
         <>
             {/* Servicios area start */}
-            <div className="tmp-service-area tmp-section-gapBottom">
+            <div className="tmp-service-area tmp-section-gapBottom dominus-services-simple">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -48,11 +46,11 @@ function ServiceTwo() {
                                     </span>
                                     <div className="line-separator line-right" />
                                 </div>
-                                <h2 className="title w-700 tmp-title-split">
+                                <h2 className="title w-700">
                                     {t("titleLine1")} <br />
                                     {t("titleLine2")}
                                 </h2>
-                                <p className="description b1 tmp-title-split-p">
+                                <p className="description b1">
                                     {t("descriptionLine1")}
                                     <br />
                                     {t("descriptionLine2")}
@@ -68,18 +66,14 @@ function ServiceTwo() {
                                 <div
                                     key={s.slug}
                                     className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12"
-                                    data-aos="slide-up"
-                                    data-aos-duration="700"
-                                    data-aos-delay={(index % 4) * 100}
                                 >
-                                    <div className="service service__style--1 bg-color-card radius text-start tmp-border-none tmponhover">
+                                    <div className="service service__style--1 bg-color-card radius text-start tmp-border-none dominus-service-card-static">
+                                        <span className="dominus-service-card-index">
+                                            {(index + 1).toString().padStart(2, "0")}
+                                        </span>
                                         <div className="icon">
                                             <i
                                                 className={s.icon}
-                                                style={{
-                                                    fontSize: "44px",
-                                                    color: "#ffffff",
-                                                }}
                                             />
                                         </div>
                                         <div className="content">
@@ -91,18 +85,11 @@ function ServiceTwo() {
                                             <p className="description mb--0">{description}</p>
                                             <div className="discover-btn mt--20">
                                                 <Link
-                                                    className="tmp-btn round btn-small btn-border hover-icon-reverse"
+                                                    className="dominus-service-card-link"
                                                     href={`/servicios/${s.slug}`}
                                                 >
-                                                    <span className="icon-reverse-wrapper">
-                                                        <span className="btn-text">{t("detailCta")}</span>
-                                                        <span className="btn-icon">
-                                                            <i className="feather-arrow-right" />
-                                                        </span>
-                                                        <span className="btn-icon">
-                                                            <i className="feather-arrow-right" />
-                                                        </span>
-                                                    </span>
+                                                    {t("detailCta")}
+                                                    <i className="feather-arrow-right" />
                                                 </Link>
                                             </div>
                                         </div>
@@ -114,18 +101,10 @@ function ServiceTwo() {
                     <div className="row mt--40">
                         <div className="col-lg-12 text-center">
                             <Link
-                                className="tmp-btn btn-large round hover-icon-reverse"
+                                className="tmp-btn btn-large round"
                                 href="/servicios"
                             >
-                                <span className="icon-reverse-wrapper">
-                                    <span className="btn-text">{t("allCta")}</span>
-                                    <span className="btn-icon">
-                                        <i className="feather-arrow-right" />
-                                    </span>
-                                    <span className="btn-icon">
-                                        <i className="feather-arrow-right" />
-                                    </span>
-                                </span>
+                                <span>{t("allCta")}</span>
                             </Link>
                         </div>
                     </div>

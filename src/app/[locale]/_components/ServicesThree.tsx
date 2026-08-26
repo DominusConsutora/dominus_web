@@ -28,11 +28,11 @@ function ServicesThree() {
     return (
         <>
             {/* Diferenciales area start */}
-            <div className="my-business-service-area tmp-section-gapBottom">
+            <div className="my-business-service-area tmp-section-gapBottom dominus-differentiators">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <div className="title-flex-between">
+                            <div className="title-flex-between dominus-differentiators__head">
                                 <div className="tmp-section-title-border text-start">
                                     <div className="pres-line-separator-wrapper text-start mb--10">
                                         <span className="subtitle">
@@ -47,9 +47,9 @@ function ServicesThree() {
                                         {t("titleLine2")}
                                     </h2>
                                 </div>
-                                <div className="tmp-load-more d-flex justify-content-center">
+                                <div className="tmp-load-more d-flex justify-content-center dominus-differentiators__cta-wrap">
                                     <Link
-                                        className="tmp-btn btn-large hover-icon-reverse"
+                                        className="tmp-btn btn-large hover-icon-reverse dominus-differentiators__cta"
                                         href="/nosotros"
                                     >
                                         <span className="icon-reverse-wrapper">
@@ -66,7 +66,7 @@ function ServicesThree() {
                             </div>
                         </div>
                     </div>
-                    <div className="row g-5 mt--20">
+                    <div className="row g-4 mt--10 dominus-differentiators__list">
                         <div className="col-lg-12">
                             {diferenciales.map((item, index) => {
                                 const isEven = index % 2 === 1;
@@ -75,7 +75,7 @@ function ServicesThree() {
                                 return (
                                     <div
                                         key={item.key}
-                                        className="single-service-list-area"
+                                        className="single-service-list-area dominus-differentiators__item"
                                         data-aos="slide-up"
                                         data-aos-duration="700"
                                         data-aos-delay={100}
@@ -83,10 +83,11 @@ function ServicesThree() {
                                         <div className="row g-5 align-items-center">
                                             {!isEven && (
                                                 <div className="col-lg-6">
-                                                    <div className="thumbnail-service-list invers-anime">
+                                                    <div className="thumbnail-service-list invers-anime dominus-differentiators__thumb-wrap">
                                                         <img
                                                             src={item.thumbnail}
                                                             alt={title}
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>
@@ -98,28 +99,30 @@ function ServicesThree() {
                                                         : "col-lg-6"
                                                 }
                                             >
-                                                <div className="inner-content">
-                                                    <div className="head">
-                                                        <div className="icon">
+                                                <div className="inner-content dominus-differentiator-card">
+                                                    <div className="head dominus-differentiator-card__head">
+                                                        <div className="icon dominus-differentiator-card__icon">
                                                             <i
                                                                 className={item.icon}
-                                                                style={{
-                                                                    fontSize: "36px",
-                                                                    color: "var(--dominus-navy)",
-                                                                }}
                                                             />
                                                         </div>
-                                                        <h6 className="title">{title}</h6>
+                                                        <div className="dominus-differentiator-card__meta">
+                                                            <span className="dominus-differentiator-card__index">
+                                                                {(index + 1).toString().padStart(2, "0")}
+                                                            </span>
+                                                            <h6 className="title">{title}</h6>
+                                                        </div>
                                                     </div>
-                                                    <p className="disc">{description}</p>
+                                                    <p className="disc dominus-differentiator-card__disc">{description}</p>
                                                 </div>
                                             </div>
                                             {isEven && (
                                                 <div className="col-lg-6 order-1 order-lg-2 order-md-1 order-sm-1">
-                                                    <div className="thumbnail-service-list invers-anime">
+                                                    <div className="thumbnail-service-list invers-anime dominus-differentiators__thumb-wrap">
                                                         <img
                                                             src={item.thumbnail}
                                                             alt={title}
+                                                            loading="lazy"
                                                         />
                                                     </div>
                                                 </div>

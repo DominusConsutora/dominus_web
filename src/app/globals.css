@@ -418,6 +418,215 @@ button.tmp-btn:hover {
   font-weight: 500;
 }
 
+/* Home · Consultoria con impacto real (diferenciales)
+ * Enfoque visual: fondo limpio, tarjetas suaves, jerarquia tipografica clara. */
+.dominus-differentiators {
+  position: relative;
+  padding-top: 36px;
+}
+.dominus-differentiators__head {
+  align-items: flex-end;
+  gap: 18px;
+}
+.dominus-differentiators__list {
+  margin-top: 18px;
+}
+.dominus-differentiators__item {
+  margin-bottom: 16px;
+  padding: 20px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 25, 75, 0.08);
+  box-shadow: 0 12px 34px rgba(0, 25, 75, 0.05);
+}
+.dominus-differentiators__thumb-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.dominus-differentiators__thumb-wrap img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.dominus-differentiators__item:hover .dominus-differentiators__thumb-wrap img {
+  transform: scale(1.03);
+}
+.dominus-differentiator-card {
+  padding: 20px 14px;
+}
+.dominus-differentiator-card__head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+.dominus-differentiator-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(0, 25, 75, 0.08);
+  color: var(--dominus-navy);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.dominus-differentiator-card__icon i {
+  font-size: 26px;
+  line-height: 1;
+}
+.dominus-differentiator-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.dominus-differentiator-card__index {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(0, 25, 75, 0.45);
+  font-weight: 600;
+}
+.dominus-differentiator-card .title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.28;
+}
+.dominus-differentiator-card__disc {
+  margin: 0;
+  max-width: 52ch;
+  font-size: 16px;
+  line-height: 1.65;
+}
+.dominus-differentiators__cta {
+  min-width: 220px;
+  justify-content: center;
+}
+@media only screen and (max-width: 991px) {
+  .dominus-differentiators__item {
+    padding: 16px;
+  }
+  .dominus-differentiator-card {
+    padding: 6px 4px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .dominus-differentiators {
+    padding-top: 24px;
+  }
+  .dominus-differentiators__head {
+    align-items: flex-start;
+  }
+  .dominus-differentiator-card .title {
+    font-size: 21px;
+  }
+  .dominus-differentiator-card__disc {
+    font-size: 15px;
+  }
+  .dominus-differentiators__cta-wrap {
+    width: 100%;
+    justify-content: flex-start !important;
+    margin-top: 6px;
+  }
+}
+
+/* Home · Servicios (Consultoria integral)
+ * Opcion 2: mas clara y elegante, con estetica institucional limpia. */
+.dominus-services-simple {
+  position: relative;
+}
+.dominus-services-simple .service-wrapper {
+  margin-top: 16px;
+}
+.dominus-services-simple .dominus-service-card-static {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%) !important;
+  border: 1px solid rgba(0, 25, 75, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(0, 25, 75, 0.04) !important;
+  border-radius: 14px !important;
+  min-height: 100%;
+  padding: 34px 26px 26px;
+  transition: border-color 220ms ease, box-shadow 220ms ease;
+}
+.dominus-services-simple .dominus-service-card-static::before,
+.dominus-services-simple .dominus-service-card-static::after {
+  content: none !important;
+}
+.dominus-services-simple .dominus-service-card-static:hover {
+  transform: none !important;
+  border-color: rgba(0, 25, 75, 0.22) !important;
+  box-shadow: 0 14px 34px rgba(0, 25, 75, 0.07) !important;
+}
+.dominus-services-simple .dominus-service-card-index {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: rgba(0, 25, 75, 0.45);
+}
+.dominus-services-simple .dominus-service-card-static .icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(0, 25, 75, 0.07);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.dominus-services-simple .dominus-service-card-static .icon i {
+  font-size: 24px;
+  color: var(--dominus-navy) !important;
+}
+.dominus-services-simple .dominus-service-card-static .content .title,
+.dominus-services-simple .dominus-service-card-static .content .title a,
+.dominus-services-simple .dominus-service-card-static .content .title a:hover {
+  color: var(--dominus-navy) !important;
+  font-size: 22px;
+  line-height: 1.3;
+}
+.dominus-services-simple .dominus-service-card-static .content .description {
+  color: var(--dominus-body) !important;
+  font-size: 15px;
+  line-height: 1.62;
+}
+.dominus-services-simple .dominus-service-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dominus-navy);
+  border-bottom: 1px solid rgba(0, 25, 75, 0.25);
+  padding-bottom: 2px;
+}
+.dominus-services-simple .dominus-service-card-link i {
+  font-size: 13px;
+}
+.dominus-services-simple .dominus-service-card-link:hover {
+  color: #001233;
+  border-bottom-color: #001233;
+}
+@media only screen and (max-width: 991px) {
+  .dominus-services-simple .dominus-service-card-static {
+    padding: 30px 22px 22px;
+  }
+  .dominus-services-simple .dominus-service-card-static .content .title,
+  .dominus-services-simple .dominus-service-card-static .content .title a,
+  .dominus-services-simple .dominus-service-card-static .content .title a:hover {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .dominus-services-simple .dominus-service-card-static {
+    padding: 26px 20px 20px;
+  }
+}
+
 /* DOMINUS · tarjetas de canal de contacto (página /contacto).
  * Card blanca sobre fondo claro, icono navy dentro de círculo suave, con
  * label + valor + hint + acción opcional. Placeholder de datos en JSON. */
