@@ -1,6 +1,5 @@
 "use client";
 import { useTranslations } from "next-intl";
-import { useTitleSplitAnimation } from "../../../components/useTitleSplitAnimation";
 
 /**
  * Nosotros · Bloque 6 · Ventajas competitivas.
@@ -30,9 +29,8 @@ const advantages: { key: AdvantageKey; icon: string }[] = [
 
 export default function AdvantagesBlock() {
     const t = useTranslations("aboutPage.advantages");
-    useTitleSplitAnimation();
     return (
-        <div className="tmp-section-gapBottom">
+        <div className="tmp-section-gapBottom dominus-about-advantages">
             <div className="container">
                 <div className="dominus-advantages-band">
                     <div className="row justify-content-center">
@@ -47,10 +45,10 @@ export default function AdvantagesBlock() {
                                     </span>
                                     <div className="line-separator line-right" />
                                 </div>
-                                <h2 className="title w-700 tmp-title-split">
+                                <h2 className="title w-700">
                                     {t("title")}
                                 </h2>
-                                <p className="description b1 tmp-title-split-p">
+                                <p className="description b1">
                                     {t("subtitle")}
                                 </p>
                             </div>
@@ -62,9 +60,6 @@ export default function AdvantagesBlock() {
                             <div
                                 key={a.key}
                                 className="col-lg-6"
-                                data-aos="fade-up"
-                                data-aos-duration="600"
-                                data-aos-delay={(index % 2) * 100}
                             >
                                 <div className="dominus-advantage-row">
                                     <div className="dominus-advantage-icon">

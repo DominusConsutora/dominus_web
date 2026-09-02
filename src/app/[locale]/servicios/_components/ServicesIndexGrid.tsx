@@ -32,7 +32,7 @@ export default function ServicesIndexGrid() {
     useTitleSplitAnimation();
 
     return (
-        <div className="tmp-service-area tmp-section-gap">
+        <div className="tmp-service-area tmp-section-gap dominus-services-simple">
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-lg-9 text-center">
@@ -64,12 +64,9 @@ export default function ServicesIndexGrid() {
                                 data-aos-duration="700"
                                 data-aos-delay={(index % 4) * 100}
                             >
-                                <div className="service service__style--1 bg-color-card radius text-start tmp-border-none tmponhover">
+                                <div className="service service__style--1 bg-color-card radius text-start tmp-border-none tmponhover dominus-service-card-static">
                                     <div className="icon">
-                                        <i
-                                            className={s.icon}
-                                            style={{ fontSize: "44px", color: "#ffffff" }}
-                                        />
+                                            <i className={s.icon} />
                                     </div>
                                     <div className="content">
                                         <h4 className="title w-600">

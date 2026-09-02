@@ -1,6 +1,5 @@
 "use client";
 import { useTranslations } from "next-intl";
-import { useTitleSplitAnimation } from "../../../components/useTitleSplitAnimation";
 
 /**
  * Nosotros · Bloque 5 · Valores.
@@ -27,9 +26,8 @@ const values: { key: ValueKey; icon: string }[] = [
 
 export default function ValuesBlock() {
     const t = useTranslations("aboutPage.values");
-    useTitleSplitAnimation();
     return (
-        <div className="tmp-section-gapBottom">
+        <div className="tmp-section-gapBottom dominus-about-values">
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-lg-9 text-center">
@@ -41,8 +39,8 @@ export default function ValuesBlock() {
                                 </span>
                                 <div className="line-separator line-right" />
                             </div>
-                            <h2 className="title w-700 tmp-title-split">{t("title")}</h2>
-                            <p className="description b1 tmp-title-split-p">
+                            <h2 className="title w-700">{t("title")}</h2>
+                            <p className="description b1">
                                 {t("subtitle")}
                             </p>
                         </div>
@@ -54,16 +52,10 @@ export default function ValuesBlock() {
                         <div
                             key={v.key}
                             className="col-lg-4 col-md-6 col-sm-6 col-12"
-                            data-aos="slide-up"
-                            data-aos-duration="700"
-                            data-aos-delay={(index % 3) * 100}
                         >
-                            <div className="service service__style--1 bg-color-card radius text-start tmp-border-none tmponhover">
+                            <div className="service service__style--1 bg-color-card radius text-start tmp-border-none dominus-about-value-card">
                                 <div className="icon">
-                                    <i
-                                        className={v.icon}
-                                        style={{ fontSize: "44px", color: "#ffffff" }}
-                                    />
+                                    <i className={v.icon} />
                                 </div>
                                 <div className="content">
                                     <h4 className="title w-600">

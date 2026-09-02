@@ -64,19 +64,19 @@
         "items": {
             "oficio": {
                 "title": "Port craft",
-                "description": "Our team was built inside the sector: port authority management, terminal operations and regulation. We don't learn on our clients' projects."
+                "description": "Our team was built inside the sector: port authority management, terminal operations, regulation and infrastructure planning. We understand challenges from boardroom decisions to the quay, speak each organization's language and avoid generic diagnoses. We do not learn on our clients' projects: we bring accumulated experience to demanding decisions."
             },
             "implementable": {
                 "title": "Actionable approach",
-                "description": "We design solutions built to be executed. Every recommendation comes with stages, owners, budget and a risk matrix."
+                "description": "We design solutions meant to be executed, not merely presented. Every recommendation becomes a roadmap with stages, owners, investments, timelines, priorities and a risk matrix. We work alongside our clients' teams so every plan is institutionally, operationally and financially viable, and ready to start from day one."
             },
             "global": {
                 "title": "Global vision",
-                "description": "We work with active worldwide benchmarking, integrating comparative best practices with the institutional reality of each country."
+                "description": "We maintain active benchmarking across ports and terminals in different regions worldwide. We compare governance models, regulatory frameworks, operating standards and investment strategies to identify proven practices. We then adapt them thoughtfully to the institutional, logistics and economic reality of each country and project."
             },
             "independencia": {
                 "title": "Technical independence",
-                "description": "We hold no stake in operating businesses in the sector. Our only product is independent technical judgment for our clients."
+                "description": "We hold no stake in operating businesses in the sector and no interests tied to suppliers, operators or developers. That independence lets us evaluate alternatives objectively, prioritize each client's interests and stand behind technically sound recommendations. Our only product is independent professional judgment for long-term decisions."
             }
         }
     },

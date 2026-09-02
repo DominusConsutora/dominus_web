@@ -1,6 +1,5 @@
 "use client";
 import { useTranslations } from "next-intl";
-import { useTitleSplitAnimation } from "../../../components/useTitleSplitAnimation";
 
 /**
  * Nosotros · Bloque 4 · Cómo trabajamos.
@@ -29,7 +28,6 @@ const principles: { key: PrincipleKey; icon: string }[] = [
 
 export default function MethodBlock() {
     const t = useTranslations("aboutPage.method");
-    useTitleSplitAnimation();
     return (
         <div className="tmp-section-gapBottom">
             <div className="container">
@@ -43,8 +41,8 @@ export default function MethodBlock() {
                                 </span>
                                 <div className="line-separator line-right" />
                             </div>
-                            <h2 className="title w-700 tmp-title-split">{t("title")}</h2>
-                            <p className="description b1 tmp-title-split-p">
+                            <h2 className="title w-700">{t("title")}</h2>
+                            <p className="description b1">
                                 {t("subtitle")}
                             </p>
                         </div>
@@ -56,9 +54,6 @@ export default function MethodBlock() {
                         <div
                             key={p.key}
                             className="col-lg-6"
-                            data-aos="fade-up"
-                            data-aos-duration="600"
-                            data-aos-delay={(index % 2) * 100}
                         >
                             <div className="dominus-principle-row">
                                 <div className="dominus-principle-icon">

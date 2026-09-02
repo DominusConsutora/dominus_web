@@ -21,11 +21,10 @@ import "../globals.css";
 import AnimationController from "../components/AnimationController";
 import BootstrapClient from "../components/BootstrapClient";
 import HeaderPanelManager from "../components/HeaderPanelManager";
-import GlobalFloatingActions from "../components/GlobalFloatingActions";
 import GlobalPreloader from "../components/GlobalPreloader";
 import OnepageBodyClass from "../components/OnepageBodyClass";
-import ReactVideoPopup from "../../components/ReactVideoPopup";
 import NextLightGallery from "../../components/NextLightGallery";
+import ReactVideoPopup from "../../components/ReactVideoPopup";
 
 import { routing } from "../../i18n/routing";
 
@@ -79,7 +78,6 @@ export default async function LocaleLayout({
           <ReactVideoPopup />
           <NextLightGallery />
           {children}
-          <GlobalFloatingActions />
         </NextIntlClientProvider>
       </body>
     </html>

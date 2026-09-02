@@ -64,19 +64,19 @@
         "items": {
             "oficio": {
                 "title": "Oficio portuario",
-                "description": "Nuestro equipo se formó dentro del sector: gestión pública portuaria, operación de terminales y regulación. No aprendemos con el proyecto de cada cliente."
+                "description": "Nuestro equipo se formó dentro del sector: gestión pública portuaria, operación de terminales, regulación y planificación de infraestructura. Conocemos los desafíos desde la toma de decisión hasta el muelle, hablamos el lenguaje de cada organización y evitamos diagnósticos genéricos. No aprendemos con el proyecto de cada cliente: ponemos experiencia acumulada al servicio de decisiones exigentes."
             },
             "implementable": {
                 "title": "Enfoque implementable",
-                "description": "Diseñamos soluciones pensadas para ejecutarse. Cada recomendación viene con etapas, responsables, presupuesto y matriz de riesgos."
+                "description": "Diseñamos soluciones pensadas para ejecutarse, no solo para ser presentadas. Cada recomendación se traduce en una hoja de ruta con etapas, responsables, inversiones, plazos, prioridades y matriz de riesgos. Trabajamos junto a los equipos del cliente para que cada plan sea viable institucional, operativa y financieramente, y pueda ponerse en marcha desde el primer día."
             },
             "global": {
                 "title": "Visión global",
-                "description": "Trabajamos con benchmarking activo a nivel mundial, integrando buenas prácticas comparadas con la realidad institucional de cada país."
+                "description": "Mantenemos un benchmarking activo de puertos y terminales en distintas regiones del mundo. Contrastamos modelos de gobernanza, marcos regulatorios, estándares operativos y estrategias de inversión para identificar prácticas probadas. Luego las adaptamos con criterio a la realidad institucional, logística y económica de cada país y de cada proyecto."
             },
             "independencia": {
                 "title": "Independencia técnica",
-                "description": "No tenemos participación en negocios operativos del sector. Nuestro único producto es criterio técnico independiente para nuestros clientes."
+                "description": "No tenemos participación en negocios operativos del sector ni intereses vinculados a proveedores, operadores o desarrolladores. Esa independencia nos permite evaluar alternativas con objetividad, priorizar el interés de cada cliente y sostener recomendaciones técnicamente fundamentadas. Nuestro único producto es criterio profesional independiente para decisiones de largo plazo."
             }
         }
     },

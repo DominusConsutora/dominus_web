@@ -264,19 +264,14 @@ button.tmp-btn:hover {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 24px 12px;
-  border-radius: 10px;
-  background: #f7f8fb;
+  padding: 22px 12px 19px;
+  border-radius: 8px;
+  background: #ffffff;
   border: 1px solid rgba(0, 25, 75, 0.08);
+  border-bottom: 3px solid var(--dominus-navy);
   text-align: center;
   height: 100%;
-  transition: transform 0.35s ease, box-shadow 0.35s ease,
-    border-color 0.35s ease;
-}
-.dominus-country-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--dominus-navy);
-  box-shadow: 0 12px 24px rgba(0, 25, 75, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 25, 75, 0.04);
 }
 .dominus-country-card .dominus-country-flag {
   font-size: 34px;
@@ -288,12 +283,13 @@ button.tmp-btn:hover {
   font-size: 15px;
 }
 .dominus-country-card--more {
-  background: var(--dominus-navy);
-  border-color: var(--dominus-navy);
+  background: #ffffff;
+  border-style: dashed;
+  border-color: rgba(0, 25, 75, 0.25);
 }
 .dominus-country-card--more .dominus-country-flag,
 .dominus-country-card--more .dominus-country-name {
-  color: #ffffff;
+  color: var(--dominus-navy);
 }
 .dominus-country-card--more .dominus-country-flag i {
   font-size: 30px;
@@ -303,30 +299,29 @@ button.tmp-btn:hover {
 .dominus-principle-row {
   display: flex;
   align-items: flex-start;
-  gap: 18px;
-  padding: 20px 22px;
-  border-radius: 10px;
-  background: #f7f8fb;
+  gap: 14px;
+  padding: 20px 22px 17px;
+  border-radius: 8px;
+  background: #ffffff;
   border: 1px solid rgba(0, 25, 75, 0.06);
+  border-bottom: 3px solid var(--dominus-navy);
+  box-shadow: 0 8px 20px rgba(0, 25, 75, 0.04);
   height: 100%;
 }
 .dominus-principle-icon {
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--dominus-navy);
-  color: #ffffff;
+  width: 28px;
+  color: var(--dominus-navy);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  font-size: 21px;
 }
 .dominus-principle-icon i {
   line-height: 1;
 }
 .dominus-principle-text {
-  color: var(--dominus-body);
+  color: var(--dominus-navy);
   font-size: 16px;
   line-height: 1.55;
   margin: 0;
@@ -334,11 +329,9 @@ button.tmp-btn:hover {
 
 /* Bloque 6 · Ventajas competitivas — banda navy con dos columnas de 4. */
 .dominus-advantages-band {
-  background: var(--dominus-navy);
-  border-radius: 14px;
-  padding: 70px 60px;
-  position: relative;
-  overflow: hidden;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
 }
 @media only screen and (max-width: 767px) {
   .dominus-advantages-band {
@@ -362,8 +355,8 @@ button.tmp-btn:hover {
 .dominus-advantages-band .subtitle,
 .dominus-advantages-band .subtitle .subtitle-text,
 .dominus-advantages-band .dominus-advantage-text {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
+  color: var(--dominus-navy) !important;
+  -webkit-text-fill-color: var(--dominus-navy) !important;
 }
 .dominus-advantages-band .title,
 .dominus-advantages-band .title .char,
@@ -377,7 +370,7 @@ button.tmp-btn:hover {
   background-clip: border-box !important;
 }
 .dominus-advantages-band .pres-line-separator-wrapper .line-separator {
-  background: rgba(255, 255, 255, 0.5) !important;
+  background: rgba(0, 25, 75, 0.3) !important;
 }
 /* El icono de cada ventaja va sobre círculo blanco → mantener color navy. */
 .dominus-advantages-band .dominus-advantage-icon,
@@ -388,19 +381,18 @@ button.tmp-btn:hover {
 .dominus-advantage-row {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 18px 20px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  gap: 14px;
+  padding: 18px 20px 15px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 25, 75, 0.08);
+  border-bottom: 3px solid var(--dominus-navy);
+  box-shadow: 0 8px 20px rgba(0, 25, 75, 0.04);
   height: 100%;
 }
 .dominus-advantage-icon {
   flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #ffffff;
+  width: 28px;
   color: var(--dominus-navy);
   display: inline-flex;
   align-items: center;
@@ -411,11 +403,472 @@ button.tmp-btn:hover {
   line-height: 1;
 }
 .dominus-advantage-text {
-  color: #ffffff;
+  color: var(--dominus-navy);
   font-size: 15px;
   line-height: 1.5;
   margin: 0;
   font-weight: 500;
+}
+
+/* Fundador · perfil ejecutivo y trayectoria. */
+.dominus-founder__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.35fr);
+  gap: 44px 64px;
+  padding: 48px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 25, 75, 0.1);
+  border-bottom: 4px solid var(--dominus-navy);
+  box-shadow: 0 10px 28px rgba(0, 25, 75, 0.04);
+}
+.dominus-founder__photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 28px;
+  border: 1px dashed rgba(0, 25, 75, 0.3);
+  background: #f6f9fd;
+  color: rgba(0, 25, 75, 0.55);
+}
+.dominus-founder__photo-placeholder i {
+  font-size: 32px;
+}
+.dominus-founder__photo-placeholder span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.dominus-founder__eyebrow,
+.dominus-founder-detail__heading > span {
+  display: block;
+  margin-bottom: 12px;
+  color: rgba(0, 25, 75, 0.55);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.dominus-founder__intro .title {
+  margin: 0 0 12px;
+  color: var(--dominus-navy);
+  font-size: 38px;
+  line-height: 1.1;
+}
+.dominus-founder__role {
+  margin: 0;
+  color: var(--dominus-navy);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.dominus-founder__profile p {
+  margin: 0 0 16px;
+  color: var(--dominus-body);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.dominus-founder__profile {
+  align-self: center;
+  padding-left: 44px;
+  border-left: 1px solid rgba(0, 25, 75, 0.12);
+}
+.dominus-founder__link,
+.dominus-founder-detail__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 10px;
+  padding-bottom: 3px;
+  color: var(--dominus-navy);
+  border-bottom: 1px solid rgba(0, 25, 75, 0.35);
+  font-size: 14px;
+  font-weight: 700;
+}
+.dominus-founder__link i,
+.dominus-founder-detail__back i {
+  font-size: 16px;
+}
+.dominus-founder__inner > .dominus-founder__link {
+  margin: 28px auto 0;
+}
+.dominus-founder__highlights {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(0, 25, 75, 0.1);
+  padding-top: 28px;
+}
+.dominus-founder__highlight {
+  min-height: 76px;
+  padding: 0 24px;
+  border-left: 1px solid rgba(0, 25, 75, 0.1);
+}
+.dominus-founder__highlight:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+.dominus-founder__highlight strong,
+.dominus-founder__highlight span {
+  display: block;
+}
+.dominus-founder__highlight strong {
+  color: var(--dominus-navy);
+  font-size: 28px;
+  line-height: 1;
+}
+.dominus-founder__highlight span {
+  margin-top: 8px;
+  color: var(--dominus-body);
+  font-size: 13px;
+  line-height: 1.4;
+}
+/* Tarjeta de fundador: identidad, perfil y dimensión institucional. */
+.dominus-founder__inner {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+.dominus-founder__identity {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  gap: 44px;
+  align-items: center;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(0, 25, 75, 0.12);
+}
+.dominus-founder__identity .dominus-founder__photo-placeholder {
+  margin-bottom: 0;
+}
+.dominus-founder__profile {
+  align-self: auto;
+  padding: 30px 0 32px;
+  border-left: 0;
+}
+.dominus-founder__profile p {
+  max-width: 1020px;
+}
+.dominus-founder__dimensions {
+  padding-top: 28px;
+  border-top: 1px solid rgba(0, 25, 75, 0.12);
+}
+.dominus-founder__dimensions h3 {
+  margin: 0 0 18px;
+  color: var(--dominus-navy);
+  font-size: 15px;
+  font-weight: 700;
+}
+.dominus-founder__dimensions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid rgba(0, 25, 75, 0.1);
+  border-left: 1px solid rgba(0, 25, 75, 0.1);
+}
+.dominus-founder__dimension {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  border-right: 1px solid rgba(0, 25, 75, 0.1);
+  border-bottom: 1px solid rgba(0, 25, 75, 0.1);
+}
+.dominus-founder__dimension span {
+  color: var(--dominus-navy);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+/* Ajuste visual: contenido centrado y dimensión institucional sin retícula. */
+.dominus-founder__identity {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+}
+.dominus-founder__intro {
+  text-align: center;
+}
+.dominus-founder__profile {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+.dominus-founder__profile p {
+  margin-right: auto;
+  margin-left: auto;
+}
+.dominus-founder__dimensions {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.dominus-founder__dimensions h3 {
+  text-align: center;
+}
+.dominus-founder__dimensions-grid {
+  gap: 12px;
+  border: 0;
+}
+.dominus-founder__dimension {
+  justify-content: center;
+  gap: 10px;
+  min-height: 62px;
+  padding: 12px 16px;
+  border: 0;
+  background: rgba(0, 25, 75, 0.045);
+}
+.dominus-founder__dimension i {
+  flex-shrink: 0;
+  color: var(--dominus-navy);
+  font-size: 18px;
+}
+.dominus-founder-detail {
+  background: #f6f9fd;
+}
+.dominus-founder-detail__back {
+  margin-bottom: 44px;
+}
+.dominus-founder-detail__heading {
+  max-width: 780px;
+  padding-bottom: 42px;
+  border-bottom: 1px solid rgba(0, 25, 75, 0.14);
+}
+.dominus-founder-detail__heading h1,
+.dominus-founder-detail__heading p,
+.dominus-founder-detail h2,
+.dominus-founder-detail h3 {
+  color: var(--dominus-navy);
+}
+.dominus-founder-detail__heading h1 {
+  margin: 0 0 14px;
+  font-size: 48px;
+  line-height: 1.08;
+}
+.dominus-founder-detail__heading p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.55;
+}
+.dominus-founder-detail__grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.6fr) minmax(0, 1.4fr);
+  gap: 64px;
+  padding-top: 48px;
+}
+.dominus-founder-detail h2 {
+  margin: 0 0 20px;
+  font-size: 21px;
+}
+.dominus-founder-detail aside {
+  padding-right: 36px;
+  border-right: 1px solid rgba(0, 25, 75, 0.14);
+}
+.dominus-founder-detail__photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 24px;
+  border: 1px dashed rgba(0, 25, 75, 0.3);
+  background: #ffffff;
+  color: rgba(0, 25, 75, 0.55);
+}
+.dominus-founder-detail__photo-placeholder i {
+  font-size: 36px;
+}
+.dominus-founder-detail__photo-placeholder span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.dominus-founder-detail aside ul {
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+.dominus-founder-detail aside li,
+.dominus-founder-detail aside p,
+.dominus-founder-detail__grid > div > p,
+.dominus-founder-detail__timeline p {
+  color: var(--dominus-body);
+  font-size: 15px;
+  line-height: 1.65;
+}
+.dominus-founder-detail aside li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0, 25, 75, 0.08);
+}
+.dominus-founder-detail aside h2 {
+  margin-bottom: 14px;
+}
+.dominus-founder-detail aside p {
+  margin: 0 0 18px;
+}
+.dominus-founder-detail__timeline article {
+  padding: 0 0 26px 20px;
+  margin-bottom: 26px;
+  border-left: 3px solid var(--dominus-navy);
+}
+.dominus-founder-detail__timeline article > span {
+  color: rgba(0, 25, 75, 0.56);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.dominus-founder-detail__timeline h3 {
+  margin: 6px 0 8px;
+  font-size: 20px;
+  line-height: 1.3;
+}
+.dominus-founder-detail__timeline p {
+  margin: 0;
+}
+.dominus-founder-detail__projects {
+  margin-top: 54px;
+  padding-top: 44px;
+  border-top: 1px solid rgba(0, 25, 75, 0.14);
+}
+.dominus-founder-detail__projects-intro {
+  margin: -10px 0 24px;
+  color: var(--dominus-body);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.dominus-founder-detail__projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.dominus-founder-detail__projects-grid article {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 22px 20px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 25, 75, 0.1);
+  border-bottom: 4px solid var(--dominus-navy);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 25, 75, 0.04);
+}
+.dominus-founder-detail__projects-grid article > span {
+  color: rgba(0, 25, 75, 0.55);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.dominus-founder-detail__projects-grid h3 {
+  margin: 10px 0 12px;
+  font-size: 19px;
+  line-height: 1.3;
+}
+.dominus-founder-detail__projects-grid p {
+  margin: 0 0 12px;
+  color: var(--dominus-body);
+  font-size: 14px;
+  line-height: 1.62;
+}
+.dominus-founder-detail__projects-grid p:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 991px) {
+  .dominus-founder__inner,
+  .dominus-founder-detail__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .dominus-founder__profile {
+    align-self: auto;
+    padding-left: 0;
+    border-left: 0;
+  }
+  .dominus-founder__dimensions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .dominus-founder-detail aside {
+    padding-right: 0;
+    border-right: 0;
+  }
+  .dominus-founder-detail__projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .dominus-founder__identity {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .dominus-founder__dimensions-grid {
+    grid-template-columns: 1fr;
+  }
+  .dominus-founder__inner {
+    padding: 32px 24px;
+  }
+  .dominus-founder__intro .title {
+    font-size: 32px;
+  }
+  .dominus-founder__highlights {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 0;
+  }
+  .dominus-founder__highlight:nth-child(3) {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .dominus-founder-detail__heading h1 {
+    font-size: 38px;
+  }
+}
+
+/* Bloque 5 · Valores: versión clara, alineada con las tarjetas de Servicios. */
+.dominus-about-values .service.service__style--1.bg-color-card.dominus-about-value-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 28px 24px 22px;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 25, 75, 0.1) !important;
+  border-bottom: 4px solid var(--dominus-navy) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 20px rgba(0, 25, 75, 0.04) !important;
+  transition: none;
+}
+.dominus-about-values .domin​​us-about-value-card .icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background: rgba(0, 25, 75, 0.07);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.dominus-about-values .domin​​us-about-value-card .icon i,
+.dominus-about-values .domin​​us-about-value-card .content .title,
+.dominus-about-values .domin​​us-about-value-card .content .title a {
+  color: var(--dominus-navy) !important;
+}
+.dominus-about-values .domin​​us-about-value-card .icon i {
+  font-size: 22px;
+}
+.dominus-about-values .domin​​us-about-value-card .content .description {
+  color: var(--dominus-body) !important;
+}
+.dominus-about-values .service.service__style--1.bg-color-card.dominus-about-value-card .icon,
+.dominus-about-values .service.service__style--1.bg-color-card.dominus-about-value-card .icon i,
+.dominus-about-values .service.service__style--1.bg-color-card.dominus-about-value-card .content .title,
+.dominus-about-values .service.service__style--1.bg-color-card.dominus-about-value-card .content .title a {
+  color: var(--dominus-navy) !important;
+}
+.dominus-about-values .service.service__style--1.bg-color-card.dominus-about-value-card .content .description,
+.dominus-about-values .service.service__style--1.bg-color-card.dominus-about-value-card .content p {
+  color: var(--dominus-body) !important;
 }
 
 /* Home · Consultoria con impacto real (diferenciales)
@@ -432,12 +885,12 @@ button.tmp-btn:hover {
   margin-top: 18px;
 }
 .dominus-differentiators__item {
-  margin-bottom: 16px;
-  padding: 20px;
-  border-radius: 14px;
+  margin-bottom: 20px;
+  padding: 18px;
+  border-radius: 10px;
   background: #ffffff;
   border: 1px solid rgba(0, 25, 75, 0.08);
-  box-shadow: 0 12px 34px rgba(0, 25, 75, 0.05);
+  box-shadow: 0 10px 28px rgba(0, 25, 75, 0.05);
 }
 .dominus-differentiators__thumb-wrap {
   border-radius: 10px;
@@ -453,51 +906,40 @@ button.tmp-btn:hover {
   transform: scale(1.03);
 }
 .dominus-differentiator-card {
-  padding: 20px 14px;
+  max-width: 100%;
+  padding: 18px 24px;
+}
+.dominus-differentiators .single-service-list-area .inner-content {
+  max-width: 100%;
 }
 .dominus-differentiator-card__head {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 10px;
-}
-.dominus-differentiator-card__icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: rgba(0, 25, 75, 0.08);
-  color: var(--dominus-navy);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.dominus-differentiator-card__icon i {
-  font-size: 26px;
-  line-height: 1;
+  align-items: flex-start;
+  margin-bottom: 8px;
 }
 .dominus-differentiator-card__meta {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 .dominus-differentiator-card__index {
   font-size: 12px;
   letter-spacing: 1px;
+  line-height: 1;
   text-transform: uppercase;
   color: rgba(0, 25, 75, 0.45);
   font-weight: 600;
 }
 .dominus-differentiator-card .title {
   margin: 0;
-  font-size: 24px;
-  line-height: 1.28;
+  font-size: 22px;
+  line-height: 1.3;
 }
 .dominus-differentiator-card__disc {
   margin: 0;
   max-width: 52ch;
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 15px;
+  line-height: 1.7;
 }
 .dominus-differentiators__cta {
   min-width: 220px;
@@ -508,7 +950,7 @@ button.tmp-btn:hover {
     padding: 16px;
   }
   .dominus-differentiator-card {
-    padding: 6px 4px;
+    padding: 12px 6px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -539,15 +981,34 @@ button.tmp-btn:hover {
 .dominus-services-simple .service-wrapper {
   margin-top: 16px;
 }
-.dominus-services-simple .dominus-service-card-static {
+.dominus-services-simple .service.service__style--1.bg-color-card.dominus-service-card-static {
   position: relative;
-  background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%) !important;
+  display: flex !important;
+  flex-direction: column;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f9fd 100%) !important;
+  color: var(--dominus-navy) !important;
   border: 1px solid rgba(0, 25, 75, 0.1) !important;
+  border-bottom: 4px solid var(--dominus-navy) !important;
   box-shadow: 0 10px 30px rgba(0, 25, 75, 0.04) !important;
   border-radius: 14px !important;
   min-height: 100%;
   padding: 34px 26px 26px;
   transition: border-color 220ms ease, box-shadow 220ms ease;
+}
+.dominus-services-simple .service.service__style--1.bg-color-card.tmponhover::after {
+  background: transparent !important;
+}
+.dominus-services-simple .service.service__style--1.bg-color-card,
+.dominus-services-simple .service.service__style--1.bg-color-card .icon,
+.dominus-services-simple .service.service__style--1.bg-color-card .icon i,
+.dominus-services-simple .service.service__style--1.bg-color-card .content .title,
+.dominus-services-simple .service.service__style--1.bg-color-card .content .title a,
+.dominus-services-simple .service.service__style--1.bg-color-card .content .title a:hover {
+  color: var(--dominus-navy) !important;
+}
+.dominus-services-simple .service.service__style--1.bg-color-card .content .description,
+.dominus-services-simple .service.service__style--1.bg-color-card .content p {
+  color: var(--dominus-body) !important;
 }
 .dominus-services-simple .dominus-service-card-static::before,
 .dominus-services-simple .dominus-service-card-static::after {
@@ -578,9 +1039,17 @@ button.tmp-btn:hover {
   justify-content: center;
   margin-bottom: 16px;
 }
+.dominus-services-simple .service.service__style--1.text-start .icon {
+  justify-content: center !important;
+}
 .dominus-services-simple .dominus-service-card-static .icon i {
   font-size: 24px;
   color: var(--dominus-navy) !important;
+}
+.dominus-services-simple .dominus-service-card-static .content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 .dominus-services-simple .dominus-service-card-static .content .title,
 .dominus-services-simple .dominus-service-card-static .content .title a,
@@ -593,6 +1062,18 @@ button.tmp-btn:hover {
   color: var(--dominus-body) !important;
   font-size: 15px;
   line-height: 1.62;
+}
+.dominus-services-simple .dominus-service-card-static .discover-btn {
+  margin-top: auto !important;
+  padding-top: 20px;
+}
+.dominus-services-simple .dominus-service-card-static .tmp-btn.btn-border {
+  color: var(--dominus-navy) !important;
+  border-color: rgba(0, 25, 75, 0.3) !important;
+}
+.dominus-services-simple .dominus-service-card-static .tmp-btn.btn-border:hover {
+  background: var(--dominus-navy) !important;
+  color: #ffffff !important;
 }
 .dominus-services-simple .dominus-service-card-link {
   display: inline-flex;

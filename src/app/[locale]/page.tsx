@@ -5,7 +5,6 @@ import AboutTwo from "./_components/AboutTwo";
 import ServicesThree from "./_components/ServicesThree";
 import ServiceTwo from "./_components/ServiceTwo";
 import CtaOne from "./_components/CtaOne";
-import ContactOne from "./_components/ContactOne";
 import FooterTwo from "./_components/FooterTwo";
 
 // Componentes comentados hasta tener contenido validado por el cliente:
@@ -24,7 +23,6 @@ export default function HomePage() {
       <ServicesThree />
       <ServiceTwo />
       <CtaOne />
-      <ContactOne />
       <FooterTwo />
     </main>
   );

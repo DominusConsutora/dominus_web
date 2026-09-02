@@ -4,6 +4,7 @@ import FooterTwo from "../_components/FooterTwo";
 import CtaOne from "../_components/CtaOne";
 import HeroAbout from "./_components/HeroAbout";
 import IntroBlock from "./_components/IntroBlock";
+import FounderBlock from "./_components/FounderBlock";
 import ReachBlock from "./_components/ReachBlock";
 import MethodBlock from "./_components/MethodBlock";
 import ValuesBlock from "./_components/ValuesBlock";
@@ -21,6 +22,7 @@ export default function AboutPage() {
             <HeaderTwo />
             <HeroAbout />
             <IntroBlock />
+            <FounderBlock />
             <ReachBlock />
             <MethodBlock />
             <ValuesBlock />

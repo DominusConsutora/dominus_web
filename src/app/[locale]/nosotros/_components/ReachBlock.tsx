@@ -1,6 +1,5 @@
 "use client";
 import { useTranslations } from "next-intl";
-import { useTitleSplitAnimation } from "../../../components/useTitleSplitAnimation";
 
 /**
  * Nosotros · Bloque 3 · Alcance de proyectos.
@@ -36,7 +35,6 @@ const countries: { key: CountryKey; flag: string }[] = [
 
 export default function ReachBlock() {
     const t = useTranslations("aboutPage.reach");
-    useTitleSplitAnimation();
     return (
         <div className="tmp-section-gapBottom">
             <div className="container">
@@ -50,8 +48,8 @@ export default function ReachBlock() {
                                 </span>
                                 <div className="line-separator line-right" />
                             </div>
-                            <h2 className="title w-700 tmp-title-split">{t("title")}</h2>
-                            <p className="description b1 tmp-title-split-p">
+                            <h2 className="title w-700">{t("title")}</h2>
+                            <p className="description b1">
                                 {t("description")}
                             </p>
                         </div>
@@ -63,9 +61,6 @@ export default function ReachBlock() {
                         <div
                             key={c.key}
                             className="col-lg-3 col-md-4 col-sm-6 col-6"
-                            data-aos="fade-up"
-                            data-aos-duration="600"
-                            data-aos-delay={(index % 4) * 80}
                         >
                             <div className="dominus-country-card">
                                 <span className="dominus-country-flag" aria-hidden="true">
@@ -80,9 +75,6 @@ export default function ReachBlock() {
 
                     <div
                         className="col-lg-3 col-md-4 col-sm-6 col-6"
-                        data-aos="fade-up"
-                        data-aos-duration="600"
-                        data-aos-delay={100}
                     >
                         <div className="dominus-country-card dominus-country-card--more">
                             <span className="dominus-country-flag" aria-hidden="true">

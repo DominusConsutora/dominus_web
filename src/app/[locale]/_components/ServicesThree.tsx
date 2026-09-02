@@ -12,15 +12,14 @@ type DiferencialKey = "oficio" | "implementable" | "global" | "independencia";
 
 type Diferencial = {
     key: DiferencialKey;
-    icon: string;        // clase feather (icon set del template)
     thumbnail: string;   // ruta a imagen en public/assets/images/services/list/
 };
 
 const diferenciales: Diferencial[] = [
-    { key: "oficio", icon: "feather-anchor", thumbnail: "/assets/images/services/list/01.webp" },
-    { key: "implementable", icon: "feather-target", thumbnail: "/assets/images/services/list/02.webp" },
-    { key: "global", icon: "feather-globe", thumbnail: "/assets/images/services/list/03.webp" },
-    { key: "independencia", icon: "feather-shield", thumbnail: "/assets/images/services/list/04.webp" },
+    { key: "oficio", thumbnail: "/assets/images/services/list/01.webp" },
+    { key: "implementable", thumbnail: "/assets/images/services/list/02.webp" },
+    { key: "global", thumbnail: "/assets/images/services/list/03.webp" },
+    { key: "independencia", thumbnail: "/assets/images/services/list/04.webp" },
 ];
 
 function ServicesThree() {
@@ -69,7 +68,6 @@ function ServicesThree() {
                     <div className="row g-4 mt--10 dominus-differentiators__list">
                         <div className="col-lg-12">
                             {diferenciales.map((item, index) => {
-                                const isEven = index % 2 === 1;
                                 const title = t(`items.${item.key}.title`);
                                 const description = t(`items.${item.key}.description`);
                                 return (
@@ -81,31 +79,18 @@ function ServicesThree() {
                                         data-aos-delay={100}
                                     >
                                         <div className="row g-5 align-items-center">
-                                            {!isEven && (
-                                                <div className="col-lg-6">
-                                                    <div className="thumbnail-service-list invers-anime dominus-differentiators__thumb-wrap">
-                                                        <img
-                                                            src={item.thumbnail}
-                                                            alt={title}
-                                                            loading="lazy"
-                                                        />
-                                                    </div>
+                                            <div className="col-lg-6">
+                                                <div className="thumbnail-service-list invers-anime dominus-differentiators__thumb-wrap">
+                                                    <img
+                                                        src={item.thumbnail}
+                                                        alt={title}
+                                                        loading="lazy"
+                                                    />
                                                 </div>
-                                            )}
-                                            <div
-                                                className={
-                                                    isEven
-                                                        ? "col-lg-6 order-2 order-lg-1 order-md-2 order-sm-2"
-                                                        : "col-lg-6"
-                                                }
-                                            >
+                                            </div>
+                                            <div className="col-lg-6">
                                                 <div className="inner-content dominus-differentiator-card">
                                                     <div className="head dominus-differentiator-card__head">
-                                                        <div className="icon dominus-differentiator-card__icon">
-                                                            <i
-                                                                className={item.icon}
-                                                            />
-                                                        </div>
                                                         <div className="dominus-differentiator-card__meta">
                                                             <span className="dominus-differentiator-card__index">
                                                                 {(index + 1).toString().padStart(2, "0")}
@@ -116,17 +101,6 @@ function ServicesThree() {
                                                     <p className="disc dominus-differentiator-card__disc">{description}</p>
                                                 </div>
                                             </div>
-                                            {isEven && (
-                                                <div className="col-lg-6 order-1 order-lg-2 order-md-1 order-sm-1">
-                                                    <div className="thumbnail-service-list invers-anime dominus-differentiators__thumb-wrap">
-                                                        <img
-                                                            src={item.thumbnail}
-                                                            alt={title}
-                                                            loading="lazy"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            )}
                                         </div>
                                     </div>
                                 );

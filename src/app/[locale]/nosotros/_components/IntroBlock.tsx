@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { useTitleSplitAnimation } from "../../../components/useTitleSplitAnimation";
 
 /**
  * Nosotros · Bloque 2 · Presentación institucional.
@@ -10,21 +9,20 @@ import { useTitleSplitAnimation } from "../../../components/useTitleSplitAnimati
  */
 export default function IntroBlock() {
     const t = useTranslations("aboutPage.intro");
-    useTitleSplitAnimation();
     return (
         <div className="tmp-about-area tmp-section-gap">
             <div className="container">
                 <div className="row row--5 align-items-center">
                     <div className="col-lg-6 pr--40 pr_sm--0">
                         <div className="about-2-thumbnail-left-wrapper">
-                            <div className="single-thumbnail invers-anime">
+                            <div className="single-thumbnail">
                                 <img
                                     loading="lazy"
                                     src="/assets/images/about/04.webp"
                                     alt={t("imgAlt1")}
                                 />
                             </div>
-                            <div className="single-thumbnail invers-anime mt--80">
+                            <div className="single-thumbnail mt--80">
                                 <img
                                     loading="lazy"
                                     src="/assets/images/about/05.webp"
@@ -46,11 +44,11 @@ export default function IntroBlock() {
                                         <div className="line-separator" />
                                     </div>
                                 </div>
-                                <h2 className="title w-700 tmp-title-split">{t("title")}</h2>
-                                <p className="description b1 tmp-title-split-p">
+                                <h2 className="title w-700">{t("title")}</h2>
+                                <p className="description b1">
                                     {t("paragraph1")}
                                 </p>
-                                <p className="description b1 tmp-title-split-p">
+                                <p className="description b1">
                                     {t("paragraph2")}
                                 </p>
                                 <div className="mt--30">

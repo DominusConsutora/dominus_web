@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { useTitleSplitAnimation } from "../../../components/useTitleSplitAnimation";
 
 /**
  * Nosotros · Bloque 1 · Hero de la página.
@@ -11,7 +10,6 @@ import { useTitleSplitAnimation } from "../../../components/useTitleSplitAnimati
  */
 export default function HeroAbout() {
     const t = useTranslations("aboutPage.hero");
-    useTitleSplitAnimation();
     return (
         <div
             className="dominus-hero-bg position-relative"
@@ -38,11 +36,11 @@ export default function HeroAbout() {
                                 </span>
                                 <div className="line-separator line-right" />
                             </div>
-                            <h1 className="title w-700 tmp-title-split" style={{ color: "#ffffff" }}>
+                            <h1 className="title w-700" style={{ color: "#ffffff" }}>
                                 {t("title")}
                             </h1>
                             <p
-                                className="description b1 tmp-title-split-p mt--20"
+                                className="description b1 mt--20"
                                 style={{ color: "rgba(255,255,255,0.85)" }}
                             >
                                 {t("subtitle")}
