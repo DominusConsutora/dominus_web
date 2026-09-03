@@ -1,6 +1,28 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import HeaderTwo from "../../_components/HeaderTwo";
 import FooterTwo from "../../_components/FooterTwo";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    const { locale } = await params;
+    const isEnglish = locale === "en";
+
+    return {
+        title: isEnglish
+            ? "Diego Salom | Port strategy expert"
+            : "Diego Salom | Experto en estrategia portuaria",
+        description: isEnglish
+            ? "Diego Salom is an expert in port management, strategic planning, governance and institutional strengthening for port authorities and operators."
+            : "Diego Salom es especialista en gestión portuaria, planificación estratégica, gobernanza y fortalecimiento institucional para autoridades y operadores portuarios.",
+        keywords: isEnglish
+            ? ["Diego Salom", "port consultant", "port governance", "port management", "waterways"]
+            : ["Diego Salom", "consultor portuario", "gobernanza portuaria", "gestión portuaria", "vías navegables"],
+    };
+}
 
 const rolesEs = [
     ["2026 - actualidad", "Consultor de UNCTAD en Argentina", "Consultoría en gestión portuaria, logística, vías navegables y fortalecimiento institucional para Naciones Unidas."],
@@ -53,9 +75,12 @@ export default async function DiegoSalomPage({
                     </div>
                     <div className="dominus-founder-detail__grid">
                         <aside>
-                            <div className="dominus-founder-detail__photo-placeholder" aria-label={isEnglish ? "Founder photo placeholder" : "Espacio reservado para foto del fundador"}>
-                                <i className="feather-user" aria-hidden="true" />
-                                <span>{isEnglish ? "No Photo" : "Sin foto"}</span>
+                            <div className="dominus-founder-detail__photo-frame" aria-label={isEnglish ? "Founder photo placeholder" : "Espacio reservado para foto del fundador"}>
+                                <img
+                                    src="/assets/images/founder/diego-salom-perfil.jpg"
+                                    alt={isEnglish ? "Diego Salom" : "Diego Salom"}
+                                    className="dominus-founder-detail__photo"
+                                />
                             </div>
                             <h2>{isEnglish ? "Specialization" : "Especialización"}</h2>
                             <ul>

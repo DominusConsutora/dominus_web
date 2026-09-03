@@ -59,9 +59,12 @@ export default function FounderBlock() {
             <div className="container">
                 <div className="dominus-founder__inner">
                     <div className="dominus-founder__identity">
-                        <div className="dominus-founder__photo-placeholder" aria-label={content.photoAriaLabel}>
-                            <i className="feather-user" aria-hidden="true" />
-                            <span>{content.photoLabel}</span>
+                        <div className="dominus-founder__photo-frame" aria-label={content.photoAriaLabel}>
+                            <img
+                                src="/assets/images/founder/diego-salom.jpg"
+                                alt={content.photoAriaLabel}
+                                className="dominus-founder__photo"
+                            />
                         </div>
                         <div className="dominus-founder__intro">
                             <span className="dominus-founder__eyebrow">{content.eyebrow}</span>

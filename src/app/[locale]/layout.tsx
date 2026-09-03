@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://dominuslogistica.com";
+
 import "../../../public/assets/css/bootstrap.min.css";
 import "../../../public/assets/css/odometer.css";
 import "../../../public/assets/css/animation.css";
@@ -25,6 +27,7 @@ import GlobalPreloader from "../components/GlobalPreloader";
 import OnepageBodyClass from "../components/OnepageBodyClass";
 import NextLightGallery from "../../components/NextLightGallery";
 import ReactVideoPopup from "../../components/ReactVideoPopup";
+import StructuredData from "../../components/StructuredData";
 
 import { routing } from "../../i18n/routing";
 
@@ -35,9 +38,64 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
+  const canonicalPath = locale === "en" ? "/en" : "/es";
+
   return {
-    title: t("title"),
+    metadataBase: new URL(siteUrl),
+    title: {
+      default: t("title"),
+      template: `%s | DOMINUS`,
+    },
     description: t("description"),
+    applicationName: "DOMINUS",
+    keywords: [
+      "puertos",
+      "consultoría portuaria",
+      "desarrollo portuario",
+      "gobernanza portuaria",
+      "terminales",
+      "infraestructura portuaria",
+      "DOMINUS",
+      "port strategy",
+      "port consultancy",
+    ],
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+      },
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        es: "/es",
+        en: "/en",
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: `${siteUrl}${canonicalPath}`,
+      siteName: "DOMINUS",
+      locale,
+      type: "website",
+      images: [
+        {
+          url: "/og-image.svg",
+          width: 1200,
+          height: 630,
+          alt: "DOMINUS · Consultoría en desarrollo portuario",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: ["/og-image.svg"],
+    },
     icons: {
       icon: [
         {
@@ -70,6 +128,7 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body>
         <NextIntlClientProvider>
+          <StructuredData />
           <GlobalPreloader />
           <BootstrapClient />
           <AnimationController />
