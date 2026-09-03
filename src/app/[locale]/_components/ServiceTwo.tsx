@@ -87,6 +87,7 @@ function ServiceTwo() {
                                                 <Link
                                                     className="dominus-service-card-link"
                                                     href={`/servicios/${s.slug}`}
+                                                    aria-label={`${t("detailCta")}: ${title}`}
                                                 >
                                                     {t("detailCta")}
                                                     <i className="feather-arrow-right" />

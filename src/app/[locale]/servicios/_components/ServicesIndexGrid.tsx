@@ -77,6 +77,7 @@ export default function ServicesIndexGrid() {
                                             <Link
                                                 className="tmp-btn round btn-small btn-border hover-icon-reverse"
                                                 href={`/servicios/${s.slug}`}
+                                                aria-label={`${tServices("detailCta")}: ${title}`}
                                             >
                                                 <span className="icon-reverse-wrapper">
                                                     <span className="btn-text">
