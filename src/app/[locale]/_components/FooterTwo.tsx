@@ -102,13 +102,13 @@ function FooterTwo() {
                                         <p className="subtitle">{t("contactPrompt")}</p>
                                         <ul className="social-icon social-default justify-content-start mt--20">
                                             <li>
-                                                <Link href="mailto:contacto@dominus.example">
-                                                    <i className="feather-mail" />
+                                                <Link href="mailto:contacto@dominus.example" aria-label={t("social.email")}>
+                                                    <i className="feather-mail" aria-hidden="true" />
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="https://www.linkedin.com/">
-                                                    <i className="feather-linkedin" />
+                                                <Link href="https://www.linkedin.com/" aria-label={t("social.linkedin")}>
+                                                    <i className="feather-linkedin" aria-hidden="true" />
                                                 </Link>
                                             </li>
                                         </ul>

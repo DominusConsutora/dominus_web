@@ -82,6 +82,7 @@ export default function ServicesIndexGrid() {
                                                 <span className="icon-reverse-wrapper">
                                                     <span className="btn-text">
                                                         {tServices("detailCta")}
+                                                        <span className="visually-hidden">{` ${title}`}</span>
                                                     </span>
                                                     <span className="btn-icon">
                                                         <i className="feather-arrow-right" />

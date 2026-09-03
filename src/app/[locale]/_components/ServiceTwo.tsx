@@ -90,6 +90,7 @@ function ServiceTwo() {
                                                     aria-label={`${t("detailCta")}: ${title}`}
                                                 >
                                                     {t("detailCta")}
+                                                    <span className="visually-hidden">{` ${title}`}</span>
                                                     <i className="feather-arrow-right" />
                                                 </Link>
                                             </div>

@@ -434,6 +434,10 @@
         "sectionServices": "Services",
         "sectionContact": "Contact",
         "contactPrompt": "Want to talk about your next port project?",
+        "social": {
+            "email": "Email DOMINUS",
+            "linkedin": "DOMINUS on LinkedIn"
+        },
         "linksServicesShort": {
             "master-plans-portuarios": "Port master plans",
             "concesiones-ppp-licitaciones": "Concessions and PPP",
