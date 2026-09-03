@@ -60,7 +60,7 @@ function FooterTwo() {
                             </div>
                             <div className="col-lg-2 col-md-6 col-sm-6 col-12">
                                 <div className="tmp-footer-widget">
-                                    <h4 className="title">{t("sectionInstitutional")}</h4>
+                                    <h3 className="title h4">{t("sectionInstitutional")}</h3>
                                     <div className="inner">
                                         <ul className="footer-link link-hover">
                                             <li>
@@ -81,7 +81,7 @@ function FooterTwo() {
                             </div>
                             <div className="col-lg-3 col-md-6 col-sm-6 col-12">
                                 <div className="tmp-footer-widget">
-                                    <h4 className="title">{t("sectionServices")}</h4>
+                                    <h3 className="title h4">{t("sectionServices")}</h3>
                                     <div className="inner">
                                         <ul className="footer-link link-hover">
                                             {serviciosSlugs.map((slug) => (
@@ -97,9 +97,9 @@ function FooterTwo() {
                             </div>
                             <div className="col-lg-3 col-md-6 col-sm-6 col-12">
                                 <div className="tmp-footer-widget">
-                                    <h4 className="title">{t("sectionContact")}</h4>
+                                    <h3 className="title h4">{t("sectionContact")}</h3>
                                     <div className="inner">
-                                        <h6 className="subtitle">{t("contactPrompt")}</h6>
+                                        <p className="subtitle">{t("contactPrompt")}</p>
                                         <ul className="social-icon social-default justify-content-start mt--20">
                                             <li>
                                                 <Link href="mailto:contacto@dominus.example">

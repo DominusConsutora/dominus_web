@@ -37,9 +37,9 @@ function CtaOne({
                                                     <h2 className="title tmp-title-split">
                                                         {t("titleLine1")} <br /> {t("titleLine2")}
                                                     </h2>
-                                                    <h6 className="subtitle tmp-title-split">
+                                                    <p className="subtitle tmp-title-split">
                                                         {t("subtitle")}
-                                                    </h6>
+                                                    </p>
                                                     <div className="call-to-btn d-flex justify-content-center">
                                                         <Link
                                                             className="tmp-btn btn-extra-large hover-icon-reverse"

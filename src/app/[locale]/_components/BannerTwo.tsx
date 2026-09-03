@@ -51,7 +51,7 @@ export default function BannerTwo() {
       className="slider-area banner-two-shape-control tmp-slider-style-1 with-bg-tin bg-transparent height-850 position-relative dominus-hero-bg dominus-home-hero"
       style={{
         zIndex: 1,
-        backgroundImage: "url('/assets/images/shape/headers_01.png')",
+        backgroundImage: "url('/assets/images/shape/headers_01.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

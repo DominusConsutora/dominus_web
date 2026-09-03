@@ -58,9 +58,9 @@ export default function ValuesBlock() {
                                     <i className={v.icon} />
                                 </div>
                                 <div className="content">
-                                    <h4 className="title w-600">
+                                    <h3 className="title w-600 h4">
                                         {t(`items.${v.key}.title`)}
-                                    </h4>
+                                    </h3>
                                     <p className="description mb--0">
                                         {t(`items.${v.key}.description`)}
                                     </p>

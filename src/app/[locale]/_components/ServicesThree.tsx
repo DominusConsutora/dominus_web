@@ -95,7 +95,7 @@ function ServicesThree() {
                                                             <span className="dominus-differentiator-card__index">
                                                                 {(index + 1).toString().padStart(2, "0")}
                                                             </span>
-                                                            <h6 className="title">{title}</h6>
+                                                            <h3 className="title h6">{title}</h3>
                                                         </div>
                                                     </div>
                                                     <p className="disc dominus-differentiator-card__disc">{description}</p>

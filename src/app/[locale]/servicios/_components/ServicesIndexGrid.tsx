@@ -69,9 +69,9 @@ export default function ServicesIndexGrid() {
                                             <i className={s.icon} />
                                     </div>
                                     <div className="content">
-                                        <h4 className="title w-600">
+                                        <h3 className="title w-600 h4">
                                             <Link href={`/servicios/${s.slug}`}>{title}</Link>
-                                        </h4>
+                                        </h3>
                                         <p className="description mb--0">{description}</p>
                                         <div className="discover-btn mt--20">
                                             <Link

@@ -35,9 +35,9 @@ export default function ServiceDetailBody({ slug }: ServiceDetailBodyProps) {
                                 {longDescription}
                             </p>
 
-                            <h3 className="title w-600 mb--20">
+                            <h2 className="title w-600 mb--20 h3">
                                 {tDetail("deliverablesTitle")}
-                            </h3>
+                            </h2>
                             <ul
                                 className="service-deliverables"
                                 style={{ listStyle: "none", padding: 0, margin: 0 }}

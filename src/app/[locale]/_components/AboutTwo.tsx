@@ -56,9 +56,9 @@ export default function AboutTwo() {
                                                 <i className="feather-anchor" aria-hidden="true" />
                                             </div>
                                             <div className="title-wrapper">
-                                                <h4 className="title">
+                                                <h3 className="title h4">
                                                     {t("feature1Title")}
-                                                </h4>
+                                                </h3>
                                                 <p className="text">
                                                     {t("feature1Text")}
                                                 </p>
@@ -69,9 +69,9 @@ export default function AboutTwo() {
                                                 <i className="feather-anchor" aria-hidden="true" />
                                             </div>
                                             <div className="title-wrapper">
-                                                <h4 className="title">
+                                                <h3 className="title h4">
                                                     {t("feature2Title")}
-                                                </h4>
+                                                </h3>
                                                 <p className="text">
                                                     {t("feature2Text")}
                                                 </p>

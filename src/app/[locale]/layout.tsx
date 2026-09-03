@@ -6,16 +6,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://dominuslogistica.com";
 
 import "../../../public/assets/css/bootstrap.min.css";
-import "../../../public/assets/css/odometer.css";
-import "../../../public/assets/css/animation.css";
 import "../../../public/assets/css/feature.css";
-import "../../../public/assets/css/lightbox.css";
-import "../../../public/assets/css/magnify.min.css";
-import "../../../public/assets/css/slick-theme.css";
-import "../../../public/assets/css/slick.css";
 import "../../../public/assets/css/style.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "aos/dist/aos.css";
 import "lenis/dist/lenis.css";
 import "../globals.css";
