@@ -430,6 +430,7 @@
     },
     "footer": {
         "tagline": "Consultora especializada en desarrollo portuario para autoridades portuarias y operadores portuarios a nivel mundial.",
+        "location": "Miami, Estados Unidos",
         "sectionInstitutional": "Institucional",
         "sectionServices": "Servicios",
         "sectionContact": "Contacto",
@@ -451,5 +452,35 @@
             "contact": "Contacto"
         },
         "copyright": "© {year} DOMINUS · Consultoría en desarrollo portuario."
+    },
+    "faq": {
+        "title": "Preguntas frecuentes",
+        "subtitle": "Todo lo que necesitás saber sobre DOMINUS y la consultoría en desarrollo portuario.",
+        "items": {
+            "what": {
+                "q": "¿Qué es DOMINUS?",
+                "a": "DOMINUS es una consultora de desarrollo portuario con base en Miami (Estados Unidos) que asesora a autoridades y operadores portuarios en planificación estratégica, gobernanza, concesiones, transformación digital y sostenibilidad."
+            },
+            "services": {
+                "q": "¿Qué servicios ofrece DOMINUS?",
+                "a": "Master plans portuarios, concesiones y PPP, gobernanza y tarifas, optimización operativa de terminales, transformación digital y Port Community Systems, sostenibilidad y green ports, regulación y políticas públicas, y capacitación portuaria."
+            },
+            "notLogistics": {
+                "q": "¿DOMINUS es una empresa de logística o transporte?",
+                "a": "No. DOMINUS es una consultora especializada en desarrollo y gestión portuaria; no opera transporte de carga ni servicios de logística. Su rol es asesorar a puertos, terminales y organismos del sector."
+            },
+            "masterPlan": {
+                "q": "¿Qué es un master plan portuario?",
+                "a": "Es el plan estratégico que ordena el desarrollo de un puerto a largo plazo: define usos del suelo, infraestructura, inversiones y etapas de crecimiento para alinear capacidad, operación y sostenibilidad."
+            },
+            "clients": {
+                "q": "¿A quién ayuda DOMINUS?",
+                "a": "A autoridades portuarias, operadores de terminales y organismos públicos del sector portuario a nivel mundial."
+            },
+            "leader": {
+                "q": "¿Quién lidera DOMINUS?",
+                "a": "Diego Salom, especialista en gestión y planificación portuaria, con experiencia en UNCTAD, la Vía Navegable Troncal y la transformación del Puerto Buenos Aires."
+            }
+        }
     }
 }

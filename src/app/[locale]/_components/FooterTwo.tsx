@@ -56,6 +56,10 @@ function FooterTwo() {
                                         </Link>
                                     </div>
                                     <p className="subtitle mt--30">{t("tagline")}</p>
+                                    <p className="subtitle mt--10">
+                                        <i className="feather-map-pin" aria-hidden="true" />{" "}
+                                        {t("location")}
+                                    </p>
                                 </div>
                             </div>
                             <div className="col-lg-2 col-md-6 col-sm-6 col-12">

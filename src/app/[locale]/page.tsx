@@ -6,6 +6,7 @@ import BannerTwo from "./_components/BannerTwo";
 import AboutTwo from "./_components/AboutTwo";
 import ServicesThree from "./_components/ServicesThree";
 import ServiceTwo from "./_components/ServiceTwo";
+import FaqOne from "./_components/FaqOne";
 import CtaOne from "./_components/CtaOne";
 import FooterTwo from "./_components/FooterTwo";
 
@@ -47,7 +48,6 @@ export async function generateMetadata({
 // Componentes comentados hasta tener contenido validado por el cliente:
 // - CaseStudyOne  → Proyectos / Casos de éxito (fase 2, requiere autorización de clientes)
 // - VideoTwo      → Video institucional (sin material aún)
-// - FaqOne        → No definido en CONTENT.md
 // - TestimonialOne → "Confían en DOMINUS" (fase 2, requiere logos autorizados)
 // - BlogOne       → Publicaciones / Insights (fase 2)
 
@@ -59,6 +59,7 @@ export default function HomePage() {
       <AboutTwo />
       <ServicesThree />
       <ServiceTwo />
+      <FaqOne />
       <CtaOne />
       <FooterTwo />
     </main>

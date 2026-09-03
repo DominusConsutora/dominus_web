@@ -430,6 +430,7 @@
     },
     "footer": {
         "tagline": "Consultancy specialized in port development for port authorities and port operators worldwide.",
+        "location": "Miami, United States",
         "sectionInstitutional": "Company",
         "sectionServices": "Services",
         "sectionContact": "Contact",
@@ -451,5 +452,35 @@
             "contact": "Contact"
         },
         "copyright": "© {year} DOMINUS · Port development consulting."
+    },
+    "faq": {
+        "title": "Frequently asked questions",
+        "subtitle": "Everything you need to know about DOMINUS and port development consulting.",
+        "items": {
+            "what": {
+                "q": "What is DOMINUS?",
+                "a": "DOMINUS is a port development consultancy based in Miami (United States) that advises port authorities and operators on strategic planning, governance, concessions, digital transformation and sustainability."
+            },
+            "services": {
+                "q": "What services does DOMINUS offer?",
+                "a": "Port master plans, concessions and PPPs, governance and tariffs, terminal operational optimization, digital transformation and Port Community Systems, sustainability and green ports, regulation and public policy, and port training."
+            },
+            "notLogistics": {
+                "q": "Is DOMINUS a logistics or transportation company?",
+                "a": "No. DOMINUS is a consultancy specialized in port development and management; it does not operate freight transport or logistics services. Its role is to advise ports, terminals and industry bodies."
+            },
+            "masterPlan": {
+                "q": "What is a port master plan?",
+                "a": "It is the strategic plan that guides a port's long-term development: it defines land use, infrastructure, investments and growth stages to align capacity, operations and sustainability."
+            },
+            "clients": {
+                "q": "Who does DOMINUS help?",
+                "a": "Port authorities, terminal operators and public sector organizations in the port industry worldwide."
+            },
+            "leader": {
+                "q": "Who leads DOMINUS?",
+                "a": "Diego Salom, a specialist in port management and planning, with experience at UNCTAD, the Main Navigable Waterway and the transformation of the Port of Buenos Aires."
+            }
+        }
     }
 }
