@@ -1162,6 +1162,232 @@ button.tmp-btn:hover {
   }
 }
 
+/* Home · Preguntas frecuentes (FAQ)
+ * Acordeon con estetica DOMINUS: tarjetas blancas, borde e icono navy,
+ * tipografia navy/gris, coherente con servicios y diferenciales. */
+.dominus-faq__list {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 16px 24px;
+}
+.dominus-faq__item {
+  background: #ffffff;
+  border: 1px solid rgba(0, 25, 75, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(0, 25, 75, 0.05);
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.dominus-faq__item:hover {
+  border-color: rgba(0, 25, 75, 0.18);
+  box-shadow: 0 16px 34px rgba(0, 25, 75, 0.08);
+}
+.dominus-faq__item:has(.dominus-faq__button:not(.collapsed)) {
+  border-color: rgba(0, 25, 75, 0.28);
+  box-shadow: 0 18px 38px rgba(0, 25, 75, 0.1);
+}
+.dominus-faq__header {
+  margin: 0;
+}
+.dominus-faq__button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 22px 26px;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--dominus-navy);
+}
+.dominus-faq__q {
+  flex: 1;
+}
+.dominus-faq__icon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 25, 75, 0.08);
+  color: var(--dominus-navy);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.dominus-faq__icon i {
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+.dominus-faq__button:not(.collapsed) .dominus-faq__icon {
+  background: var(--dominus-navy);
+  color: #ffffff;
+}
+.dominus-faq__button:not(.collapsed) .dominus-faq__icon i {
+  transform: rotate(45deg);
+}
+.dominus-faq__body {
+  padding: 0 26px 24px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--dominus-body);
+  max-width: 70ch;
+}
+@media only screen and (max-width: 767px) {
+  .dominus-faq__list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+  .dominus-faq__button {
+    padding: 18px;
+    font-size: 16px;
+    gap: 12px;
+  }
+  .dominus-faq__body {
+    padding: 0 18px 20px;
+  }
+}
+
+/* Home + /blog · Tarjetas de nota (BlogCard) con estetica DOMINUS.
+ * Card blanca, imagen superior con badge de categoria, meta, titulo navy,
+ * extracto gris y enlace "leer nota". Coherente con servicios/FAQ. */
+.dominus-blog-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 25, 75, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 25, 75, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.dominus-blog-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 25, 75, 0.18);
+  box-shadow: 0 18px 38px rgba(0, 25, 75, 0.1);
+}
+.dominus-blog-card__thumb {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+.dominus-blog-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.dominus-blog-card:hover .dominus-blog-card__thumb img {
+  transform: scale(1.04);
+}
+.dominus-blog-card__cat {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--dominus-navy);
+  color: #ffffff !important;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.dominus-blog-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 22px 24px 26px;
+  flex: 1;
+}
+.dominus-blog-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+  color: var(--dominus-body-soft);
+}
+.dominus-blog-card__meta li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--dominus-body-soft) !important;
+}
+.dominus-blog-card__meta i {
+  font-size: 14px;
+  color: var(--dominus-navy);
+}
+.dominus-blog-card__title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+.dominus-blog-card__title a {
+  color: var(--dominus-navy);
+  transition: color 0.2s ease;
+}
+.dominus-blog-card__title a:hover {
+  color: var(--color-primary, #0a58ca);
+}
+.dominus-blog-card__excerpt {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--dominus-body);
+}
+.dominus-blog-card__link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dominus-navy);
+  transition: gap 0.2s ease;
+}
+.dominus-blog-card__link:hover {
+  gap: 12px;
+}
+
+/* /blog/[slug] · Cuerpo del articulo */
+.dominus-blog-article__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.dominus-blog-article__tag {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(0, 25, 75, 0.06);
+  border: 1px solid rgba(0, 25, 75, 0.08);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dominus-navy) !important;
+}
+.dominus-blog-article__footer {
+  border-top: 1px solid rgba(0, 25, 75, 0.08);
+  padding-top: 28px;
+}
+@media only screen and (max-width: 767px) {
+  .dominus-blog-card__title {
+    font-size: 19px;
+  }
+}
+
 /* DOMINUS · tarjetas de canal de contacto (página /contacto).
  * Card blanca sobre fondo claro, icono navy dentro de círculo suave, con
  * label + valor + hint + acción opcional. Placeholder de datos en JSON. */

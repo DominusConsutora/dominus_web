@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getBlogSlugs } from "../data/blogPosts";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://dominuslogistica.com";
 const serviceSlugs = [
@@ -14,12 +15,15 @@ const serviceSlugs = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ["es", "en"];
+  const blogSlugs = getBlogSlugs();
   const routes = [
     "",
     "/nosotros",
     "/nosotros/diego-salom",
     "/servicios",
     ...serviceSlugs.map((slug) => `/servicios/${slug}`),
+    "/blog",
+    ...blogSlugs.map((slug) => `/blog/${slug}`),
     "/contacto",
   ];
 

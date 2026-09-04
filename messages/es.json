@@ -13,6 +13,7 @@
         "about": "Nosotros",
         "team": "Equipo",
         "services": "Servicios",
+        "blog": "Blog",
         "contact": "Contacto",
         "servicesList": {
             "master-plans-portuarios": "Master plans portuarios",
@@ -331,6 +332,47 @@
             "imgAlt": "Llamado a la acción — Servicios"
         }
     },
+    "blogPage": {
+        "hero": {
+            "eyebrow": "Insights",
+            "breadcrumbHome": "Inicio",
+            "breadcrumbCurrent": "Blog",
+            "title": "Ideas y análisis sobre desarrollo portuario",
+            "subtitle": "Artículos y opiniones del equipo de DOMINUS sobre planificación, gobernanza, concesiones, operación y sostenibilidad portuaria.",
+            "imgAlt": "Blog DOMINUS — desarrollo portuario"
+        },
+        "home": {
+            "eyebrow": "Insights",
+            "title": "Últimas notas",
+            "description": "Análisis y opinión sobre los temas que definen el futuro de puertos y terminales.",
+            "cta": "Ver todas las notas"
+        },
+        "intro": {
+            "eyebrow": "Todas las notas",
+            "title": "Análisis y opinión portuaria",
+            "description": "Publicamos con criterio profesional sobre planificación, gobernanza, concesiones, operación y sostenibilidad. Menos ruido, más señal."
+        },
+        "list": {
+            "readMore": "Leer nota"
+        },
+        "meta": {
+            "readingTime": "{minutes} min de lectura",
+            "by": "Por"
+        },
+        "detail": {
+            "breadcrumbHome": "Inicio",
+            "parentLabel": "Blog",
+            "backToBlog": "← Volver al blog"
+        },
+        "finalCta": {
+            "titleLine1": "¿Querés discutir",
+            "titleLine2": "un desafío portuario?",
+            "subtitle": "Contanos el reto que enfrenta tu institución y armamos una propuesta a medida. Sin compromiso.",
+            "primary": "Hablemos",
+            "emailLink": "Conocé nuestros servicios",
+            "imgAlt": "Llamado a la acción — Blog"
+        }
+    },
     "contact": {
         "subtitleNumber": "03",
         "subtitleText": "Contacto",
@@ -454,6 +496,7 @@
         "copyright": "© {year} DOMINUS · Consultoría en desarrollo portuario."
     },
     "faq": {
+        "eyebrow": "FAQ",
         "title": "Preguntas frecuentes",
         "subtitle": "Todo lo que necesitás saber sobre DOMINUS y la consultoría en desarrollo portuario.",
         "items": {

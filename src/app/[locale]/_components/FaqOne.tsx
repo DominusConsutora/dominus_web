@@ -27,44 +27,56 @@ function FaqOne() {
     };
 
     return (
-        <div className="tmp-faq-area tmp-section-gap">
+        <div className="tmp-service-area tmp-section-gapBottom dominus-faq">
             <div className="container">
-                <div className="section-title text-center mb--40">
-                    <h2 className="title w-700">{t("title")}</h2>
-                    <p className="description b1">{t("subtitle")}</p>
-                </div>
-                <div className="row justify-content-center">
-                    <div className="col-lg-10">
-                        <div className="tmp-accordion-style accordion">
-                            <div className="accordion" id="dominusFaq">
-                                {items.map((item, index) => {
-                                    const isFirst = index === 0;
-                                    return (
-                                        <div className="accordion-item card tmponhover" key={index}>
-                                            <h3 className="accordion-header card-header" id={`faqHeading${index}`}>
-                                                <button
-                                                    className={`accordion-button${isFirst ? "" : " collapsed"}`}
-                                                    type="button"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target={`#faqCollapse${index}`}
-                                                    aria-expanded={isFirst}
-                                                    aria-controls={`faqCollapse${index}`}
-                                                >
-                                                    {item.q}
-                                                </button>
-                                            </h3>
-                                            <div
-                                                id={`faqCollapse${index}`}
-                                                className={`accordion-collapse collapse${isFirst ? " show" : ""}`}
-                                                aria-labelledby={`faqHeading${index}`}
-                                                data-bs-parent="#dominusFaq"
-                                            >
-                                                <div className="accordion-body card-body">{item.a}</div>
-                                            </div>
-                                        </div>
-                                    );
-                                })}
+                <div className="row">
+                    <div className="col-lg-12">
+                        <div className="tmp-section-title-border text-center">
+                            <div className="pres-line-separator-wrapper text-center mb--10">
+                                <div className="line-separator line-left" />
+                                <span className="subtitle">
+                                    <span className="subtitle-text">{t("eyebrow")}</span>
+                                </span>
+                                <div className="line-separator line-right" />
                             </div>
+                            <h2 className="title w-700">{t("title")}</h2>
+                            <p className="description b1">{t("subtitle")}</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="row justify-content-center mt--10">
+                    <div className="col-xl-11 col-lg-12">
+                        <div className="dominus-faq__list accordion" id="dominusFaq">
+                            {items.map((item, index) => {
+                                const isFirst = index === 0;
+                                return (
+                                    <div className="dominus-faq__item" key={index}>
+                                        <h3 className="dominus-faq__header" id={`faqHeading${index}`}>
+                                            <button
+                                                className={`dominus-faq__button${isFirst ? "" : " collapsed"}`}
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target={`#faqCollapse${index}`}
+                                                aria-expanded={isFirst}
+                                                aria-controls={`faqCollapse${index}`}
+                                            >
+                                                <span className="dominus-faq__q">{item.q}</span>
+                                                <span className="dominus-faq__icon" aria-hidden="true">
+                                                    <i className="feather-plus" />
+                                                </span>
+                                            </button>
+                                        </h3>
+                                        <div
+                                            id={`faqCollapse${index}`}
+                                            className={`dominus-faq__collapse collapse${isFirst ? " show" : ""}`}
+                                            aria-labelledby={`faqHeading${index}`}
+                                            data-bs-parent="#dominusFaq"
+                                        >
+                                            <div className="dominus-faq__body">{item.a}</div>
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

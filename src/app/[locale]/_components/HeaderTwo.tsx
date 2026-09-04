@@ -11,7 +11,7 @@ interface HeaderTwoProps {
     mobileButtonClassName?: string;
     showTopNews?: boolean;
     variant?: 'transparent' | 'not-transparent';
-    activeNav?: 'home' | 'nosotros' | 'servicios' | 'contacto';
+    activeNav?: 'home' | 'nosotros' | 'servicios' | 'blog' | 'contacto';
 }
 
 function HeaderTwo({

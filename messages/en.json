@@ -13,6 +13,7 @@
         "about": "About",
         "team": "Team",
         "services": "Services",
+        "blog": "Blog",
         "contact": "Contact",
         "servicesList": {
             "master-plans-portuarios": "Port master plans",
@@ -331,6 +332,47 @@
             "imgAlt": "Call to action — Services"
         }
     },
+    "blogPage": {
+        "hero": {
+            "eyebrow": "Insights",
+            "breadcrumbHome": "Home",
+            "breadcrumbCurrent": "Blog",
+            "title": "Ideas and analysis on port development",
+            "subtitle": "Articles and opinion from the DOMINUS team on port planning, governance, concessions, operations and sustainability.",
+            "imgAlt": "DOMINUS blog — port development"
+        },
+        "home": {
+            "eyebrow": "Insights",
+            "title": "Latest notes",
+            "description": "Analysis and opinion on the topics shaping the future of ports and terminals.",
+            "cta": "View all notes"
+        },
+        "intro": {
+            "eyebrow": "All notes",
+            "title": "Port analysis and opinion",
+            "description": "We publish with professional judgement on planning, governance, concessions, operations and sustainability. Less noise, more signal."
+        },
+        "list": {
+            "readMore": "Read note"
+        },
+        "meta": {
+            "readingTime": "{minutes} min read",
+            "by": "By"
+        },
+        "detail": {
+            "breadcrumbHome": "Home",
+            "parentLabel": "Blog",
+            "backToBlog": "← Back to blog"
+        },
+        "finalCta": {
+            "titleLine1": "Want to discuss",
+            "titleLine2": "a port challenge?",
+            "subtitle": "Tell us the challenge your institution faces and we'll build a tailored proposal. No commitment.",
+            "primary": "Let's talk",
+            "emailLink": "Explore our services",
+            "imgAlt": "Call to action — Blog"
+        }
+    },
     "contact": {
         "subtitleNumber": "03",
         "subtitleText": "Contact",
@@ -454,6 +496,7 @@
         "copyright": "© {year} DOMINUS · Port development consulting."
     },
     "faq": {
+        "eyebrow": "FAQ",
         "title": "Frequently asked questions",
         "subtitle": "Everything you need to know about DOMINUS and port development consulting.",
         "items": {

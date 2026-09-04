@@ -14,7 +14,7 @@ const serviceSlugs = [
   'capacitacion-y-talento',
 ] as const
 
-type NavKey = 'home' | 'nosotros' | 'servicios' | 'contacto'
+type NavKey = 'home' | 'nosotros' | 'servicios' | 'blog' | 'contacto'
 
 interface DominusNavProps {
   active?: NavKey
@@ -42,6 +42,9 @@ export default function DominusNav({ active = 'home' }: DominusNavProps) {
               </li>
             ))}
           </ul>
+        </li>
+        <li className={active === 'blog' ? 'active' : ''}>
+          <Link href="/blog">{t('blog')}</Link>
         </li>
         <li className={active === 'contacto' ? 'active' : ''}>
           <Link href="/contacto">{t('contact')}</Link>
