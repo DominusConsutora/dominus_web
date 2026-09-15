@@ -6,7 +6,6 @@ import BannerTwo from "./_components/BannerTwo";
 import AboutTwo from "./_components/AboutTwo";
 import ServicesThree from "./_components/ServicesThree";
 import ServiceTwo from "./_components/ServiceTwo";
-import FaqOne from "./_components/FaqOne";
 import BlogOne from "./_components/BlogOne";
 import CtaOne from "./_components/CtaOne";
 import FooterTwo from "./_components/FooterTwo";
@@ -59,7 +58,6 @@ export default function HomePage() {
       <AboutTwo />
       <ServicesThree />
       <ServiceTwo />
-      <FaqOne />
       <BlogOne />
       <CtaOne />
       <FooterTwo />

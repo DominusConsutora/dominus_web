@@ -77,6 +77,9 @@ function FooterTwo() {
                                                 <Link href="/servicios">{tNav("services")}</Link>
                                             </li>
                                             <li>
+                                                <Link href="/preguntas-frecuentes">{t("legal.faq")}</Link>
+                                            </li>
+                                            <li>
                                                 <Link href="/contacto">{tNav("contact")}</Link>
                                             </li>
                                         </ul>

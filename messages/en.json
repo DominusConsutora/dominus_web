@@ -352,6 +352,21 @@
             "title": "Port analysis and opinion",
             "description": "We publish with professional judgement on planning, governance, concessions, operations and sustainability. Less noise, more signal."
         },
+        "filters": {
+            "label": "Filter by topic",
+            "all": "All topics",
+            "empty": "We will publish analysis on this topic soon.",
+            "axes": {
+                "master-plans-portuarios": "Port master plans",
+                "concesiones-ppp-licitaciones": "Concessions, PPP and tenders",
+                "gobernanza-y-tarifas": "Governance and tariffs",
+                "optimizacion-operativa-terminales": "Terminal operational optimization",
+                "transformacion-digital-pcs": "Digital transformation and PCS",
+                "sostenibilidad-y-green-ports": "Sustainability and green ports",
+                "regulacion-y-politicas-publicas": "Regulation and public policy",
+                "capacitacion-y-talento": "Training and port talent"
+            }
+        },
         "list": {
             "readMore": "Read note"
         },
@@ -491,7 +506,8 @@
         "legal": {
             "privacy": "Privacy policy",
             "terms": "Terms and conditions",
-            "contact": "Contact"
+            "contact": "Contact",
+            "faq": "Frequently asked questions"
         },
         "copyright": "© {year} DOMINUS · Port development consulting."
     },

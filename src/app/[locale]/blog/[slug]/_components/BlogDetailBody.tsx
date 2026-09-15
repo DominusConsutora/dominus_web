@@ -19,7 +19,7 @@ export default function BlogDetailBody({ slug }: BlogDetailBodyProps) {
     const post = getBlogPost(slug);
     if (!post) return null;
 
-    const paragraphs = post.body[locale];
+    const sections = post.sections;
 
     return (
         <div className="tmp-service-details-area tmp-section-gap">
@@ -27,11 +27,22 @@ export default function BlogDetailBody({ slug }: BlogDetailBodyProps) {
                 <div className="row justify-content-center">
                     <div className="col-lg-10 col-xl-8">
                         <article className="dominus-blog-article">
-                            {paragraphs.map((text, idx) => (
-                                <p key={idx} className="description b1 mb--30">
-                                    {text}
-                                </p>
-                            ))}
+                            {sections
+                                ? sections.map((section) => (
+                                    <section className="dominus-blog-article__section" key={section.heading[locale]}>
+                                        <h2>{section.heading[locale]}</h2>
+                                        {section.paragraphs[locale].map((text, index) => (
+                                            <p key={index} className="description b1 mb--30">
+                                                {text}
+                                            </p>
+                                        ))}
+                                    </section>
+                                ))
+                                : post.body[locale].map((text, index) => (
+                                    <p key={index} className="description b1 mb--30">
+                                        {text}
+                                    </p>
+                                ))}
 
                             <div className="dominus-blog-article__tags mt--20">
                                 {post.tags.map((tag) => (

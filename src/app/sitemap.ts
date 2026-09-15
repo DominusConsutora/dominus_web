@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog",
     ...blogSlugs.map((slug) => `/blog/${slug}`),
     "/contacto",
+    "/preguntas-frecuentes",
   ];
 
   return locales.flatMap((locale) =>

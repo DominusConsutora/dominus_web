@@ -1,7 +1,8 @@
 "use client";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useTitleSplitAnimation } from "../../../components/useTitleSplitAnimation";
-import { getSortedPosts } from "../../../../data/blogPosts";
+import { blogAxes, getSortedPosts, type BlogAxis } from "../../../../data/blogPosts";
 import BlogCard from "./BlogCard";
 
 /**
@@ -11,7 +12,12 @@ import BlogCard from "./BlogCard";
  */
 export default function BlogIndexGrid() {
     const t = useTranslations("blogPage.intro");
+    const tFilters = useTranslations("blogPage.filters");
     const posts = getSortedPosts();
+    const [activeAxis, setActiveAxis] = useState<BlogAxis | null>(null);
+    const visiblePosts = activeAxis
+        ? posts.filter((post) => post.axis === activeAxis)
+        : posts;
     useTitleSplitAnimation();
 
     return (
@@ -32,13 +38,42 @@ export default function BlogIndexGrid() {
                         </div>
                     </div>
                 </div>
+                <div className="dominus-blog__filters" aria-label={tFilters("label")}>
+                    <span className="dominus-blog__filters-label">{tFilters("label")}</span>
+                    <div className="dominus-blog__filter-list" role="group" aria-label={tFilters("label")}>
+                        <button
+                            className={`dominus-blog__filter${activeAxis === null ? " is-active" : ""}`}
+                            type="button"
+                            aria-pressed={activeAxis === null}
+                            onClick={() => setActiveAxis(null)}
+                        >
+                            {tFilters("all")}
+                        </button>
+                        {blogAxes.map((axis) => (
+                            <button
+                                className={`dominus-blog__filter${activeAxis === axis ? " is-active" : ""}`}
+                                type="button"
+                                key={axis}
+                                aria-pressed={activeAxis === axis}
+                                onClick={() => setActiveAxis(axis)}
+                            >
+                                {tFilters(`axes.${axis}`)}
+                            </button>
+                        ))}
+                    </div>
+                </div>
                 <div className="row g-4 mt--30">
-                    {posts.map((post) => (
+                    {visiblePosts.map((post) => (
                         <div className="col-lg-4 col-md-6 col-12" key={post.slug}>
                             <BlogCard post={post} />
                         </div>
                     ))}
                 </div>
+                {visiblePosts.length === 0 && (
+                    <p className="dominus-blog__empty" role="status">
+                        {tFilters("empty")}
+                    </p>
+                )}
             </div>
         </div>
     );

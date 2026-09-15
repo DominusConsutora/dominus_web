@@ -1362,6 +1362,69 @@ button.tmp-btn:hover {
 .dominus-blog-card__link:hover {
   gap: 12px;
 }
+.dominus-blog__filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  margin-top: 38px;
+}
+.dominus-blog__filters-label {
+  color: var(--dominus-navy);
+  font-size: 14px;
+  font-weight: 700;
+}
+.dominus-blog__filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.dominus-blog__filter {
+  min-height: 40px;
+  padding: 8px 16px;
+  border: 1px solid rgba(0, 25, 75, 0.2);
+  border-radius: 4px;
+  background: #ffffff;
+  color: var(--dominus-navy);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.dominus-blog__filter:hover,
+.dominus-blog__filter:focus-visible {
+  border-color: var(--dominus-navy);
+  background: rgba(0, 25, 75, 0.06);
+}
+.dominus-blog__filter.is-active {
+  border-color: var(--dominus-navy);
+  background: var(--dominus-navy);
+  color: #ffffff;
+}
+.dominus-blog__empty {
+  margin: 32px auto 0;
+  max-width: 620px;
+  padding: 22px 26px;
+  border-left: 3px solid var(--dominus-navy);
+  background: rgba(0, 25, 75, 0.04);
+  color: var(--dominus-body);
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .dominus-blog__filters {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .dominus-blog__filter-list {
+    justify-content: flex-start;
+  }
+}
 
 /* /blog/[slug] · Cuerpo del articulo */
 .dominus-blog-article__tags {
