@@ -38,42 +38,48 @@ export default function BlogIndexGrid() {
                         </div>
                     </div>
                 </div>
-                <div className="dominus-blog__filters" aria-label={tFilters("label")}>
-                    <span className="dominus-blog__filters-label">{tFilters("label")}</span>
-                    <div className="dominus-blog__filter-list" role="group" aria-label={tFilters("label")}>
-                        <button
-                            className={`dominus-blog__filter${activeAxis === null ? " is-active" : ""}`}
-                            type="button"
-                            aria-pressed={activeAxis === null}
-                            onClick={() => setActiveAxis(null)}
-                        >
-                            {tFilters("all")}
-                        </button>
-                        {blogAxes.map((axis) => (
-                            <button
-                                className={`dominus-blog__filter${activeAxis === axis ? " is-active" : ""}`}
-                                type="button"
-                                key={axis}
-                                aria-pressed={activeAxis === axis}
-                                onClick={() => setActiveAxis(axis)}
-                            >
-                                {tFilters(`axes.${axis}`)}
-                            </button>
-                        ))}
+                <div className="row g-4 mt--30 align-items-start">
+                    <aside className="col-lg-3">
+                        <div className="dominus-blog__filters" aria-label={tFilters("label")}>
+                            <span className="dominus-blog__filters-label">{tFilters("label")}</span>
+                            <div className="dominus-blog__filter-list" role="group" aria-label={tFilters("label")}>
+                                <button
+                                    className={`dominus-blog__filter${activeAxis === null ? " is-active" : ""}`}
+                                    type="button"
+                                    aria-pressed={activeAxis === null}
+                                    onClick={() => setActiveAxis(null)}
+                                >
+                                    {tFilters("all")}
+                                </button>
+                                {blogAxes.map((axis) => (
+                                    <button
+                                        className={`dominus-blog__filter${activeAxis === axis ? " is-active" : ""}`}
+                                        type="button"
+                                        key={axis}
+                                        aria-pressed={activeAxis === axis}
+                                        onClick={() => setActiveAxis(axis)}
+                                    >
+                                        {tFilters(`axes.${axis}`)}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    </aside>
+                    <div className="col-lg-9">
+                        <div className="row g-4">
+                            {visiblePosts.map((post) => (
+                                <div className="col-lg-4 col-md-6 col-12" key={post.slug}>
+                                    <BlogCard post={post} />
+                                </div>
+                            ))}
+                        </div>
+                        {visiblePosts.length === 0 && (
+                            <p className="dominus-blog__empty" role="status">
+                                {tFilters("empty")}
+                            </p>
+                        )}
                     </div>
                 </div>
-                <div className="row g-4 mt--30">
-                    {visiblePosts.map((post) => (
-                        <div className="col-lg-4 col-md-6 col-12" key={post.slug}>
-                            <BlogCard post={post} />
-                        </div>
-                    ))}
-                </div>
-                {visiblePosts.length === 0 && (
-                    <p className="dominus-blog__empty" role="status">
-                        {tFilters("empty")}
-                    </p>
-                )}
             </div>
         </div>
     );

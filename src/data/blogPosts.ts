@@ -3,6 +3,8 @@
 // que agregar un artículo sea editar este archivo: cada post lleva metadatos
 // + cuerpo por idioma (array de párrafos). Alimenta la home, /blog y /blog/[slug].
 
+import { publishedBlogPosts } from './publishedBlogPosts'
+
 export type Locale = 'es' | 'en'
 type Localized = Record<Locale, string>
 
@@ -39,7 +41,7 @@ export type BlogPost = {
   sections?: BlogSection[]
 }
 
-export const blogPosts: BlogPost[] = [
+export const referenceBlogPosts: BlogPost[] = [
   {
     slug: 'master-plan-portuario-planificar-incertidumbre',
     category: { es: 'Planificación', en: 'Planning' },
@@ -462,6 +464,9 @@ export const blogPosts: BlogPost[] = [
     ],
   },
 ]
+
+// Las notas de referencia se conservan para reutilizarlas, pero no se publican.
+export const blogPosts: BlogPost[] = publishedBlogPosts
 
 export function getSortedPosts(): BlogPost[] {
   return [...blogPosts].sort(

@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getBlogSlugs } from "../data/blogPosts";
 
+export const dynamic = "force-static";
+
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://dominuslogistica.com";
 const serviceSlugs = [
   "master-plans-portuarios",

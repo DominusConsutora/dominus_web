@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "../../../i18n/navigation";
 import React from "react";
 import { useTranslations } from "next-intl";
 
@@ -71,9 +71,6 @@ function FooterTwo() {
                                                 <Link href="/nosotros">{tNav("about")}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/equipo">{tNav("team")}</Link>
-                                            </li>
-                                            <li>
                                                 <Link href="/servicios">{tNav("services")}</Link>
                                             </li>
                                             <li>
@@ -109,12 +106,12 @@ function FooterTwo() {
                                         <p className="subtitle">{t("contactPrompt")}</p>
                                         <ul className="social-icon social-default justify-content-start mt--20">
                                             <li>
-                                                <Link href="mailto:contacto@dominus.example" aria-label={t("social.email")}>
+                                                <Link href="mailto:info@dominuslogistica.com" aria-label={t("social.email")}>
                                                     <i className="feather-mail" aria-hidden="true" />
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="https://www.linkedin.com/" aria-label={t("social.linkedin")}>
+                                                <Link href="https://www.linkedin.com/company/dominus-portuaria" aria-label={t("social.linkedin")}>
                                                     <i className="feather-linkedin" aria-hidden="true" />
                                                 </Link>
                                             </li>
@@ -132,16 +129,6 @@ function FooterTwo() {
                             <div className="col-lg-6 col-md-8 col-sm-12 col-12">
                                 <div className="copyright-left">
                                     <ul className="ft-menu link-hover">
-                                        <li>
-                                            <Link href="/privacy-policy">
-                                                {t("legal.privacy")}
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/terms-condition">
-                                                {t("legal.terms")}
-                                            </Link>
-                                        </li>
                                         <li>
                                             <Link href="/contacto">{t("legal.contact")}</Link>
                                         </li>

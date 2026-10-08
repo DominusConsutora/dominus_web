@@ -5,6 +5,7 @@ import FooterTwo from "../_components/FooterTwo";
 import CtaOne from "../_components/CtaOne";
 import HeroBlog from "./_components/HeroBlog";
 import BlogIndexGrid from "./_components/BlogIndexGrid";
+import { localizedAlternates } from "../../../lib/seo";
 
 export async function generateMetadata({
     params,
@@ -21,6 +22,7 @@ export async function generateMetadata({
         description: isEnglish
             ? "Articles and opinion from the DOMINUS team on port planning, governance, concessions, operations and sustainability."
             : "Artículos y opiniones del equipo de DOMINUS sobre planificación, gobernanza, concesiones, operación y sostenibilidad portuaria.",
+        alternates: localizedAlternates("/blog", locale),
     };
 }
 

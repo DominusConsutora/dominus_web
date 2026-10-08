@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import { Link } from "../../../../../i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { getBlogPost, type Locale } from "../../../../../data/blogPosts";
 
@@ -22,11 +22,12 @@ export default function BlogDetailBody({ slug }: BlogDetailBodyProps) {
     const sections = post.sections;
 
     return (
-        <div className="tmp-service-details-area tmp-section-gap">
+        <div className="tmp-service-details-area dominus-blog-detail-body tmp-section-gap">
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-lg-10 col-xl-8">
                         <article className="dominus-blog-article">
+                            <p className="dominus-blog-article__lead">{post.excerpt[locale]}</p>
                             {sections
                                 ? sections.map((section) => (
                                     <section className="dominus-blog-article__section" key={section.heading[locale]}>

@@ -26,20 +26,20 @@ export default function HeroBlogDetail({ slug }: HeroBlogDetailProps) {
 
     return (
         <div
-            className="dominus-hero-bg position-relative"
+            className="dominus-hero-bg dominus-blog-detail-hero position-relative"
             style={{
                 backgroundImage: `url('${post.heroImage}')`,
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: "center 20%",
                 backgroundRepeat: "no-repeat",
-                minHeight: "480px",
+                minHeight: "520px",
                 display: "flex",
                 alignItems: "center",
                 zIndex: 1,
             }}
         >
             <div className="dominus-hero-overlay" aria-hidden="true" />
-            <div className="container" style={{ paddingTop: "140px", paddingBottom: "80px" }}>
+            <div className="container" style={{ paddingTop: "118px", paddingBottom: "62px" }}>
                 <div className="row justify-content-center">
                     <div className="col-lg-10 col-xl-9">
                         <div className="breadcrumb-inner text-center">
@@ -52,7 +52,7 @@ export default function HeroBlogDetail({ slug }: HeroBlogDetailProps) {
                             </div>
                             <h1 className="title w-700 tmp-title-split">{post.title[locale]}</h1>
                             <ul
-                                className="page-list mt--20"
+                                className="page-list dominus-blog-detail-hero__meta mt--20"
                                 style={{
                                     listStyle: "none",
                                     padding: 0,

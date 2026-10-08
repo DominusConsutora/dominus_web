@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import React from "react";
+import { setRequestLocale } from "next-intl/server";
 import HeaderTwo from "../_components/HeaderTwo";
 import FooterTwo from "../_components/FooterTwo";
 import CtaOne from "../_components/CtaOne";
 import HeroServices from "./_components/HeroServices";
 import ServicesIndexGrid from "./_components/ServicesIndexGrid";
+import { localizedAlternates } from "../../../lib/seo";
 
 export async function generateMetadata({
   params,
@@ -21,6 +23,7 @@ export async function generateMetadata({
     description: isEnglish
       ? "Explore DOMINUS services for port planning, concessions, governance, operations, sustainability and digital transformation for ports and terminals."
       : "Explorá los servicios de DOMINUS en planificación portuaria, concesiones, gobernanza, operaciones, sostenibilidad y transformación digital para puertos y terminales.",
+    alternates: localizedAlternates("/servicios", locale),
   };
 }
 
@@ -29,7 +32,14 @@ export async function generateMetadata({
  * CTA final que enlaza a `/contacto` (secundario a `/nosotros`).
  * Fuente de contenido: CONTENT.md · Servicios.
  */
-export default function ServicesPage() {
+export default async function ServicesPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
     return (
         <main className="page-wrapper">
             <HeaderTwo activeNav="servicios" />

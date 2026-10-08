@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "../../../../i18n/navigation";
+import { setRequestLocale } from "next-intl/server";
 import HeaderTwo from "../../_components/HeaderTwo";
 import FooterTwo from "../../_components/FooterTwo";
+import { localizedAlternates } from "../../../../lib/seo";
 
 export async function generateMetadata({
     params,
@@ -18,6 +20,7 @@ export async function generateMetadata({
         description: isEnglish
             ? "Diego Salom is an expert in port management, strategic planning, governance and institutional strengthening for port authorities and operators."
             : "Diego Salom es especialista en gestión portuaria, planificación estratégica, gobernanza y fortalecimiento institucional para autoridades y operadores portuarios.",
+        alternates: localizedAlternates("/nosotros/diego-salom", locale),
         keywords: isEnglish
             ? ["Diego Salom", "port consultant", "port governance", "port management", "waterways"]
             : ["Diego Salom", "consultor portuario", "gobernanza portuaria", "gestión portuaria", "vías navegables"],
@@ -56,6 +59,7 @@ export default async function DiegoSalomPage({
     params: Promise<{ locale: string }>;
 }) {
     const { locale } = await params;
+    setRequestLocale(locale);
     const isEnglish = locale === "en";
     const roles = isEnglish ? rolesEn : rolesEs;
     const projects = isEnglish ? projectsEn : projectsEs;
@@ -72,6 +76,15 @@ export default async function DiegoSalomPage({
                         <span>{isEnglish ? "Founder" : "Fundador"}</span>
                         <h1>Diego Salom</h1>
                         <p>{isEnglish ? "UNCTAD Consultant in Argentina | Ports, logistics, waterways and technical cooperation." : "Consultor de UNCTAD en Argentina | Puertos, logística, vías navegables y cooperación técnica."}</p>
+                        <a
+                            className="dominus-founder-detail__linkedin"
+                            href="https://www.linkedin.com/in/diegosalom/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <i className="feather-linkedin" aria-hidden="true" />
+                            <span>{isEnglish ? "View LinkedIn profile" : "Ver perfil en LinkedIn"}</span>
+                        </a>
                     </div>
                     <div className="dominus-founder-detail__grid">
                         <aside>

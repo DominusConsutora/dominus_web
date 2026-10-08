@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import React from "react";
 import HeaderTwo from "./_components/HeaderTwo";
 import BannerTwo from "./_components/BannerTwo";
@@ -9,6 +9,7 @@ import ServiceTwo from "./_components/ServiceTwo";
 import BlogOne from "./_components/BlogOne";
 import CtaOne from "./_components/CtaOne";
 import FooterTwo from "./_components/FooterTwo";
+import { localizedAlternates } from "../../lib/seo";
 
 export async function generateMetadata({
   params,
@@ -25,6 +26,7 @@ export async function generateMetadata({
     description: isEnglish
       ? "DOMINUS supports port authorities and operators with strategic plans, governance, digital transformation and sustainability projects across the port sector."
       : "DOMINUS acompaña a autoridades y operadores portuarios con planes estratégicos, gobernanza, transformación digital y sostenibilidad para el desarrollo portuario.",
+    alternates: localizedAlternates("/", locale),
     keywords: isEnglish
       ? [
           "port consultancy",
@@ -50,7 +52,14 @@ export async function generateMetadata({
 // - VideoTwo      → Video institucional (sin material aún)
 // - TestimonialOne → "Confían en DOMINUS" (fase 2, requiere logos autorizados)
 
-export default function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <main className="page-wrapper">
       <HeaderTwo />

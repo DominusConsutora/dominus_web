@@ -424,10 +424,10 @@
                 "email": {
                     "icon": "feather-mail",
                     "label": "Email institucional",
-                    "value": "contacto@dominus.example",
+                    "value": "info@dominuslogistica.com",
                     "hint": "Respondemos en un día hábil.",
                     "action": "Escribinos por email",
-                    "href": "mailto:contacto@dominus.example"
+                    "href": "mailto:info@dominuslogistica.com"
                 },
                 "phone": {
                     "icon": "feather-phone",

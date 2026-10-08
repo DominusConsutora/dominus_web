@@ -83,6 +83,7 @@ const structuredData = {
       jobTitle: "Consultor en gestión y desarrollo portuario",
       description:
         "Especialista en gestión portuaria, planificación estratégica, gobernanza y desarrollo institucional. Consultor de UNCTAD en Argentina con trayectoria en infraestructura crítica, concesiones y cooperación internacional (UNCTAD - TRAINFORTRADE).",
+      sameAs: ["https://www.linkedin.com/in/diegosalom/"],
       worksFor: { "@id": `${siteUrl}/#organization` },
       knowsAbout: [
         "Gestión portuaria",

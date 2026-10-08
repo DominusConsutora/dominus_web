@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import { Link } from "../../../../i18n/navigation";
 import { useTranslations } from "next-intl";
 import { useTitleSplitAnimation } from "../../../components/useTitleSplitAnimation";
 
@@ -13,17 +13,13 @@ import { useTitleSplitAnimation } from "../../../components/useTitleSplitAnimati
 
 const CHANNEL_KEYS = [
     "email",
-    "phone",
-    "whatsapp",
     "linkedin",
-    "address",
-    "schedule",
 ] as const;
 
 type ChannelKey = (typeof CHANNEL_KEYS)[number];
 
 // Canales cuyo href debe abrirse en nueva pestaña (LinkedIn, WhatsApp, Maps).
-const EXTERNAL_CHANNELS: ChannelKey[] = ["linkedin", "whatsapp", "address"];
+const EXTERNAL_CHANNELS: ChannelKey[] = ["linkedin"];
 
 export default function ContactChannels() {
     const t = useTranslations("contactPage.channels");

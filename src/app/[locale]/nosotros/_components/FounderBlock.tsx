@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "../../../../i18n/navigation";
 import { useLocale } from "next-intl";
 
 const dimensionIcons = [
@@ -21,6 +21,7 @@ export default function FounderBlock() {
                   "He has led teams, professional development programs and strategic processes for critical infrastructure, bringing together public bodies, international operators and industry stakeholders.",
               ],
               cta: "View full career profile",
+              linkedin: "View Diego on LinkedIn",
               photoLabel: "No Photo",
               photoAriaLabel: "Founder photo placeholder",
               dimensionTitle: "Institutional dimension",
@@ -41,6 +42,7 @@ export default function FounderBlock() {
                   "Ha liderado equipos, programas de profesionalización y procesos estratégicos para infraestructura crítica, articulando organismos públicos, operadores internacionales y actores del sector.",
               ],
               cta: "Ver trayectoria completa",
+              linkedin: "Ver a Diego en LinkedIn",
               photoLabel: "Sin foto",
               photoAriaLabel: "Espacio reservado para foto del fundador",
               dimensionTitle: "Dimensión institucional",
@@ -70,6 +72,15 @@ export default function FounderBlock() {
                             <span className="dominus-founder__eyebrow">{content.eyebrow}</span>
                             <h2 className="title w-700">Diego Salom</h2>
                             <p className="dominus-founder__role">{content.role}</p>
+                            <a
+                                className="dominus-founder__linkedin"
+                                href="https://www.linkedin.com/in/diegosalom/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <i className="feather-linkedin" aria-hidden="true" />
+                                <span>{content.linkedin}</span>
+                            </a>
                         </div>
                     </div>
                     <div className="dominus-founder__profile">

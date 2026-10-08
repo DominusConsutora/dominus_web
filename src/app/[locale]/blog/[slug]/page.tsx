@@ -8,6 +8,7 @@ import HeroBlogDetail from "./_components/HeroBlogDetail";
 import BlogDetailBody from "./_components/BlogDetailBody";
 import { routing } from "../../../../i18n/routing";
 import { getBlogPost, getBlogSlugs } from "../../../../data/blogPosts";
+import { localizedAlternates } from "../../../../lib/seo";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://dominuslogistica.com";
 
@@ -26,27 +27,22 @@ export async function generateMetadata({
     const post = getBlogPost(slug);
     if (!post) return {};
     const lang = locale === "en" ? "en" : "es";
+    const canonicalPath = `/${lang}/blog/${slug}`;
 
     return {
         title: post.title[lang],
         description: post.excerpt[lang],
-        alternates: {
-            canonical: `/${lang}/blog/${slug}`,
-        },
+        alternates: localizedAlternates(`/blog/${slug}`, lang),
         openGraph: {
             type: "article",
             title: post.title[lang],
             description: post.excerpt[lang],
-            url: `${siteUrl}/${lang}/blog/${slug}`,
-            images: [{ url: post.heroImage }],
+            url: `${siteUrl}${canonicalPath}`,
+            images: [{ url: post.heroImage, alt: post.title[lang] }],
         },
     };
 }
 
-/**
- * Página dinámica `/blog/[slug]` — Detalle de nota.
- * Inyecta el schema BlogPosting en el HTML inicial (server) para SEO/GEO.
- */
 export default async function BlogDetailPage({
     params,
 }: {
@@ -54,15 +50,14 @@ export default async function BlogDetailPage({
 }) {
     const { locale, slug } = await params;
     const post = getBlogPost(slug);
-    if (!post) {
-        notFound();
-    }
+    if (!post) notFound();
+
     setRequestLocale(locale);
     const lang = locale === "en" ? "en" : "es";
-
     const blogSchema = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
+        "@id": `${siteUrl}/${lang}/blog/${slug}#article`,
         headline: post.title[lang],
         description: post.excerpt[lang],
         image: `${siteUrl}${post.heroImage}`,
@@ -73,16 +68,15 @@ export default async function BlogDetailPage({
         articleSection: post.category[lang],
         author: {
             "@type": "Person",
+            "@id": `${siteUrl}/#diego-salom`,
             name: post.author,
             url: `${siteUrl}/${lang}/nosotros/diego-salom`,
         },
         publisher: {
             "@type": "Organization",
+            "@id": `${siteUrl}/#organization`,
             name: "DOMINUS",
-            logo: {
-                "@type": "ImageObject",
-                url: `${siteUrl}/logo_dark.png`,
-            },
+            logo: { "@type": "ImageObject", url: `${siteUrl}/logo_dark.png` },
         },
         mainEntityOfPage: {
             "@type": "WebPage",

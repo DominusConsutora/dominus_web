@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import { Link } from "../../../../i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import type { BlogPost, Locale } from "../../../../data/blogPosts";
 
@@ -21,9 +21,9 @@ export default function BlogCard({ post }: BlogCardProps) {
         <article className="dominus-blog-card">
             <Link className="dominus-blog-card__thumb" href={href} aria-label={post.title[locale]}>
                 <img loading="lazy" src={post.heroImage} alt={post.title[locale]} />
-                <span className="dominus-blog-card__cat">{post.category[locale]}</span>
             </Link>
             <div className="dominus-blog-card__body">
+                <span className="dominus-blog-card__cat">{post.category[locale]}</span>
                 <ul className="dominus-blog-card__meta">
                     <li>
                         <i className="feather-user" aria-hidden="true" />

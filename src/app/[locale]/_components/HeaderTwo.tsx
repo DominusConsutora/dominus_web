@@ -2,7 +2,7 @@
 import DominusNav from '../../../components/header/DominusNav'
 import LanguageSwitcher from '../../../components/header/LanguageSwitcher'
 import { useState, useEffect } from 'react';
-import Link from 'next/link'
+import { Link } from '../../../i18n/navigation'
 
 interface HeaderTwoProps {
     className?: string;

@@ -7,6 +7,7 @@ import CtaOne from "../../_components/CtaOne";
 import HeroServiceDetail from "./_components/HeroServiceDetail";
 import ServiceDetailBody from "./_components/ServiceDetailBody";
 import { routing } from "../../../../i18n/routing";
+import { localizedAlternates } from "../../../../lib/seo";
 
 const SERVICE_LABELS: Record<string, { es: string; en: string }> = {
     "master-plans-portuarios": {
@@ -85,6 +86,7 @@ export async function generateMetadata({
         keywords: isEnglish
             ? [label, "port consulting", "port strategy", "terminal performance", "governance"]
             : [label, "consultoría portuaria", "estrategia portuaria", "desarrollo portuario", "gobernanza"],
+        alternates: localizedAlternates(`/servicios/${slug}`, locale),
     };
 }
 

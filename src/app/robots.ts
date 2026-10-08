@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 // Crawlers de motores de IA que se permiten explícitamente para visibilidad en
 // respuestas generativas (GEO). Si en el futuro se quiere bloquear alguno,
 // mover su userAgent a una regla con `disallow: "/"`.

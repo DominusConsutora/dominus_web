@@ -2,7 +2,6 @@
 "use client";
 
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import { useTranslations } from "next-intl";
 
 interface SectionAppoinmentProps {
@@ -27,14 +26,13 @@ function SectionAppoinment({ hideHeader = false }: SectionAppoinmentProps = {}) 
     setMessage("");
 
     try {
-      await emailjs.sendForm(
-        "service_8jqp6e8",
-        "template_ozlprhn",
-        formRef.current,
-        {
-          publicKey: "icIGBT37l1cSvgSZ4",
-        }
-      );
+      const response = await fetch("/contact.php", {
+        method: "POST",
+        body: new FormData(formRef.current),
+        headers: { Accept: "application/json" },
+      });
+
+      if (!response.ok) throw new Error("Form submission failed");
 
       setMessage(t("form.success"));
       formRef.current.reset();
@@ -87,6 +85,14 @@ function SectionAppoinment({ hideHeader = false }: SectionAppoinmentProps = {}) 
               id="contact-form"
               onSubmit={handleSubmit}
             >
+              <input
+                type="text"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="contact-form__honeypot"
+              />
               <div className="form-group-wrapper">
                 <div className="form-group tmponhover">
                   <input
