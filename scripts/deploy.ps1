@@ -2,13 +2,18 @@ param(
     [string]$Message = "Actualizacion del sitio"
 )
 
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Continue"
 Set-Location (Split-Path -Parent $PSScriptRoot)
 $project = (Get-Location).Path
 
 function Run([string]$Label, [scriptblock]$Command) {
     Write-Host "`n==> $Label" -ForegroundColor Cyan
     & $Command
+    if ($LASTEXITCODE -ne 0) { throw "Fallo: $Label" }
+}
+
+function Step([string]$Label, [scriptblock]$Command) {
+    & $Command 2>&1 | Out-Null
     if ($LASTEXITCODE -ne 0) { throw "Fallo: $Label" }
 }
 
@@ -40,25 +45,25 @@ git worktree prune
 try {
     Run "Preparar worktree para deploy" { git worktree add --detach $wt main }
     Push-Location $wt
-    git checkout --orphan deploy-new 2>&1 | Out-Null
+    Step "Crear rama deploy-new" { git checkout --orphan deploy-new }
     Move-Item (Join-Path $wt "out") $tmpOut
-    git rm -rf -q . 2>&1 | Out-Null
+    Step "Vaciar worktree" { git rm -rf -q . }
     Get-ChildItem -Force | Where-Object Name -ne ".git" | Remove-Item -Recurse -Force
     robocopy $tmpOut $wt /E /NFL /NDL /NJH /NJS /NP | Out-Null
     New-Item -ItemType File -Path (Join-Path $wt ".nojekyll") -Force | Out-Null
-    git add -A 2>$null
+    Step "Agregar archivos" { git add -A }
     git commit -q -m "Deploy: build estatico (out)" -m "Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
     if ($LASTEXITCODE -ne 0) { throw "Fallo el commit de deploy" }
     Run "Push deploy (solo contenido de out)" { git push -f origin deploy-new:deploy }
 }
 finally {
     Set-Location $project
-    if (Test-Path $wt) { git worktree remove $wt --force 2>$null | Out-Null }
-    git branch -D deploy-new 2>$null | Out-Null
+    if (Test-Path $wt) { git worktree remove $wt --force 2>&1 | Out-Null }
+    git branch -D deploy-new 2>&1 | Out-Null
     if (Test-Path $tmpOut) { Remove-Item $tmpOut -Recurse -Force }
 }
 
-git fetch origin deploy 2>$null | Out-Null
-git branch -f deploy origin/deploy 2>$null | Out-Null
+git fetch origin deploy 2>&1 | Out-Null
+git branch -f deploy origin/deploy 2>&1 | Out-Null
 
 Write-Host "`nListo: main, develop y deploy actualizadas en GitHub." -ForegroundColor Green
