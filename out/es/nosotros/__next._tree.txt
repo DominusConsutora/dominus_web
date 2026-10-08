@@ -5,4 +5,4 @@
 :HC["/",""]
 :HL["/assets/images/founder/diego-salom.jpg","image"]
 :HL["/logo_bco.png","image"]
-0:{"buildId":"HNCnVS_dVX4x4w8QtKOS_","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"locale","paramType":"d","paramKey":"es","hasRuntimePrefetch":false,"slots":{"children":{"name":"nosotros","paramType":null,"paramKey":"nosotros","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true}},"isRootLayout":false},"staleTime":300}
+0:{"buildId":"z--DCdJRNDVXC1KxW-b7q","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"locale","paramType":"d","paramKey":"es","hasRuntimePrefetch":false,"slots":{"children":{"name":"nosotros","paramType":null,"paramKey":"nosotros","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true}},"isRootLayout":false},"staleTime":300}
