@@ -1,10 +1,17 @@
 param(
-    [string]$Message = "Actualizacion del sitio"
+    [string]$Message
 )
 
 $ErrorActionPreference = "Continue"
 Set-Location (Split-Path -Parent $PSScriptRoot)
 $project = (Get-Location).Path
+
+if ([string]::IsNullOrWhiteSpace($Message)) {
+    $default = "Actualizacion del sitio"
+    $input = Read-Host "Mensaje del commit (Enter para '$default')"
+    $Message = if ([string]::IsNullOrWhiteSpace($input)) { $default } else { $input.Trim() }
+}
+Write-Host "Mensaje del commit: $Message" -ForegroundColor Yellow
 
 function Run([string]$Label, [scriptblock]$Command) {
     Write-Host "`n==> $Label" -ForegroundColor Cyan
