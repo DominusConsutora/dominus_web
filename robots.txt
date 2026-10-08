@@ -1,0 +1,25 @@
+User-Agent: *
+Allow: /
+Disallow: /private/
+Disallow: /api/
+
+User-Agent: GPTBot
+User-Agent: ChatGPT-User
+User-Agent: OAI-SearchBot
+User-Agent: ClaudeBot
+User-Agent: anthropic-ai
+User-Agent: Claude-Web
+User-Agent: PerplexityBot
+User-Agent: Perplexity-User
+User-Agent: Google-Extended
+User-Agent: Applebot-Extended
+User-Agent: CCBot
+User-Agent: Amazonbot
+User-Agent: Bytespider
+User-Agent: Meta-ExternalAgent
+Allow: /
+Disallow: /private/
+Disallow: /api/
+
+Host: https://dominuslogistica.com
+Sitemap: https://dominuslogistica.com/sitemap.xml

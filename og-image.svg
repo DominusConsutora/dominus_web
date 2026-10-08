@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">DOMINUS</title>
+  <desc id="desc">Consultoría en desarrollo portuario</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#071B2F"/>
+      <stop offset="100%" stop-color="#0D2F4E"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#79D7F4"/>
+      <stop offset="100%" stop-color="#D5F0FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1000" cy="120" r="220" fill="#123B5D" opacity="0.7"/>
+  <circle cx="1040" cy="500" r="260" fill="#1B4D74" opacity="0.6"/>
+  <rect x="80" y="90" width="240" height="54" rx="12" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.25)"/>
+  <text x="110" y="127" fill="#D5F0FF" font-family="Arial, Helvetica, sans-serif" font-size="28" letter-spacing="4">DOMINUS</text>
+  <text x="80" y="240" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="700">Consultoría</text>
+  <text x="80" y="310" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="700">portuaria</text>
+  <text x="80" y="380" fill="#BFE7FF" font-family="Arial, Helvetica, sans-serif" font-size="28">Desarrollo, gobernanza y estrategia para el futuro de los puertos.</text>
+  <rect x="80" y="430" width="260" height="8" rx="4" fill="url(#accent)"/>
+  <text x="80" y="500" fill="#D5F0FF" font-family="Arial, Helvetica, sans-serif" font-size="24">port development • logistics • infrastructure</text>
+</svg>

@@ -1,0 +1,7 @@
+:HL["/_next/static/chunks/18568033c6cd283a.css","style"]
+:HL["/_next/static/chunks/d4be3bdcb68af4a0.css","style"]
+:HL["/_next/static/chunks/8c711cd2337f3b42.css","style"]
+:HL["/_next/static/chunks/a7d5d2405463065d.css","style"]
+:HC["/",""]
+:HL["/logo_bco.png","image"]
+0:{"buildId":"HNCnVS_dVX4x4w8QtKOS_","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"locale","paramType":"d","paramKey":"en","hasRuntimePrefetch":false,"slots":{"children":{"name":"contacto","paramType":null,"paramKey":"contacto","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true}},"isRootLayout":false},"staleTime":300}
