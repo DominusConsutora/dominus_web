@@ -111,7 +111,7 @@ export const publishedBlogPosts: BlogPost[] = [
     },
     author: 'Diego Salom',
     date: '2026-10-08',
-    readingMinutes: 6,
+    readingMinutes: 10,
     heroImage: '/assets/images/blog/02_2026.webp',
     tags: ['Competitividad portuaria', 'Operaciones de terminales', 'Productividad', 'Logística'],
     body: { es: [], en: [] },

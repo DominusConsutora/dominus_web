@@ -6,7 +6,8 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "eslint"
+        "lint": "eslint",
+        "deploy": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/deploy.ps1"
     },
     "dependencies": {
         "@popperjs/core": "^2.11.8",
