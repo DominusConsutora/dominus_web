@@ -506,10 +506,64 @@
         "legal": {
             "privacy": "Política de privacidad",
             "terms": "Términos y condiciones",
+            "cookies": "Política de cookies",
             "contact": "Contacto",
             "faq": "Preguntas frecuentes"
         },
         "copyright": "© {year} DOMINUS · Consultoría en desarrollo portuario."
+    },
+    "cookieConsent": {
+        "title": "Tu privacidad importa",
+        "description": "Usamos almacenamiento esencial para guardar tus preferencias. Con tu permiso, también podemos usar herramientas de analítica y publicidad. Podés aceptar, rechazar o configurar cada categoría.",
+        "privacyLink": "Política de privacidad",
+        "cookiesLink": "Política de cookies",
+        "necessaryTitle": "Esenciales",
+        "necessaryDescription": "Necesarias para que el sitio funcione y recordar tus elecciones.",
+        "analyticsTitle": "Analítica",
+        "analyticsDescription": "Ayuda a entender el uso del sitio y mejorarlo.",
+        "marketingTitle": "Publicidad",
+        "marketingDescription": "Permite medir campañas y personalizar publicidad.",
+        "configure": "Configurar",
+        "reject": "Rechazar opcionales",
+        "accept": "Aceptar todas",
+        "save": "Guardar selección",
+        "manage": "Preferencias de cookies",
+        "gpcNotice": "Tu navegador envía una señal Global Privacy Control; las categorías opcionales permanecerán desactivadas.",
+        "saveError": "No pudimos guardar tus preferencias. Revisá la configuración de cookies de tu navegador e intentá nuevamente."
+    },
+    "legalPages": {
+        "privacy": {
+            "title": "Política de privacidad",
+            "intro": "Esta política explica cómo DOMINUS puede tratar información personal cuando visitás este sitio o nos contactás. Revisá también la Política de cookies para administrar las tecnologías opcionales.",
+            "identityTitle": "Quién opera este sitio",
+            "identityBody": "DOMINUS es una consultora de desarrollo portuario con sede en Miami, Estados Unidos, y opera este sitio web. Para consultas sobre privacidad o sobre esta política, escribinos a info@dominuslogistica.com.",
+            "dataTitle": "Información que podemos recibir",
+            "dataBody": "Si completás el formulario de contacto, recibimos tu nombre, institución o empresa, correo electrónico, asunto y mensaje. También pueden procesarse datos técnicos del dispositivo y de navegación mediante herramientas de analítica o publicidad cuando las habilitás en las preferencias de cookies.",
+            "useTitle": "Cómo usamos la información",
+            "useBody": "Usamos los datos del formulario para responder consultas y coordinar comunicaciones. Los datos técnicos pueden utilizarse para mantener y proteger el sitio, medir su uso y mejorar su contenido, de acuerdo con las preferencias que selecciones y la normativa aplicable.",
+            "sharingTitle": "Proveedores y servicios de terceros",
+            "sharingBody": "Para operar el sitio y responder consultas podemos recurrir a proveedores de alojamiento, correo y tecnología. El sitio utiliza Google Tag Manager como administrador de etiquetas; los servicios que se ejecutan dentro de ese contenedor dependen de su configuración. El inventario de etiquetas y proveedores debe mantenerse actualizado cuando esa configuración cambie.",
+            "rightsTitle": "Tus opciones y derechos",
+            "rightsBody": "Podés administrar las categorías opcionales desde el control «Preferencias de cookies» disponible en el sitio. Según tu lugar de residencia y la legislación aplicable, también podrías solicitar acceso, corrección o eliminación de datos, u oponerte a determinados usos, como publicidad dirigida o la venta o comunicación de información personal. Escribinos a info@dominuslogistica.com para realizar una solicitud. Si tu navegador envía una señal Global Privacy Control, la categoría de publicidad se mantiene desactivada.",
+            "retentionTitle": "Conservación y actualizaciones",
+            "retentionBody": "Conservamos la información solo durante el tiempo necesario para atender la finalidad para la que se recibió, cumplir obligaciones aplicables y resolver consultas. Podemos actualizar esta política cuando cambien el sitio, sus servicios o las normas aplicables; publicaremos aquí la versión vigente."
+        },
+        "cookies": {
+            "title": "Política de cookies",
+            "intro": "Este sitio utiliza almacenamiento esencial y, si lo autorizás, tecnologías opcionales. Podés cambiar o retirar tu elección en cualquier momento desde «Preferencias de cookies», disponible en la esquina inferior de la página.",
+            "necessaryTitle": "Tecnologías esenciales",
+            "necessaryBody": "Se usan para funciones básicas del sitio y para guardar tu elección de consentimiento. No se pueden desactivar desde el panel porque el sitio no puede recordar tus preferencias sin ellas.",
+            "analyticsTitle": "Analítica",
+            "analyticsBody": "Si aceptás esta categoría, las etiquetas de analítica pueden medir visitas e interacciones para ayudarnos a comprender y mejorar el sitio. La información y los identificadores concretos dependen de las etiquetas configuradas.",
+            "marketingTitle": "Publicidad",
+            "marketingBody": "Si aceptás esta categoría, las etiquetas publicitarias pueden medir campañas o personalizar publicidad. Si tu navegador envía una señal Global Privacy Control, mantenemos esta categoría desactivada.",
+            "googleTitle": "Google Tag Manager y etiquetas",
+            "googleBody": "Google Tag Manager administra etiquetas de terceros en el sitio. El contenedor y sus etiquetas opcionales solo se cargan después de que aceptás analítica o publicidad. El sitio comunica las preferencias a las etiquetas compatibles con Google Consent Mode; las etiquetas personalizadas del contenedor también deben estar configuradas para respetar las categorías elegidas. La lista exacta de proveedores y cookies depende de la configuración activa del contenedor.",
+            "choicesTitle": "Cómo cambiar tu elección",
+            "choicesBody": "Al ingresar por primera vez podés aceptar todas las categorías opcionales, rechazarlas o configurarlas por separado. Tu preferencia se guarda en una cookie esencial durante seis meses. Podés abrir «Preferencias de cookies» para modificarla o retirarla; al retirar el consentimiento, las señales de consentimiento se actualizan para las etiquetas cargadas.",
+            "contactTitle": "Contacto",
+            "contactBody": "Para consultas sobre cookies y privacidad, escribinos a info@dominuslogistica.com."
+        }
     },
     "faq": {
         "eyebrow": "FAQ",

@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://dominuslogistica.com";
-const googleTagManagerId = "GTM-WB8BJ9W7";
-
 import "../../../public/assets/css/bootstrap.min.css";
 import "../../../public/assets/css/feature.css";
 import "../../../public/assets/css/style.css";
@@ -22,6 +19,7 @@ import OnepageBodyClass from "../components/OnepageBodyClass";
 import NextLightGallery from "../../components/NextLightGallery";
 import ReactVideoPopup from "../../components/ReactVideoPopup";
 import StructuredData from "../../components/StructuredData";
+import CookieConsent from "../components/CookieConsent";
 
 import { routing } from "../../i18n/routing";
 
@@ -91,12 +89,7 @@ export async function generateMetadata({
       images: ["/og-image.svg"],
     },
     icons: {
-      icon: [
-        {
-          url: "/assets/images/favicon.png",
-          type: "image/x-icon",
-        },
-      ],
+      icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     },
   };
 }
@@ -121,16 +114,9 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body>
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${googleTagManagerId}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-          }}
-        />
-        <Script id="google-tag-manager" strategy="afterInteractive">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${googleTagManagerId}');`}
-        </Script>
         <NextIntlClientProvider>
           <StructuredData />
+          <CookieConsent />
           <GlobalPreloader />
           <BootstrapClient />
           <AnimationController />

@@ -132,6 +132,12 @@ function FooterTwo() {
                                         <li>
                                             <Link href="/contacto">{t("legal.contact")}</Link>
                                         </li>
+                                        <li>
+                                            <Link href="/privacidad">{t("legal.privacy")}</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/cookies">{t("legal.cookies")}</Link>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

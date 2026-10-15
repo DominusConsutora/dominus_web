@@ -506,10 +506,64 @@
         "legal": {
             "privacy": "Privacy policy",
             "terms": "Terms and conditions",
+            "cookies": "Cookie policy",
             "contact": "Contact",
             "faq": "Frequently asked questions"
         },
         "copyright": "© {year} DOMINUS · Port development consulting."
+    },
+    "cookieConsent": {
+        "title": "Your privacy matters",
+        "description": "We use essential storage to save your preferences. With your permission, we may also use analytics and advertising tools. You can accept, reject, or configure each category.",
+        "privacyLink": "Privacy policy",
+        "cookiesLink": "Cookie policy",
+        "necessaryTitle": "Essential",
+        "necessaryDescription": "Needed for the site to work and to remember your choices.",
+        "analyticsTitle": "Analytics",
+        "analyticsDescription": "Helps us understand how the site is used and improve it.",
+        "marketingTitle": "Advertising",
+        "marketingDescription": "Allows campaign measurement and personalized advertising.",
+        "configure": "Configure",
+        "reject": "Reject optional",
+        "accept": "Accept all",
+        "save": "Save choices",
+        "manage": "Cookie preferences",
+        "gpcNotice": "Your browser sends a Global Privacy Control signal; optional categories will remain disabled.",
+        "saveError": "We could not save your preferences. Check your browser's cookie settings and try again."
+    },
+    "legalPages": {
+        "privacy": {
+            "title": "Privacy policy",
+            "intro": "This policy explains how DOMINUS may process personal information when you visit this website or contact us. See the Cookie Policy to manage optional technologies.",
+            "identityTitle": "Who operates this website",
+            "identityBody": "DOMINUS is a port development consultancy based in Miami, United States, and operates this website. For questions about privacy or this policy, email info@dominuslogistica.com.",
+            "dataTitle": "Information we may receive",
+            "dataBody": "If you submit the contact form, we receive your name, institution or company, email address, subject, and message. Technical device and browsing data may also be processed by analytics or advertising tools when you enable them in your cookie preferences.",
+            "useTitle": "How we use information",
+            "useBody": "We use contact form data to respond to inquiries and coordinate communications. Technical data may be used to operate and secure the website, measure its use, and improve its content, according to your selected preferences and applicable law.",
+            "sharingTitle": "Service providers and third parties",
+            "sharingBody": "We may use hosting, email, and technology providers to operate the website and respond to inquiries. The website uses Google Tag Manager to manage tags; the services running within that container depend on its configuration. The tag and provider inventory should be kept current whenever that configuration changes.",
+            "rightsTitle": "Your choices and rights",
+            "rightsBody": "You can manage optional categories through the site's Cookie preferences control. Depending on where you live and applicable law, you may also have the right to request access to, correction or deletion of data, or to opt out of certain uses such as targeted advertising or the sale or sharing of personal information. Email info@dominuslogistica.com to make a request. If your browser sends a Global Privacy Control signal, the advertising category remains disabled.",
+            "retentionTitle": "Retention and updates",
+            "retentionBody": "We keep information only for as long as needed for the purpose for which it was received, to meet applicable obligations, and to address inquiries. We may update this policy when the website, its services, or applicable rules change; the current version will be published here."
+        },
+        "cookies": {
+            "title": "Cookie policy",
+            "intro": "This website uses essential storage and, if you allow it, optional technologies. You can change or withdraw your choice at any time using Cookie preferences, available in the lower corner of the page.",
+            "necessaryTitle": "Essential technologies",
+            "necessaryBody": "These support basic website functions and store your consent choice. They cannot be disabled in the panel because the site needs them to remember your preferences.",
+            "analyticsTitle": "Analytics",
+            "analyticsBody": "If you accept this category, analytics tags may measure visits and interactions to help us understand and improve the website. The specific information and identifiers depend on the tags configured.",
+            "marketingTitle": "Advertising",
+            "marketingBody": "If you accept this category, advertising tags may measure campaigns or personalize advertising. If your browser sends a Global Privacy Control signal, this category remains disabled.",
+            "googleTitle": "Google Tag Manager and tags",
+            "googleBody": "Google Tag Manager manages third-party tags on the website. The container and its optional tags load only after you accept analytics or advertising. The site communicates your preferences to tags that support Google Consent Mode; custom tags in the container must also be configured to respect the selected categories. The exact provider and cookie list depends on the container's active configuration.",
+            "choicesTitle": "How to change your choice",
+            "choicesBody": "On your first visit, you can accept all optional categories, reject them, or configure them separately. Your preference is saved in an essential cookie for six months. Use Cookie preferences to change or withdraw it; when consent is withdrawn, consent signals are updated for loaded tags.",
+            "contactTitle": "Contact",
+            "contactBody": "For questions about cookies and privacy, email info@dominuslogistica.com."
+        }
     },
     "faq": {
         "eyebrow": "FAQ",
