@@ -1,7 +1,7 @@
 "use client";
 import { useLocale, useTranslations } from "next-intl";
 import { useTitleSplitAnimation } from "../../../../components/useTitleSplitAnimation";
-import { getBlogPost, type Locale } from "../../../../../data/blogPosts";
+import { formatBlogDate, getBlogPost, type Locale } from "../../../../../data/blogPosts";
 
 interface HeroBlogDetailProps {
     slug: string;
@@ -19,10 +19,7 @@ export default function HeroBlogDetail({ slug }: HeroBlogDetailProps) {
     const post = getBlogPost(slug);
     if (!post) return null;
 
-    const formattedDate = new Intl.DateTimeFormat(
-        locale === "en" ? "en-US" : "es-AR",
-        { day: "2-digit", month: "long", year: "numeric" },
-    ).format(new Date(post.date));
+    const formattedDate = formatBlogDate(post.date, locale, "long");
 
     return (
         <div

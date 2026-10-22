@@ -474,6 +474,19 @@ export function getSortedPosts(): BlogPost[] {
   )
 }
 
+export function formatBlogDate(
+  date: string,
+  locale: Locale,
+  month: 'short' | 'long' = 'short',
+): string {
+  return new Intl.DateTimeFormat(locale === 'en' ? 'en-US' : 'es-AR', {
+    day: '2-digit',
+    month,
+    year: 'numeric',
+    timeZone: 'UTC',
+  }).format(new Date(`${date}T00:00:00Z`))
+}
+
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug)
 }

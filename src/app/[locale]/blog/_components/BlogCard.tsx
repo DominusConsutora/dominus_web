@@ -1,7 +1,7 @@
 "use client";
 import { Link } from "../../../../i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import type { BlogPost, Locale } from "../../../../data/blogPosts";
+import { formatBlogDate, type BlogPost, type Locale } from "../../../../data/blogPosts";
 
 interface BlogCardProps {
     post: BlogPost;
@@ -12,10 +12,7 @@ export default function BlogCard({ post }: BlogCardProps) {
     const locale = useLocale() as Locale;
     const href = `/blog/${post.slug}`;
 
-    const formattedDate = new Intl.DateTimeFormat(
-        locale === "en" ? "en-US" : "es-AR",
-        { day: "2-digit", month: "short", year: "numeric" },
-    ).format(new Date(post.date));
+    const formattedDate = formatBlogDate(post.date, locale);
 
     return (
         <article className="dominus-blog-card">
