@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "DOMINUS | Consultora de desarrollo portuario",
@@ -23,7 +24,7 @@ export default function RootPage() {
         Consultoría especializada en desarrollo portuario para autoridades y operadores.
       </p>
       <p>
-        <a href="/es/">Ir al sitio en español</a> · <a href="/en/">View the English site</a>
+        <Link href="/es/">Ir al sitio en español</Link> · <Link href="/en/">View the English site</Link>
       </p>
     </main>
   );
