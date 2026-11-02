@@ -2,6 +2,169 @@ import type { BlogPost } from './blogPosts'
 
 export const publishedBlogPosts: BlogPost[] = [
   {
+    slug: 'del-puerto-digital-al-puerto-inteligente',
+    category: { es: 'Transformación digital', en: 'Digital transformation' },
+    axis: 'transformacion-digital-pcs',
+    title: {
+      es: 'Del puerto digital al puerto inteligente: qué significa realmente digitalizar una comunidad portuaria',
+      en: 'From digital port to smart port: what it really means to digitalize a port community',
+    },
+    excerpt: {
+      es: 'Digitalizar un puerto no es incorporar tecnología: es decidir cómo se coordinan las personas, las instituciones y la información que hacen posible la operación.',
+      en: 'Digitalizing a port is not about adding technology: it is about deciding how to coordinate the people, institutions and information that make operations possible.',
+    },
+    author: 'Diego Salom',
+    date: '2026-10-28',
+    readingMinutes: 10,
+    heroImage: '/assets/images/blog/04_2026.jpg',
+    tags: ['Transformación digital', 'PCS', 'TOS', 'Puertos inteligentes'],
+    body: { es: [], en: [] },
+    sections: [
+      {
+        heading: {
+          es: 'Una conversación que suele empezar por el lugar equivocado',
+          en: 'A conversation that often starts in the wrong place',
+        },
+        paragraphs: {
+          es: [
+            'Cuando se habla de modernizar un puerto, la conversación casi siempre arranca por la herramienta: qué sistema comprar, qué plataforma implementar, qué tecnología incorporar. Son preguntas comprensibles, pero llegan demasiado pronto.',
+            'Un puerto no es una terminal ni un software. Es una comunidad de actores —autoridad portuaria, terminales, navieras, agentes, transportistas, despachantes, aduana y organismos de control— que dependen unos de otros para que una carga se mueva. Digitalizar esa comunidad significa, ante todo, cambiar la forma en que esos actores comparten información y toman decisiones. La tecnología es el medio. El resultado que importa es un sistema que funcione con menos fricción, más previsibilidad y reglas más claras.',
+          ],
+          en: [
+            'When people talk about modernizing a port, the conversation almost always starts with the tool: which system to buy, which platform to implement, which technology to adopt. These are understandable questions, but they come too early.',
+            'A port is neither a terminal nor a piece of software. It is a community of stakeholders—port authorities, terminals, shipping lines, agents, carriers, customs brokers, customs and control agencies—who depend on one another to move cargo. Digitalizing that community means, first and foremost, changing how those stakeholders share information and make decisions. Technology is the means. What matters is a system that works with less friction, greater predictability and clearer rules.',
+          ],
+        },
+      },
+      {
+        heading: {
+          es: 'Tres capas que se complementan, no se sustituyen',
+          en: 'Three layers that complement rather than replace one another',
+        },
+        paragraphs: {
+          es: [
+            'El ecosistema digital de un puerto suele describirse con siglas que a menudo se confunden. Conviene distinguirlas, porque cada una resuelve un problema distinto.',
+            'El TOS (Terminal Operating System) es el sistema de gestión de la operación dentro de la terminal: planificación del buque y del patio, control de equipos, gestión de entregas y recepciones. Ordena lo que ocurre puertas adentro. Una terminal puede tener un TOS excelente y, aun así, depender de papeles, llamadas y planillas para coordinarse con quienes están afuera.',
+            'El PCS (Port Community System) es la plataforma que conecta a la comunidad portuaria. Su función es el intercambio ordenado de información entre actores que de otro modo se comunican de forma bilateral y fragmentada: una misma información cargada una sola vez, disponible para quienes la necesitan, con estados y eventos visibles para todos. Es la infraestructura de coordinación del puerto.',
+            'La ventanilla única conecta a la comunidad con el Estado. Permite que operadores y usuarios presenten la información requerida por los distintos organismos de control a través de un único punto de entrada, en lugar de repetir trámites ante cada uno. Su valor no es solo tecnológico: obliga a revisar, armonizar y simplificar procedimientos que durante años se superpusieron.',
+            'Estas tres capas no compiten entre sí. Se complementan, y su valor aparece cuando están pensadas como parte de una misma arquitectura, con interfaces claras y datos que circulan sin reingresos manuales.',
+          ],
+          en: [
+            'A port’s digital ecosystem is often described using acronyms that are easily confused. It is worth distinguishing them, because each addresses a different problem.',
+            'A TOS (Terminal Operating System) manages operations within the terminal: vessel and yard planning, equipment control, and delivery and receipt management. It organizes what happens inside the gates. A terminal can have an excellent TOS and still rely on paperwork, phone calls and spreadsheets to coordinate with those outside.',
+            'A PCS (Port Community System) is the platform that connects the port community. It enables the structured exchange of information among stakeholders who would otherwise communicate bilaterally and in fragments: information entered once, available to those who need it, with statuses and events visible to everyone. It is the port’s coordination infrastructure.',
+            'A single window connects the community with the state. It lets operators and users submit information required by different control agencies through one point of entry instead of repeating procedures with each agency. Its value is not only technological: it requires procedures that have overlapped for years to be reviewed, harmonized and simplified.',
+            'These three layers do not compete. They complement one another, and their value emerges when they are designed as part of one architecture, with clear interfaces and data that flows without manual re-entry.',
+          ],
+        },
+      },
+      {
+        heading: {
+          es: 'Trazabilidad: saber qué pasa, cuándo y con quién',
+          en: 'Traceability: knowing what happens, when and with whom',
+        },
+        paragraphs: {
+          es: [
+            'La trazabilidad suele presentarse como una función de seguimiento de la carga. Es más que eso: es la capacidad de reconstruir, con información confiable, qué ocurrió en cada etapa de un proceso, quién intervino y cuánto tiempo tomó.',
+            'Ese registro tiene un valor enorme. Permite identificar dónde se generan las demoras, comparar el desempeño de distintas etapas, dar previsibilidad a los usuarios y fundamentar decisiones con datos y no con percepciones. Un puerto que no puede medir sus procesos difícilmente pueda mejorarlos; uno que los mide con información compartida puede discutir sus problemas con evidencia.',
+            'Pero la trazabilidad solo es útil si los datos son consistentes. Eso exige definiciones comunes, eventos estandarizados y acuerdos sobre quién registra qué y en qué momento.',
+          ],
+          en: [
+            'Traceability is often presented as a cargo-tracking feature. It is more than that: it is the ability to reconstruct, using reliable information, what happened at each stage of a process, who was involved and how long it took.',
+            'That record is extremely valuable. It helps identify where delays occur, compare performance across stages, give users greater predictability and support decisions with data rather than perceptions. A port that cannot measure its processes is unlikely to improve them; one that measures them using shared information can discuss problems with evidence.',
+            'But traceability is useful only when the data is consistent. That requires common definitions, standardized events and agreements about who records what and when.',
+          ],
+        },
+      },
+      {
+        heading: {
+          es: 'La integración de actores es un desafío institucional',
+          en: 'Integrating stakeholders is an institutional challenge',
+        },
+        paragraphs: {
+          es: [
+            'La parte más difícil de digitalizar una comunidad portuaria rara vez es técnica. Es lograr que actores con intereses, ritmos y capacidades diferentes acuerden cómo compartir información.',
+            'Aparecen preguntas que ninguna plataforma responde por sí sola. ¿Quién lidera el proyecto y con qué legitimidad? ¿Quién es el propietario de los datos y quién puede acceder a ellos? ¿Cómo se protege la información comercial sensible? ¿Cómo se financia y sostiene el sistema en el tiempo? ¿Qué pasa con los actores con menor capacidad tecnológica? ¿Qué procesos se rediseñan, y cuáles simplemente se trasladan a una pantalla?',
+            'Digitalizar un proceso ineficiente solo produce un proceso ineficiente más rápido. Por eso los proyectos más sólidos empiezan por entender y simplificar el flujo, y recién después lo traducen a un sistema.',
+          ],
+          en: [
+            'The hardest part of digitalizing a port community is rarely technical. It is getting stakeholders with different interests, timelines and capabilities to agree on how to share information.',
+            'Questions arise that no platform can answer on its own. Who leads the project, and with what legitimacy? Who owns the data, and who can access it? How is commercially sensitive information protected? How is the system funded and maintained over time? What happens to stakeholders with less technological capacity? Which processes are redesigned, and which are simply moved onto a screen?',
+            'Digitalizing an inefficient process only makes it an inefficient process that runs faster. That is why the strongest projects begin by understanding and simplifying the workflow, and only then translate it into a system.',
+          ],
+        },
+      },
+      {
+        heading: {
+          es: 'Sin gobernanza, la tecnología no escala',
+          en: 'Without governance, technology cannot scale',
+        },
+        paragraphs: {
+          es: [
+            'Detrás de cada plataforma portuaria que funciona hay una decisión de gobernanza: un esquema claro de roles, un modelo de neutralidad, reglas de uso, criterios de acceso a la información y un mecanismo para resolver diferencias entre los participantes.',
+            'Sin ese marco, los sistemas tienden a repetir la fragmentación que querían resolver: plataformas paralelas, datos duplicados, estándares incompatibles y adopción parcial. Con él, la tecnología se vuelve una infraestructura compartida y no un conjunto de soluciones aisladas.',
+            'Por eso la transformación digital portuaria es, en el fondo, una agenda de gobernanza. Define quién coordina, bajo qué reglas y con qué incentivos; y recién entonces qué herramientas lo sostienen.',
+          ],
+          en: [
+            'Behind every port platform that works is a governance decision: a clear allocation of roles, a neutrality model, rules for use, criteria for information access and a mechanism for resolving disagreements among participants.',
+            'Without that framework, systems tend to reproduce the fragmentation they were meant to solve: parallel platforms, duplicated data, incompatible standards and partial adoption. With it, technology becomes shared infrastructure rather than a collection of isolated solutions.',
+            'That is why port digital transformation is, at its core, a governance agenda. It defines who coordinates, under which rules and with what incentives—and only then which tools will support it.',
+          ],
+        },
+      },
+      {
+        heading: {
+          es: 'Medir para saber si funcionó',
+          en: 'Measure to know whether it worked',
+        },
+        paragraphs: {
+          es: [
+            'Una iniciativa digital se justifica por lo que cambia en la operación, no por lo que incorpora. Los indicadores deberían estar definidos desde el inicio: tiempos de permanencia de la carga, tiempos de trámite, tiempos de atención en accesos, previsibilidad de los procesos, costos para los usuarios, nivel de adopción por parte de los actores.',
+            'Esa disciplina evita uno de los riesgos más frecuentes: proyectos que se evalúan por su grado de avance técnico y no por su efecto sobre la eficiencia del puerto.',
+          ],
+          en: [
+            'A digital initiative is justified by what it changes in operations, not by what it adds. Its indicators should be defined from the outset: cargo dwell times, processing times, gate service times, process predictability, user costs and stakeholder adoption.',
+            'That discipline helps avoid one of the most common risks: projects assessed by their technical progress rather than their impact on port efficiency.',
+          ],
+        },
+      },
+      {
+        heading: {
+          es: 'De la digitalización a un puerto inteligente',
+          en: 'From digitalization to a smart port',
+        },
+        paragraphs: {
+          es: [
+            'Se suele decir que un puerto es «inteligente» por la cantidad de tecnología que utiliza. Nuestra mirada es otra. Un puerto inteligente es aquel que cuenta con información confiable, compartida y a tiempo, y que la usa para coordinar mejor, anticipar problemas y decidir con mayor criterio.',
+            'La inteligencia no está en el dispositivo: está en la calidad de las decisiones que el sistema permite tomar. Y esas decisiones dependen de procesos bien diseñados, datos consistentes y actores que confían en compartirlos. La innovación tecnológica puede potenciar ese esquema, pero no lo reemplaza.',
+          ],
+          en: [
+            'A port is often called “smart” because of how much technology it uses. We see it differently. A smart port has reliable, timely, shared information and uses it to coordinate better, anticipate problems and make more informed decisions.',
+            'Intelligence is not in the device; it is in the quality of the decisions the system enables. Those decisions depend on well-designed processes, consistent data and stakeholders who trust one another enough to share it. Technological innovation can strengthen that model, but it cannot replace it.',
+          ],
+        },
+      },
+      {
+        heading: {
+          es: 'Cómo lo abordamos en DOMINUS',
+          en: 'How we approach it at DOMINUS',
+        },
+        paragraphs: {
+          es: [
+            'En DOMINUS entendemos la transformación digital portuaria como un proyecto de sistema, no de producto. Acompañamos a autoridades y operadores a partir de un diagnóstico de procesos y actores, para definir qué problemas se quiere resolver, qué arquitectura de TOS, PCS y ventanilla única tiene sentido para cada realidad, qué modelo de gobernanza la sostiene y cómo se implementa por etapas, con responsables, inversiones, plazos y riesgos.',
+            'No hay una receta única. Cada puerto tiene su estructura institucional, su nivel de madurez y su comunidad. Lo que sí es común es el punto de partida: antes de elegir una tecnología, conviene preguntarse qué decisiones se necesita mejorar y quiénes deben participar para lograrlo.',
+            'El puerto digital es una etapa necesaria. El puerto inteligente es lo que ocurre cuando esa información se transforma, de manera sostenida, en mejor coordinación, mayor eficiencia y servicios más confiables.',
+          ],
+          en: [
+            'At DOMINUS, we see port digital transformation as a systems project, not a product. We work with authorities and operators, starting with a diagnosis of processes and stakeholders, to define which problems need solving, which TOS, PCS and single-window architecture fits each context, what governance model will sustain it, and how to implement it in stages—with clear owners, investments, timelines and risks.',
+            'There is no one-size-fits-all formula. Every port has its own institutional structure, level of maturity and community. What they share is the right starting point: before choosing a technology, ask which decisions need to improve and who must be involved to make that happen.',
+            'The digital port is a necessary step. A smart port is what happens when that information is consistently turned into better coordination, greater efficiency and more reliable services.',
+          ],
+        },
+      },
+    ],
+  },
+  {
     slug: 'master-plans-portuarios-planificar-decidir',
     category: { es: 'Planificación', en: 'Planning' },
     axis: 'master-plans-portuarios',
