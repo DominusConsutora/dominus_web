@@ -75,7 +75,7 @@ export async function generateMetadata({
       type: "website",
       images: [
         {
-          url: "/og-image.svg",
+          url: "/og-image.png",
           width: 1200,
           height: 630,
           alt: "DOMINUS · Consultoría en desarrollo portuario",
@@ -86,7 +86,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      images: ["/og-image.svg"],
+      images: ["/og-image.png"],
     },
     icons: {
       icon: [{ url: "/icon.svg", type: "image/svg+xml" }],

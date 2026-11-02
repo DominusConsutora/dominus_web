@@ -22,7 +22,7 @@ const structuredData = {
       legalName: "DOMINUS Consultora Portuaria",
       url: siteUrl,
       logo: `${siteUrl}/logo_dark.png`,
-      image: `${siteUrl}/og-image.svg`,
+      image: `${siteUrl}/og-image.png`,
       description:
         "Consultora especializada en desarrollo portuario, gobernanza, planificación estratégica, sostenibilidad y transformación digital para autoridades y operadores portuarios.",
       areaServed: "Worldwide",
