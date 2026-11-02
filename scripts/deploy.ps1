@@ -52,8 +52,8 @@ try {
     Run "Traer deploy desde GitHub" { git fetch origin deploy }
     Run "Preparar worktree para deploy" { git worktree add --detach $wt origin/deploy }
     Push-Location $wt
-    Get-ChildItem -Force | Where-Object Name -ne ".git" | Remove-Item -Recurse -Force
-    robocopy (Join-Path $project "out") $wt /E /NFL /NDL /NJH /NJS /NP | Out-Null
+    robocopy (Join-Path $project "out") $wt /MIR /XF .git /XD .git /NFL /NDL /NJH /NJS /NP | Out-Null
+    if ($LASTEXITCODE -gt 7) { throw "Fallo al sincronizar out con el worktree de deploy (robocopy: $LASTEXITCODE)" }
     New-Item -ItemType File -Path (Join-Path $wt ".nojekyll") -Force | Out-Null
     Step "Agregar archivos" { git add -A }
     git diff --cached --quiet

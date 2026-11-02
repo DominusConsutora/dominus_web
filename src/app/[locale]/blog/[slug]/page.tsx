@@ -40,6 +40,12 @@ export async function generateMetadata({
             url: `${siteUrl}${canonicalPath}`,
             images: [{ url: post.heroImage, alt: post.title[lang] }],
         },
+        twitter: {
+            card: "summary_large_image",
+            title: post.title[lang],
+            description: post.excerpt[lang],
+            images: [{ url: post.heroImage, alt: post.title[lang] }],
+        },
     };
 }
 
