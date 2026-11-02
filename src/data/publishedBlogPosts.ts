@@ -14,7 +14,7 @@ export const publishedBlogPosts: BlogPost[] = [
       en: 'Digitalizing a port is not about adding technology: it is about deciding how to coordinate the people, institutions and information that make operations possible.',
     },
     author: 'Diego Salom',
-    date: '2026-10-28',
+    date: '2026-11-02',
     readingMinutes: 10,
     heroImage: '/assets/images/blog/04_2026.jpg',
     tags: ['Transformación digital', 'PCS', 'TOS', 'Puertos inteligentes'],
